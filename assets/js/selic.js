@@ -34,7 +34,36 @@ $.get(
       },
       options: {
         responsive: true,
-        scales: {},
+        scales: {
+            x: {
+              display: true,
+              title: {
+                display: true,
+              },
+              grid: {
+                color: "#FFFFFF",
+              },
+              ticks: {
+                color: "#FFFFFF",
+                callback: function (val, index) {
+                  return index % 2 === 0 ? this.getLabelForValue(val) : "";
+                },
+                major: {
+                  enabled: true,
+                },
+              },
+            },
+            y: {
+              display: true,
+              color: "#FFFFFF",
+              grid: {
+                color: "#FFFFFF",
+              },
+              ticks: {
+                color: "#FFFFFF",
+              }
+            },
+          },
         layouts: {},
         plugins: {
           title: {
@@ -94,7 +123,36 @@ $.get("https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/
         },
         options: {
           responsive: true,
-          scales: {},
+          scales: {
+            x: {
+              display: true,
+              title: {
+                display: true,
+              },
+              grid: {
+                color: "#FFFFFF",
+              },
+              ticks: {
+                color: "#FFFFFF",
+                callback: function (val, index) {
+                  return index % 2 === 0 ? this.getLabelForValue(val) : "";
+                },
+                major: {
+                  enabled: true,
+                },
+              },
+            },
+            y: {
+              display: true,
+              color: "#FFFFFF",
+              grid: {
+                color: "#FFFFFF",
+              },
+              ticks: {
+                color: "#FFFFFF",
+              }
+            },
+          },
           layouts: {},
           plugins: {
             title: {

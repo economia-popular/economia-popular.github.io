@@ -27,20 +27,49 @@ $.get(
             data: dataset,
             borderWidth: 1,
             borderColor: "#FFFFFF",
-            backgroundColor: "#FFFFFF"
+            backgroundColor: "#FFFFFF",
           },
         ],
       },
       options: {
         responsive: true,
+        hover: {
+            mode: 'index',
+            intersec: false
+        },
         scales: {
-            x: {
-                display: true,
+          x: {
+            display: true,
+            title: {
+                display: true
+            },
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+              callback: function(val, index) {
+                return index % 2 === 0 ? this.getLabelForValue(val) : '';
               },
-              y: {
-                display: true,
-                color: "#FFFFFF"
+              major : {
+                enabled: true
               }
+            },
+            
+          },
+          y: {
+            display: true,
+            color: "#FFFFFF",
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+            },
+            // Melhorar o entendimento do coeficiente de GINI
+            min: 0,
+            max: 1,
+          },
         },
         layouts: {},
         plugins: {
@@ -48,10 +77,10 @@ $.get(
             display: true,
             text: "Evolução do Coeficiente de Gini",
             color: "#FFFFFF",
-            padding: {
-              top: 10,
-              bottom: 30,
-            },
+            // padding: {
+            //   top: 10,
+            //   bottom: 30,
+            // },
           },
           subtitle: {
             display: true,

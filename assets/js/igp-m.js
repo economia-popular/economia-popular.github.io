@@ -26,13 +26,42 @@ $.get(
             data: dataset,
             borderWidth: 1,
             borderColor: "#FFFFFF",
-            backgroundColor: "#FFFFFF"
+            backgroundColor: "#FFFFFF",
           },
         ],
       },
       options: {
         responsive: true,
-        scales: {},
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+            },
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+              callback: function (val, index) {
+                return index % 2 === 0 ? this.getLabelForValue(val) : "";
+              },
+              major: {
+                enabled: true,
+              },
+            },
+          },
+          y: {
+            display: true,
+            color: "#FFFFFF",
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+            }
+          },
+        },
         layouts: {},
         plugins: {
           title: {
