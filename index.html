@@ -52,7 +52,8 @@
 			<!-- PIB -->
 			<article id="pib">
 				<h2 class="major">PIB - Produto Interno Bruto</h2>
-				<p>O PIB, ou Produto Interno Bruto é a soma de todos os bens e serviços finais produzidos por um país,
+				<p>O PIB, ou <b>Produto Interno Bruto</b> é a soma de todos os bens e serviços finais produzidos por um
+					país,
 					estado ou cidade, geralmente em um ano. Todos os países calculam o seu PIB nas suas respectivas
 					moedas.</a></p>
 
@@ -63,7 +64,7 @@
 					<canvas id="pib-variacao" height="300"></canvas>
 				</p>
 				<h2>PIB Per Capta</h2>
-				<p>O PIB Per Capta simula o quanto cada cidadão brasileiro ganharia se a soma total do PIB fosse
+				<p>O <b>PIB Per Capta</b> simula o quanto cada cidadão brasileiro ganharia se a soma total do PIB fosse
 					dividida igualmente entre todos</p>
 				<p>
 					<canvas id="pib-per-capta" height="300"></canvas>
@@ -91,6 +92,30 @@
 				<p>
 				<div class="fonte-pib"></div>
 				</p>
+				<p>Ultima atualização:
+				<div class="atualizacao-pib"></div>
+				</p>
+			</article>
+
+			<!-- IPCA -->
+			<article id="ipca">
+				<h2 class="major">IPCA - Índice de Preços no Consumidor Amplo</h2>
+				<p><b>O Índice de Preços no Consumidor Amplo</b> é usado para observar tendências de inflação. É calculado com base no preço médio necessário para comprar um conjunto de bens de consumo e serviços num país, comparando com períodos anteriores.</p>
+				<p>É útilizado para calcular a <b>variação do custo de vida médio</b> de família com <b>renda mensal de 1 e 40 salários mínimos</b></p>
+				<p>O resultado mostra se os preços aumentaram ou diminuíram de um mês para o outro.</p>
+				<h2>Indice IPCA</h2>
+				<p>A evolução do PIB é acompanhada de forma trimestral. Esse indicador leva em conta o crescimento ou
+					queda do PIB em relação <b>ao mesmo trimestre do ano anterior</b></p>
+				<p>
+					<canvas id="ipca-variacao" height="300"></canvas>
+				</p>
+
+				<p>
+					<div class="fonte-ipca"></div>
+				</p>
+				<p>Ultima atualização:
+					<div class="atualizacao-ipca"></div>
+				</p>
 			</article>
 
 			<!-- Work -->
@@ -106,8 +131,6 @@
 					tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
 					tempus.</p>
 			</article>
-
-			<h3>Fonte: </h3>
 
 			<!-- About -->
 			<article id="about">
@@ -161,7 +184,8 @@
 						<em>emphasized</em>.
 						This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
 						This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a
-							href="#">this is a link</a>.</p>
+							href="#">this is a link</a>.
+					</p>
 					<hr />
 					<h2>Heading Level 2</h2>
 					<h3>Heading Level 3</h3>
@@ -420,6 +444,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/pib.js"></script>
+	<script src="assets/js/ipca.js"></script>
 
 
 	<!-- Google tag (gtag.js) -->
