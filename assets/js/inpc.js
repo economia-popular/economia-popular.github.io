@@ -26,6 +26,7 @@ $.get(
             label: "% em relação ao mês anterior",
             data: dataset,
             borderWidth: 1,
+            color: "#FFFFFF"
           },
         ],
       },
@@ -36,7 +37,7 @@ $.get(
         plugins: {
           title: {
             display: true,
-            text: "Variação do inpc",
+            text: "Variação do INPC %",
             color: "#FFFFFF",
             padding: {
               top: 10,

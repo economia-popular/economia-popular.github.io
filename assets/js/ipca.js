@@ -1,5 +1,7 @@
 const ipca_variacao = document.getElementById("ipca-variacao");
 
+const ipca_acumulado = document.getElementById("ipca-acumulado");
+
 // IPCA - Variação
 $.get(
   "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/ipca/ipca.json",
@@ -36,7 +38,7 @@ $.get(
         plugins: {
           title: {
             display: true,
-            text: "Variação do IPCA",
+            text: "Variação do IPCA %",
             color: "#FFFFFF",
             padding: {
               top: 10,
@@ -57,3 +59,59 @@ $.get(
     $("div.atualizacao-ipca").text(raw.data_atualizacao);
   }
 );
+
+// IPCA - Acumulado
+$.get(
+    "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/ipca/ipca.json",
+    function (data, textStatus, jqXHR) {
+      const dataset = [];
+  
+      var raw = JSON.parse(data);
+  
+      raw.data.forEach((element) => {
+        console.log(element);
+        temp = {
+          x: element.mes_ano,
+          y: element.acumulado_ano,
+        };
+        dataset.push(temp);
+      });
+  
+      new Chart(ipca_acumulado, {
+        type: "bar",
+        data: {
+          backgroundColor: "#FFFFFF",
+          datasets: [
+            {
+              label: "IPCA Acumulado no ano %",
+              data: dataset,
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          scales: {},
+          layouts: {},
+          plugins: {
+            title: {
+              display: true,
+              text: "Acumulo do IPCA",
+              color: "#FFFFFF",
+              padding: {
+                top: 10,
+                bottom: 30,
+              },
+            },
+            subtitle: {
+              display: true,
+              color: "#FFFFFF",
+              text: raw.unidade_medida,
+            },
+          },
+        },
+      });
+  
+    }
+  );
+  
