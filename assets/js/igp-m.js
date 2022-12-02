@@ -20,13 +20,13 @@ $.get(
     new Chart(igpm_variacao, {
       type: "line",
       data: {
-        backgroundColor: "#FFFFFF",
         datasets: [
           {
             label: "% em relação ao mês anterior",
             data: dataset,
             borderWidth: 1,
-            color: "#FFFFFF"
+            borderColor: "#FFFFFF",
+            backgroundColor: "#FFFFFF"
           },
         ],
       },

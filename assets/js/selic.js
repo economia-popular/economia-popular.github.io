@@ -1,10 +1,9 @@
-const ipca_variacao = document.getElementById("ipca-variacao");
+const selic_variacao = document.getElementById("selic-variacao");
+const selic_acumulado = document.getElementById("selic-acumulado");
 
-const ipca_acumulado = document.getElementById("ipca-acumulado");
-
-// IPCA - Variação
+// SELIC - Variação
 $.get(
-  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/ipca/ipca.json",
+  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/selic/selic-variacao-mes.json",
   function (data, textStatus, jqXHR) {
     const dataset = [];
 
@@ -14,12 +13,12 @@ $.get(
       console.log(element);
       temp = {
         x: element.mes_ano,
-        y: element.variacao_mes,
+        y: element.valor,
       };
       dataset.push(temp);
     });
 
-    new Chart(ipca_variacao, {
+    new Chart(selic_variacao, {
       type: "line",
       data: {
         backgroundColor: "#FFFFFF",
@@ -40,7 +39,7 @@ $.get(
         plugins: {
           title: {
             display: true,
-            text: "Variação do IPCA %",
+            text: "Variação do selic %",
             color: "#FFFFFF",
             padding: {
               top: 10,
@@ -56,15 +55,15 @@ $.get(
       },
     });
 
-    // Fonte do IPCA
-    $("div.fonte-ipca").text(raw.fonte);
-    $("div.atualizacao-ipca").text(raw.data_atualizacao);
+    // Fonte do selic
+    $("div.fonte-selic").text(raw.fonte);
+    $("div.atualizacao-selic").text(raw.data_atualizacao);
   }
 );
 
-// IPCA - Acumulado
-$.get(
-    "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/ipca/ipca.json",
+
+// SELIC - Percentual / Ano
+$.get("https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/selic/selic-percentual-ano.json",
     function (data, textStatus, jqXHR) {
       const dataset = [];
   
@@ -74,18 +73,18 @@ $.get(
         console.log(element);
         temp = {
           x: element.mes_ano,
-          y: element.acumulado_ano,
+          y: element.valor,
         };
         dataset.push(temp);
       });
   
-      new Chart(ipca_acumulado, {
-        type: "bar",
+      new Chart(selic_acumulado, {
+        type: "line",
         data: {
           backgroundColor: "#FFFFFF",
           datasets: [
             {
-              label: "IPCA Acumulado no ano %",
+              label: "Taxa Percentual/Ano",
               data: dataset,
               borderWidth: 1,
               borderColor: "#FFFFFF",
@@ -100,7 +99,7 @@ $.get(
           plugins: {
             title: {
               display: true,
-              text: "Acumulo Anual do IPCA",
+              text: "Acumulo da Selic %",
               color: "#FFFFFF",
               padding: {
                 top: 10,
@@ -116,6 +115,9 @@ $.get(
         },
       });
   
+      // Fonte do selic
+      $("div.fonte-selic").text(raw.fonte);
+      $("div.atualizacao-selic").text(raw.data_atualizacao);
     }
   );
   
