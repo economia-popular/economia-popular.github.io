@@ -39,10 +39,11 @@
 					<li><a href="#inpc">INPC</a></li>
 					<li><a href="#igpm">IGP-M</a></li>
 					<li><a href="#selic">Selic</a></li>
-					<li><a href="#elements">IDH</a></li>
-					<li><a href="#elements">Renda</a></li>
-					<li><a href="#elements">Sociais</a></li>
-					<li><a href="#elements">Ambientais</a></li>
+					<li><a href="#breve">Bovespa</a></li>
+					<li><a href="#breve">IDH</a></li>
+					<li><a href="#breve">Renda</a></li>
+					<li><a href="#breve">Sociais</a></li>
+					<li><a href="#breve">Ambientais</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -64,6 +65,18 @@
 				<p>
 					<canvas id="pib-variacao" height="300"></canvas>
 				</p>
+
+
+				<h2>PIB Acumulado - Trimestre</h2>
+				<p>
+					<canvas id="pib-acumulado" height="300"></canvas>
+				</p>
+
+				<h2>PIB Acumulado - Anual</h2>
+				<p>
+					<canvas id="pib-acumulado-anual" height="300"></canvas>
+				</p>
+
 				<h2>PIB Per Capta</h2>
 				<p>O <b>PIB Per Capta</b> simula o quanto cada cidadão brasileiro ganharia se a soma total do PIB fosse
 					dividida igualmente entre todos</p>
@@ -101,8 +114,11 @@
 			<!-- IPCA -->
 			<article id="ipca">
 				<h2 class="major">IPCA - Índice de Preços no Consumidor Amplo</h2>
-				<p><b>O Índice de Preços no Consumidor Amplo</b> é usado para observar <b>tendências de inflação</b>. É calculado com base no preço médio necessário para comprar um conjunto de bens de consumo e serviços num país, comparando com períodos anteriores.</p>
-				<p>Assim como INPC, é útilizado para calcular a <b>variação do custo de vida médio</b> de família com <b>renda mensal de 1 e 40 salários mínimos</b></p>
+				<p><b>O Índice de Preços no Consumidor Amplo</b> é usado para observar <b>tendências de inflação</b>. É
+					calculado com base no preço médio necessário para comprar um conjunto de bens de consumo e serviços
+					num país, comparando com períodos anteriores.</p>
+				<p>Assim como INPC, é útilizado para calcular a <b>variação do custo de vida médio</b> de família com
+					<b>renda mensal de 1 e 40 salários mínimos</b></p>
 				<p>O resultado mostra se os preços aumentaram ou diminuíram de um mês para o outro.</p>
 				<h2>Variação Mensal do IPCA</h2>
 
@@ -116,20 +132,23 @@
 				</p>
 
 				<p>
-					<div class="fonte-ipca"></div>
+				<div class="fonte-ipca"></div>
 				</p>
 				<p>Ultima atualização:
-					<div class="atualizacao-ipca"></div>
+				<div class="atualizacao-ipca"></div>
 				</p>
 			</article>
 
 			<!-- INPC -->
 			<article id="inpc">
 				<h2 class="major">INPC - Índice Nacional de Preços ao Consumidor</h2>
-				<p><b>Índice Nacional de Preços ao Consumidor</b> é usado para observar tendências de inflação. É calculado com base no preço médio necessário para comprar um conjunto de bens de consumo e serviços num país, comparando com períodos anteriores.</p>
-				<p>Assim como IPCA, é útilizado para calcular a <b>variação do custo de vida médio</b> de família com <b>renda mensal de 1 e 5 salários mínimos</b></p>
+				<p><b>Índice Nacional de Preços ao Consumidor</b> é usado para observar tendências de inflação. É
+					calculado com base no preço médio necessário para comprar um conjunto de bens de consumo e serviços
+					num país, comparando com períodos anteriores.</p>
+				<p>Assim como IPCA, é útilizado para calcular a <b>variação do custo de vida médio</b> de família com
+					<b>renda mensal de 1 e 5 salários mínimos</b></p>
 				<p>O resultado mostra se os preços aumentaram ou diminuíram de um mês para o outro.</p>
-				
+
 				<h2>Variação do INPC - Histórico</h2>
 
 				<p>
@@ -137,20 +156,24 @@
 				</p>
 
 				<p>
-					<div class="fonte-inpc"></div>
+				<div class="fonte-inpc"></div>
 				</p>
 				<p>Ultima atualização:
-					<div class="atualizacao-inpc"></div>
+				<div class="atualizacao-inpc"></div>
 				</p>
 			</article>
 
 			<!-- IGP-M -->
 			<article id="igpm">
 				<h2 class="major">IGP-M - O Índice Geral de Preços - Mercado</h2>
-				<p><b>O Índice Geral de Preços de Mercado </b> é um indice divulgada pela <b>Fundação Gentúlio Vargas (FGV)</b>. Por meio dele, é possível saber se houve aumento (inflação) ou diminuição (deflação) em determinado período e prever tendências.</p>
+				<p><b>O Índice Geral de Preços de Mercado </b> é um indice divulgada pela <b>Fundação Gentúlio Vargas
+						(FGV)</b>. Por meio dele, é possível saber se houve aumento (inflação) ou diminuição (deflação)
+					em determinado período e prever tendências.</p>
 				<p>Utilizado como indice comparativo com outros índices como <b>IPCA</b> e <b>INPC</b></p>
-				<p>A tabela IGP-M é o <b>principal parâmetro utilizado na atualização dos preços dos aluguéis</b>, o que ocorre anualmente. Então, é o percentual anual divulgado que indicará o reajuste dos valores para locadores e locatários.</p>
-				
+				<p>A tabela IGP-M é o <b>principal parâmetro utilizado na atualização dos preços dos aluguéis</b>, o que
+					ocorre anualmente. Então, é o percentual anual divulgado que indicará o reajuste dos valores para
+					locadores e locatários.</p>
+
 				<h2>Variação do IGP-M - Histórico</h2>
 
 				<p>
@@ -158,23 +181,31 @@
 				</p>
 
 				<p>
-					<div class="fonte-igpm"></div>
+				<div class="fonte-igpm"></div>
 				</p>
 				<p>Ultima atualização:
-					<div class="atualizacao-igpm"></div>
+				<div class="atualizacao-igpm"></div>
 				</p>
 			</article>
 
 			<!-- SELIC -->
 			<article id="selic">
 				<h2 class="major">Selic - Sistema Especial de Liquidação e Custódia</h2>
-				<p>No Brasil, a <b>Taxa Selic é a taxa básica de juros da economia</b> . É o <b>principal instrumento de política monetária</b> utilizado pelo <b>Banco Central do Brasil</b> para controle da inflação</p>
-				<p>Os movimentos da Selic <b>influenciam todas as taxas de juros praticadas no país</b>,  sejam as que um banco cobra ao <b>conceder um empréstimo</b>, sejam as que um <b>investidor recebe ao realizar uma aplicação financeira</b>.</p>
-				<p>A Taxa Selic é a principal ferramenta do Banco Central para controlar o volume de recursos em circulação. Quando a economia está aquecida e os preços começam a subir a ponto de afetar negativamente as metas de inflação, a Selic Sobe, desestimulando empréstimos e contrações de serviços que tomam a Selic como báse de preço.</p>
-				<p>O mesmo ocorre quando a inflação está abaixo da meta. A Selic é diminuida para estimular o consumo e contratações de empréstimos de Pessoa Física e Pessoa Jurídica e aquecer a economia. </p>
+				<p>No Brasil, a <b>Taxa Selic é a taxa básica de juros da economia</b> . É o <b>principal instrumento de
+						política monetária</b> utilizado pelo <b>Banco Central do Brasil</b> para controle da inflação
+				</p>
+				<p>Os movimentos da Selic <b>influenciam todas as taxas de juros praticadas no país</b>, sejam as que um
+					banco cobra ao <b>conceder um empréstimo</b>, sejam as que um <b>investidor recebe ao realizar uma
+						aplicação financeira</b>.</p>
+				<p>A Taxa Selic é a principal ferramenta do Banco Central para controlar o volume de recursos em
+					circulação. Quando a economia está aquecida e os preços começam a subir a ponto de afetar
+					negativamente as metas de inflação, a Selic Sobe, desestimulando empréstimos e contrações de
+					serviços que tomam a Selic como báse de preço.</p>
+				<p>O mesmo ocorre quando a inflação está abaixo da meta. A Selic é diminuida para estimular o consumo e
+					contratações de empréstimos de Pessoa Física e Pessoa Jurídica e aquecer a economia. </p>
 				<h2>Taxa Selic - Acumulada ao Ano</h2>
 
-				
+
 				<p>
 					<canvas id="selic-acumulado" height="300"></canvas>
 				</p>
@@ -183,13 +214,13 @@
 				<p>
 					<canvas id="selic-variacao" height="300"></canvas>
 				</p>
-				
+
 
 				<p>
-					<div class="fonte-selic"></div>
+				<div class="fonte-selic"></div>
 				</p>
 				<p>Ultima atualização:
-					<div class="atualizacao-selic"></div>
+				<div class="atualizacao-selic"></div>
 				</p>
 			</article>
 
@@ -203,6 +234,13 @@
 					lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada
 					fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum
 					dolor sit amet.</p>
+			</article>
+
+			<!-- Breve -->
+			<article id="breve">
+				<h2 class="major">Em Breve</h2>
+				<span class="image main"><img src="images/breve.jpeg" alt="" /></span>
+				<p>Indice em Construção</p>
 			</article>
 
 			<!-- Contact -->
