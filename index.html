@@ -39,9 +39,9 @@
 					<li><a href="#inpc">INPC</a></li>
 					<li><a href="#igpm">IGP-M</a></li>
 					<li><a href="#selic">Selic</a></li>
-					<li><a href="#breve">Bovespa</a></li>
+					<li><a href="#gini">Gini</a></li>
 					<li><a href="#breve">IDH</a></li>
-					<li><a href="#breve">Renda</a></li>
+					<li><a href="#breve">Bovespa</a></li>
 					<li><a href="#breve">Sociais</a></li>
 					<li><a href="#breve">Ambientais</a></li>
 				</ul>
@@ -74,7 +74,7 @@
 
 				<h2>PIB Acumulado - Anual</h2>
 				<p>
-					<canvas id="pib-acumulado-anual" height="300"></canvas>
+					<canvas id="pib-acumulado" height="300"></canvas>
 				</p>
 
 				<h2>PIB Per Capta</h2>
@@ -224,6 +224,31 @@
 				</p>
 			</article>
 
+
+			<!-- RENDA -->
+			<article id="gini">
+				<h2 class="major">Coeficiente de Gini</h2>
+				<p>
+					O <b>Coeficiente de Gini</b>, ou <b>Indice de Gini</b> é um instrumento para medir o grau de concentração de renda em determinado grupo.
+					Ele aponta a diferença entre os rendimentos dos <b>mais pobres</b> e dos <b>mais ricos</b>. Numericamente, varia de zero a um (alguns apresentam de zero a cem).
+				</p>
+				<p>
+					<li>O valor <b>zero</b> representa a situação de <b>igualdade</b>, ou seja, numa situação imaginária onde <b>todos têm a mesma renda</b>.</li>
+					<li>O valor um (ou cem) está no extremo oposto, isto é, uma situação imaginária onde <b>só uma pessoa detém toda a riqueza</b>.</li> 
+				</p>
+
+				<h2>Coeficiente de Gini - Individual</h2>
+				<p>
+					<canvas id="gini-variacao" height="300"></canvas>
+				</p>
+
+				<p>
+				<div class="fonte-gini"></div>
+				</p>
+				<p>Ultima atualização:
+				<div class="atualizacao-gini"></div>
+				</p>
+			</article>
 
 			<!-- About -->
 			<article id="about">
@@ -548,6 +573,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	<script src="assets/js/inpc.js"></script>
 	<script src="assets/js/igp-m.js"></script>
 	<script src="assets/js/selic.js"></script>
+	<script src="assets/js/gini.js"></script>
 
 
 	<!-- Google tag (gtag.js) -->

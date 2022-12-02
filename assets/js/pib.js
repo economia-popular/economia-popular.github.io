@@ -9,7 +9,6 @@ $.get(
     function (data, textStatus, jqXHR) {
   
       const dataset = [];
-  
       var raw = JSON.parse(data);
 
       raw.data.sort((a, b) => a.ano - b.ano);
