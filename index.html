@@ -36,7 +36,7 @@
 				<ul>
 					<li><a href="#pib">PIB</a></li>
 					<li><a href="#ipca">IPCA</a></li>
-					<li><a href="#about">INPC</a></li>
+					<li><a href="#inpc">INPC</a></li>
 					<li><a href="#contact">IGP-M</a></li>
 					<li><a href="#elements">IDH</a></li>
 					<li><a href="#elements">Renda</a></li>
@@ -100,12 +100,11 @@
 			<!-- IPCA -->
 			<article id="ipca">
 				<h2 class="major">IPCA - Índice de Preços no Consumidor Amplo</h2>
-				<p><b>O Índice de Preços no Consumidor Amplo</b> é usado para observar tendências de inflação. É calculado com base no preço médio necessário para comprar um conjunto de bens de consumo e serviços num país, comparando com períodos anteriores.</p>
+				<p><b>O Índice de Preços no Consumidor Amplo</b> é usado para observar <b>tendências de inflação</b>. É calculado com base no preço médio necessário para comprar um conjunto de bens de consumo e serviços num país, comparando com períodos anteriores.</p>
 				<p>É útilizado para calcular a <b>variação do custo de vida médio</b> de família com <b>renda mensal de 1 e 40 salários mínimos</b></p>
 				<p>O resultado mostra se os preços aumentaram ou diminuíram de um mês para o outro.</p>
 				<h2>Indice IPCA</h2>
-				<p>A evolução do PIB é acompanhada de forma trimestral. Esse indicador leva em conta o crescimento ou
-					queda do PIB em relação <b>ao mesmo trimestre do ano anterior</b></p>
+
 				<p>
 					<canvas id="ipca-variacao" height="300"></canvas>
 				</p>
@@ -118,18 +117,24 @@
 				</p>
 			</article>
 
-			<!-- Work -->
-			<article id="work">
-				<h2 class="major">Work</h2>
-				<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-				<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac.
-					Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer
-					sollicitudin mauris nec lorem luctus ultrices.</p>
-				<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna
-					sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas
-					laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat
-					tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
-					tempus.</p>
+			<!-- INPC -->
+			<article id="inpc">
+				<h2 class="major">INPC - Índice Nacional de Preços ao Consumidor</h2>
+				<p><b>Índice Nacional de Preços ao Consumidor</b> é usado para observar tendências de inflação. É calculado com base no preço médio necessário para comprar um conjunto de bens de consumo e serviços num país, comparando com períodos anteriores.</p>
+				<p>É útilizado para calcular a <b>variação do custo de vida médio</b> de família com <b>renda mensal de 1 e 5 salários mínimos</b></p>
+				<p>O resultado mostra se os preços aumentaram ou diminuíram de um mês para o outro.</p>
+				<h2>Indice INPC</h2>
+
+				<p>
+					<canvas id="inpc-variacao" height="300"></canvas>
+				</p>
+
+				<p>
+					<div class="fonte-inpc"></div>
+				</p>
+				<p>Ultima atualização:
+					<div class="atualizacao-inpc"></div>
+				</p>
 			</article>
 
 			<!-- About -->
@@ -445,6 +450,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/pib.js"></script>
 	<script src="assets/js/ipca.js"></script>
+	<script src="assets/js/inpc.js"></script>
 
 
 	<!-- Google tag (gtag.js) -->
