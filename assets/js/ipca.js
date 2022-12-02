@@ -96,7 +96,7 @@ $.get(
           plugins: {
             title: {
               display: true,
-              text: "Acumulo do IPCA",
+              text: "Acumulo Anual do IPCA",
               color: "#FFFFFF",
               padding: {
                 top: 10,

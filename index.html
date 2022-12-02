@@ -37,7 +37,7 @@
 					<li><a href="#pib">PIB</a></li>
 					<li><a href="#ipca">IPCA</a></li>
 					<li><a href="#inpc">INPC</a></li>
-					<li><a href="#contact">IGP-M</a></li>
+					<li><a href="#igpm">IGP-M</a></li>
 					<li><a href="#elements">IDH</a></li>
 					<li><a href="#elements">Renda</a></li>
 					<li><a href="#elements">Sociais</a></li>
@@ -140,6 +140,27 @@
 				</p>
 				<p>Ultima atualização:
 					<div class="atualizacao-inpc"></div>
+				</p>
+			</article>
+
+			<!-- IGP-M -->
+			<article id="igpm">
+				<h2 class="major">IGP-M - O Índice Geral de Preços - Mercado</h2>
+				<p><b>O Índice Geral de Preços de Mercado </b> é um indice divulgada pela <b>Fundação Gentúlio Vargas (FGV)</b>. Por meio dele, é possível saber se houve aumento (inflação) ou diminuição (deflação) em determinado período e prever tendências.</p>
+				<p>Utilizado como indice comparativo com outros índices como <b>IPCA</b> e <b>INPC</b></p>
+				<p>A tabela IGP-M é o <b>principal parâmetro utilizado na atualização dos preços dos aluguéis</b>, o que ocorre anualmente. Então, é o percentual anual divulgado que indicará o reajuste dos valores para locadores e locatários.</p>
+				
+				<h2>Variação do IGP-M - Histórico</h2>
+
+				<p>
+					<canvas id="igpm-variacao" height="300"></canvas>
+				</p>
+
+				<p>
+					<div class="fonte-igpm"></div>
+				</p>
+				<p>Ultima atualização:
+					<div class="atualizacao-igpm"></div>
 				</p>
 			</article>
 
@@ -457,6 +478,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	<script src="assets/js/pib.js"></script>
 	<script src="assets/js/ipca.js"></script>
 	<script src="assets/js/inpc.js"></script>
+	<script src="assets/js/igp-m.js"></script>
 
 
 	<!-- Google tag (gtag.js) -->
