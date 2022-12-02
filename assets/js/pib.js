@@ -111,6 +111,9 @@ $.get(
         },
       });
 
+    // Fonte do PIB
+    $('div.fonte-pib').text(raw.fonte);
+
   }
 );
 
