@@ -119,7 +119,7 @@ $.get(
     });
 
     new Chart(idh_sexo, {
-      type: "line",
+      type: "bar",
       data: {
         backgroundColor: "#FFFFFF",
         datasets: [
@@ -127,16 +127,16 @@ $.get(
             label: "IDH Masculino",
             data: dataset_m,
             borderWidth: 1,
-            borderColor: "#FFFFFF",
-            backgroundColor: "#FFFFFF",
+            // borderColor: "#FFFFFF",
+            // backgroundColor: "#FFFFFF",
           },
 
           {
             label: "IDH Feminino",
             data: dataset_f,
             borderWidth: 1,
-            borderColor: "#FFFFFF",
-            backgroundColor: "#FFFFFF",
+            // borderColor: "#FFFFFF",
+            // backgroundColor: "#FFFFFF",
           },
         ],
       },
@@ -307,16 +307,16 @@ $.get(
             label: "Expectativa Masculino",
             data: dataset_ev_m,
             borderWidth: 1,
-            borderColor: "#FFFFFF",
-            backgroundColor: "#FFFFFF",
+            // borderColor: "#FFFFFF",
+            // backgroundColor: "#FFFFFF",
           },
 
           {
             label: "Expectativa Feminino",
             data: dataset_ev_f,
             borderWidth: 1,
-            borderColor: "#FFFFFF",
-            backgroundColor: "#FFFFFF",
+            // borderColor: "#FFFFFF",
+            // backgroundColor: "#FFFFFF",
           },
         ],
       },
