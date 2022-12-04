@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Economia Popular - PIB</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="/assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="/assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- PIB -->
+			<article id="pib">
+				<h2 class="major">PIB - Produto Interno Bruto</h2>
+				<p>O PIB, ou <b>Produto Interno Bruto</b> é a soma de todos os bens e serviços finais produzidos por um
+					país,
+					estado ou cidade, geralmente em um ano. Todos os países calculam o seu PIB nas suas respectivas
+					moedas.</a></p>
+
+				<h2>Evolução do PIB</h2>
+				<p>A evolução do PIB é acompanhada de forma trimestral. Esse indicador leva em conta o crescimento ou
+					queda do PIB em relação <b>ao mesmo trimestre do ano anterior</b></p>
+				<p>
+					<canvas id="pib-variacao" height="300"></canvas>
+				</p>
+
+
+				<h2>PIB Acumulado - Trimestre</h2>
+				<p>
+					<canvas id="pib-acumulado" height="300"></canvas>
+				</p>
+
+				<h2>PIB Acumulado - Anual</h2>
+				<p>
+					<canvas id="pib-acumulado-anual" height="300"></canvas>
+				</p>
+
+				<h2>PIB Per Capta</h2>
+				<p>O <b>PIB Per Capta</b> simula o quanto cada cidadão brasileiro ganharia se a soma total do PIB fosse
+					dividida igualmente entre todos</p>
+				<p>
+					<canvas id="pib-per-capta" height="300"></canvas>
+				</p>
+
+				<h3>Calculo do PIB</h3>
+				<p>Para o cálculo do PIB, são utilizados diversos dados; alguns produzidos pelo IBGE, outros
+					provenientes de fontes externas. Essas são algumas das peças que compõem o quebra-cabeça do PIB:</p>
+				<ul>
+					<li>Balanço de Pagamentos (Banco Central)</li>
+					<li>Declaração de Informações Econômico-Fiscais da Pessoa Jurídica - DIPJ (Secretaria da Receita
+						Federal)</li>
+					<li>Índice de Preços ao Produtor Amplo - IPA (FGV)</li>
+					<li>Índice Nacional de Preços ao Consumidor Amplo - IPCA (IBGE)</li>
+					<li>Produção Agrícola Municipal - PAM - (IBGE)</li>
+					<li>Pesquisa Anual de Comércio - PAC (IBGE)</li>
+					<li>Pesquisa Anual de Serviços - PAS (IBGE)</li>
+					<li>Pesquisa de Orçamentos Familiares - POF (IBGE)</li>
+					<li>Pesquisa Industrial Anual - Empresa - PIA-Empresa (IBGE)</li>
+					<li>Pesquisa Industrial Mensal - Produção Física - PIM-PF (IBGE)</li>
+					<li>Pesquisa Mensal de Comércio - PMC (IBGE)</li>
+					<li>Pesquisa Mensal de Serviços - PMS (IBGE)</li>
+				</ul>
+
+				<p>
+				<div class="fonte-pib"></div>
+				</p>
+				<p>Ultima atualização:
+				<div class="atualizacao-pib"></div>
+				</p>
+			</article>
+
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+		</footer>
+
+	</div>
+
+	<!-- BG -->
+	<div id="bg"></div>
+
+	<!-- Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="/assets/js/jquery.min.js"></script>
+	<script src="/assets/js/browser.min.js"></script>
+	<script src="/assets/js/breakpoints.min.js"></script>
+	<script src="/assets/js/util.js"></script>
+	<script src="/assets/js/main.js"></script>
+	<script src="/assets/js/pib.js"></script>
+	<script src="/assets/js/ipca.js"></script>
+	<script src="/assets/js/inpc.js"></script>
+	<script src="/assets/js/igp-m.js"></script>
+	<script src="/assets/js/selic.js"></script>
+	<script src="/assets/js/gini.js"></script>
+	<script src="/assets/js/idh.js"></script>
+
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9GQ3VE9HVC"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-9GQ3VE9HVC');
+	</script>
+
+</body>
+
+</html>

@@ -1,18 +1,13 @@
 <!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 
 <head>
 	<title>Economia Popular</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="/assets/css/main.css" />
 	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
+		<link rel="stylesheet" href="/assets/css/noscript.css" />
 	</noscript>
 </head>
 
@@ -29,7 +24,7 @@
 			<div class="content">
 				<div class="inner">
 					<h1>Economia Popular</h1>
-					<p>Indicadores Econômicos Simplificados</p>
+					<p>Indicadores Socioeconômicos Simplificados</p>
 				</div>
 			</div>
 			<nav>
@@ -39,6 +34,8 @@
 					<li><a href="#inpc">INPC</a></li>
 					<li><a href="#igpm">IGP-M</a></li>
 					<li><a href="#selic">Selic</a></li>
+				</ul>	
+				<ul>
 					<li><a href="#gini">Gini</a></li>
 					<li><a href="#breve">IDH</a></li>
 					<li><a href="#breve">Bovespa</a></li>
@@ -59,32 +56,52 @@
 					estado ou cidade, geralmente em um ano. Todos os países calculam o seu PIB nas suas respectivas
 					moedas.</a></p>
 
-				<h2>Evolução do PIB</h2>
+				<h1>Evolução do PIB</h1>
 				<p>A evolução do PIB é acompanhada de forma trimestral. Esse indicador leva em conta o crescimento ou
 					queda do PIB em relação <b>ao mesmo trimestre do ano anterior</b></p>
 				<p>
 					<canvas id="pib-variacao" height="300"></canvas>
 				</p>
+				<h3>Datasets</h3>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/pib/pib-variacao.json" target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/pib/pib-variacao.csv" target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+				<p></p><br>
 
 
-				<h2>PIB Acumulado - Trimestre</h2>
+				<h1>PIB Acumulado - Trimestre</h1>
 				<p>
 					<canvas id="pib-acumulado" height="300"></canvas>
 				</p>
+				
+				<h3>Datasets</h3>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/pib/pib-acumulado.json" target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/pib/pib-acumulado.csv" target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+				<p></p><br>
 
-				<h2>PIB Acumulado - Anual</h2>
+				<h1>PIB Acumulado - Anual</h1>
 				<p>
 					<canvas id="pib-acumulado-anual" height="300"></canvas>
 				</p>
 
-				<h2>PIB Per Capta</h2>
+
+				<h3>Datasets</h3>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/pib/pib-acumulado-ano.json" target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/pib/pib-acumulado-ano.csv" target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+				<p></p><br>
+
+				<h1>PIB Per Capta</h1>
 				<p>O <b>PIB Per Capta</b> simula o quanto cada cidadão brasileiro ganharia se a soma total do PIB fosse
 					dividida igualmente entre todos</p>
 				<p>
 					<canvas id="pib-per-capta" height="300"></canvas>
 				</p>
 
-				<h3>Calculo do PIB</h3>
+				<h3>Datasets</h3>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/pib/pib-per-capta.json" target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/pib/pib-per-capta.csv" target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+				<p></p><br>
+
+				<h2>Calculo do PIB</h2>
 				<p>Para o cálculo do PIB, são utilizados diversos dados; alguns produzidos pelo IBGE, outros
 					provenientes de fontes externas. Essas são algumas das peças que compõem o quebra-cabeça do PIB:</p>
 				<ul>
@@ -103,12 +120,11 @@
 					<li>Pesquisa Mensal de Serviços - PMS (IBGE)</li>
 				</ul>
 
-				<p>
+				<h3>Fonte Oficial: </h3>
 				<div class="fonte-pib"></div>
-				</p>
-				<p>Ultima atualização:
+				<br><br>
+				<h3>Ultima atualização: </h3>
 				<div class="atualizacao-pib"></div>
-				</p>
 			</article>
 
 			<!-- IPCA -->
@@ -121,23 +137,28 @@
 				<p>Assim como INPC, é útilizado para calcular a <b>variação do custo de vida médio</b> de família com
 					<b>renda mensal de 1 e 40 salários mínimos</b></p>
 				<p>O resultado mostra se os preços aumentaram ou diminuíram de um mês para o outro.</p>
-				<h2>Variação Mensal do IPCA</h2>
-
+				
+				<h1>Variação Mensal do IPCA</h1>
 				<p>
 					<canvas id="ipca-variacao" height="300"></canvas>
 				</p>
 
-				<h2>Variação do IPCA - Histórico</h2>
+				<h1>Variação do IPCA - Histórico</h1>
 				<p>
 					<canvas id="ipca-acumulado" height="300"></canvas>
 				</p>
 
-				<p>
+				<h3>Datasets</h3>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/ipca/ipca.json" target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/ipca/ipca.csv" target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+				<p></p><br>
+
+				<h3>Fonte Oficial: </h3>
 				<div class="fonte-ipca"></div>
-				</p>
-				<p>Ultima atualização:
+				<br><br>
+				<h3>Ultima atualização: </h3>
 				<div class="atualizacao-ipca"></div>
-				</p>
+
 			</article>
 
 			<!-- INPC -->
@@ -157,12 +178,16 @@
 					<canvas id="inpc-variacao" height="300"></canvas>
 				</p>
 
-				<p>
+				<h3>Datasets</h3>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/inpc/inpc.json" target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/inpc/inpc.csv" target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+				<p></p><br>
+
+				<h3>Fonte Oficial: </h3>
 				<div class="fonte-inpc"></div>
-				</p>
-				<p>Ultima atualização:
+				<br><br>
+				<h3>Ultima atualização: </h3>
 				<div class="atualizacao-inpc"></div>
-				</p>
 			</article>
 
 			<!-- IGP-M -->
@@ -183,12 +208,16 @@
 					<canvas id="igpm-variacao" height="300"></canvas>
 				</p>
 
-				<p>
+				<h3>Datasets</h3>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/igpm/igpm.json" target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/igpm/igpm.csv" target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+				<p></p><br>
+
+				<h3>Fonte Oficial: </h3>
 				<div class="fonte-igpm"></div>
-				</p>
-				<p>Ultima atualização:
+				<br><br>
+				<h3>Ultima atualização: </h3>
 				<div class="atualizacao-igpm"></div>
-				</p>
 			</article>
 
 			<!-- SELIC -->
@@ -214,22 +243,30 @@
 					<canvas id="selic-acumulado" height="300"></canvas>
 				</p>
 
+				<h3>Datasets</h3>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/selic/selic-percentual-ano.json" target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/selic/selic-percentual-ano.csv" target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+				<p></p><br>
+
 				<h2>Taxa Selic - Variação Mensal</h2>
 				<p>
 					<canvas id="selic-variacao" height="300"></canvas>
 				</p>
 
+				<h3>Datasets</h3>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/selic/selic-variacao-mes.json" target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/selic/selic-variacao-mes.csv" target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+				<p></p><br>
 
-				<p>
+				<h3>Fonte Oficial: </h3>
 				<div class="fonte-selic"></div>
-				</p>
-				<p>Ultima atualização:
+				<br><br>
+				<h3>Ultima atualização: </h3>
 				<div class="atualizacao-selic"></div>
-				</p>
 			</article>
 
 
-			<!-- RENDA -->
+			<!-- GINI -->
 			<article id="gini">
 				<h2 class="major">Coeficiente de Gini</h2>
 				<p>
@@ -246,12 +283,16 @@
 					<canvas id="gini-variacao" height="300"></canvas>
 				</p>
 
-				<p>
+				<h3>Datasets</h3>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/gini/gini.json" target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/gini/gini.csv" target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+				<p></p><br>
+				
+				<h3>Fonte Oficial: </h3>
 				<div class="fonte-gini"></div>
-				</p>
-				<p>Ultima atualização:
+				<br><br>
+				<h3>Ultima atualização: </h3>
 				<div class="atualizacao-gini"></div>
-				</p>
 			</article>
 
 			<!-- About -->
@@ -557,7 +598,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 		<!-- Footer -->
 		<footer id="footer">
-			<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+			<p class="copyright">&copy; Economia Popular. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 		</footer>
 
 	</div>
@@ -567,17 +608,18 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 	<!-- Scripts -->
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-	<script src="assets/js/pib.js"></script>
-	<script src="assets/js/ipca.js"></script>
-	<script src="assets/js/inpc.js"></script>
-	<script src="assets/js/igp-m.js"></script>
-	<script src="assets/js/selic.js"></script>
-	<script src="assets/js/gini.js"></script>
+	<script src="/assets/js/jquery.min.js"></script>
+	<script src="/assets/js/browser.min.js"></script>
+	<script src="/assets/js/breakpoints.min.js"></script>
+	<script src="/assets/js/util.js"></script>
+	<script src="/assets/js/main.js"></script>
+	<script src="/assets/js/pib.js"></script>
+	<script src="/assets/js/ipca.js"></script>
+	<script src="/assets/js/inpc.js"></script>
+	<script src="/assets/js/igp-m.js"></script>
+	<script src="/assets/js/selic.js"></script>
+	<script src="/assets/js/gini.js"></script>
+	<script src="/assets/js/idh.js"></script>
 
 
 	<!-- Google tag (gtag.js) -->
