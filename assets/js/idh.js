@@ -127,16 +127,16 @@ $.get(
             label: "IDH Masculino",
             data: dataset_m,
             borderWidth: 1,
-            // borderColor: "#FFFFFF",
-            // backgroundColor: "#FFFFFF",
+            borderColor: "#114247",
+            backgroundColor: "#114247",
           },
 
           {
             label: "IDH Feminino",
             data: dataset_f,
             borderWidth: 1,
-            // borderColor: "#FFFFFF",
-            // backgroundColor: "#FFFFFF",
+            borderColor: "#5D6D2F",
+            backgroundColor: "#5D6D2F",
           },
         ],
       },
@@ -213,7 +213,7 @@ $.get(
           backgroundColor: "#FFFFFF",
           datasets: [
             {
-              label: "IDH",
+              label: "Expectativa de Vida",
               data: dataset_ev,
               borderWidth: 1,
               borderColor: "#FFFFFF",
@@ -280,7 +280,7 @@ $.get(
 
     raw.data.forEach((element) => {
 
-      if (element.expectativa_de_vida_feminina > 0) {
+      if (element.expectativa_de_vida_feminina > 0 && element.ano_referencia >= 2002) {
         // Masculino
         temp_m = {
           x: element.ano_referencia,
@@ -307,16 +307,16 @@ $.get(
             label: "Expectativa Masculino",
             data: dataset_ev_m,
             borderWidth: 1,
-            // borderColor: "#FFFFFF",
-            // backgroundColor: "#FFFFFF",
+            borderColor: "#114247",
+            backgroundColor: "#114247",
           },
 
           {
             label: "Expectativa Feminino",
             data: dataset_ev_f,
             borderWidth: 1,
-            // borderColor: "#FFFFFF",
-            // backgroundColor: "#FFFFFF",
+            borderColor: "#5D6D2F",
+            backgroundColor: "#5D6D2F",
           },
         ],
       },
