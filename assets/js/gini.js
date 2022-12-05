@@ -17,6 +17,28 @@ $.get(
       dataset.push(temp);
     });
 
+    // Data Grid
+    var columnDefs = [
+      { headerName: "Ano", field: "ano_referencia" },
+      { headerName: "Valor", field: "valor" }
+    ];
+
+    var gridOptions = {
+      defaultColDef: {
+        flex: 1,
+        sortable: true,
+        filter: true,
+      },
+      columnDefs: columnDefs,
+      rowData: raw.data.reverse(),
+      animateRows: true,
+      accentedSort: true
+    };
+
+    var eGridDiv = document.querySelector('#gini-grid');
+
+    new agGrid.Grid(eGridDiv, gridOptions);
+
     new Chart(gini_variacao, {
       type: "line",
       data: {
