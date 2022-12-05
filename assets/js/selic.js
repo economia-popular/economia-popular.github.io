@@ -10,7 +10,7 @@ $.get(
     var raw = JSON.parse(data);
 
     raw.data.forEach((element) => {
-      console.log(element);
+      
       temp = {
         x: element.mes_ano,
         y: element.valor,
@@ -99,7 +99,7 @@ $.get("https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/
       var raw = JSON.parse(data);
   
       raw.data.forEach((element) => {
-        console.log(element);
+        
         temp = {
           x: element.mes_ano,
           y: element.valor,

@@ -6,6 +6,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="/assets/css/main.css" />
+
 	<noscript>
 		<link rel="stylesheet" href="/assets/css/noscript.css" />
 	</noscript>
@@ -42,6 +43,10 @@
 					<li><a href="#breve">Sociais</a></li>
 					<li><a href="#breve">Ambientais</a></li>
 				</ul>
+				<br><br>
+				<p>
+					<a href="#sobre" class="button">Sobre</a>
+				</p>
 			</nav>
 		</header>
 
@@ -59,9 +64,9 @@
 				<h1>Evolução do PIB</h1>
 				<p>A evolução do PIB é acompanhada de forma trimestral. Esse indicador leva em conta o crescimento ou
 					queda do PIB em relação <b>ao mesmo trimestre do ano anterior</b></p>
-				<p>
-					<canvas id="pib-variacao" height="300"></canvas>
-				</p>
+					
+				<canvas id="pib-variacao" style="height:50vh; width:80vw"></canvas>
+
 				<h3>Datasets</h3>
 				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/pib/pib-variacao.json"
 					target="_blank" class="button primary icon solid fa-download" download>JSON</a>
@@ -72,7 +77,7 @@
 
 				<h1>PIB Acumulado - Trimestre</h1>
 				<p>
-					<canvas id="pib-acumulado" height="300"></canvas>
+					<canvas id="pib-acumulado" style="height:50vh; width:80vw"></canvas>
 				</p>
 
 				<h3>Datasets</h3>
@@ -84,7 +89,7 @@
 
 				<h1>PIB Acumulado - Anual</h1>
 				<p>
-					<canvas id="pib-acumulado-anual" height="300"></canvas>
+					<canvas id="pib-acumulado-anual" style="height:50vh; width:80vw"></canvas>
 				</p>
 
 
@@ -99,7 +104,7 @@
 				<p>O <b>PIB Per Capta</b> simula o quanto cada cidadão brasileiro ganharia se a soma total do PIB fosse
 					dividida igualmente entre todos</p>
 				<p>
-					<canvas id="pib-per-capta" height="300"></canvas>
+					<canvas id="pib-per-capta" style="height:50vh; width:80vw"></canvas>
 				</p>
 
 				<h3>Datasets</h3>
@@ -107,7 +112,7 @@
 					target="_blank" class="button primary icon solid fa-download" download>JSON</a>
 				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/pib/pib-per-capta.csv"
 					target="_blank" class="button primary icon solid fa-download" download>CSV</a>
-				<p></p><br>
+				<br>
 
 				<h2>Calculo do PIB</h2>
 				<p>Para o cálculo do PIB, são utilizados diversos dados; alguns produzidos pelo IBGE, outros
@@ -154,12 +159,12 @@
 
 				<h1>Variação Mensal do IPCA</h1>
 				<p>
-					<canvas id="ipca-variacao" height="300"></canvas>
+					<canvas id="ipca-variacao" style="height:50vh; width:80vw"></canvas>
 				</p>
 
 				<h1>Variação do IPCA - Histórico</h1>
 				<p>
-					<canvas id="ipca-acumulado" height="300"></canvas>
+					<canvas id="ipca-acumulado" style="height:50vh; width:80vw"></canvas>
 				</p>
 
 				<h3>Datasets</h3>
@@ -168,6 +173,12 @@
 				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/ipca/ipca.csv"
 					target="_blank" class="button primary icon solid fa-download" download>CSV</a>
 				<p></p><br>
+
+
+				<p>
+					<a href="/ipca" target="_blank" class="button icon solid fa-search-location">Dados Detalhados</a>
+				</p>
+				<br><br>
 
 				<h3>Fonte Oficial: </h3>
 				<div class="fonte-ipca"></div>
@@ -192,7 +203,7 @@
 				<h2>Variação do INPC - Histórico</h2>
 
 				<p>
-					<canvas id="inpc-variacao" height="300"></canvas>
+					<canvas id="inpc-variacao" style="height:50vh; width:80vw"></canvas>
 				</p>
 
 				<h3>Datasets</h3>
@@ -201,6 +212,11 @@
 				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/inpc/inpc.csv"
 					target="_blank" class="button primary icon solid fa-download" download>CSV</a>
 				<p></p><br>
+
+				<p>
+					<a href="/inpc" target="_blank" class="button icon solid fa-search-location">Dados Detalhados</a>
+				</p>
+				<br><br>
 
 				<h3>Fonte Oficial: </h3>
 				<div class="fonte-inpc"></div>
@@ -224,8 +240,13 @@
 				<h2>Variação do IGP-M - Histórico</h2>
 
 				<p>
-					<canvas id="igpm-variacao" height="300"></canvas>
+					<canvas id="igpm-variacao" style="height:50vh; width:80vw"></canvas>
 				</p>
+
+				<p>
+					<a href="/igpm" target="_blank" class="button icon solid fa-search-location">Dados Detalhados</a>
+				</p>
+				<br><br>
 
 				<h3>Datasets</h3>
 				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/igpm/igpm.json"
@@ -261,7 +282,7 @@
 
 
 				<p>
-					<canvas id="selic-acumulado" height="300"></canvas>
+					<canvas id="selic-acumulado" style="height:50vh; width:80vw"></canvas>
 				</p>
 
 				<h3>Datasets</h3>
@@ -273,7 +294,7 @@
 
 				<h2>Taxa Selic - Variação Mensal</h2>
 				<p>
-					<canvas id="selic-variacao" height="300"></canvas>
+					<canvas id="selic-variacao" style="height:50vh; width:80vw"></canvas>
 				</p>
 
 				<h3>Datasets</h3>
@@ -282,6 +303,11 @@
 				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/selic/selic-variacao-mes.csv"
 					target="_blank" class="button primary icon solid fa-download" download>CSV</a>
 				<p></p><br>
+
+				<p>
+					<a href="/selic" target="_blank" class="button icon solid fa-search-location">Dados Detalhados</a>
+				</p>
+				<br><br>
 
 				<h3>Fonte Oficial: </h3>
 				<div class="fonte-selic"></div>
@@ -309,7 +335,7 @@
 
 				<h2>Coeficiente de Gini - Individual</h2>
 				<p>
-					<canvas id="gini-variacao" height="300"></canvas>
+					<canvas id="gini-variacao" style="height:50vh; width:80vw"></canvas>
 				</p>
 
 				<h3>Datasets</h3>
@@ -317,7 +343,7 @@
 					target="_blank" class="button primary icon solid fa-download" download>JSON</a>
 				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/gini/gini.csv"
 					target="_blank" class="button primary icon solid fa-download" download>CSV</a>
-				<p></p><br>
+				<p></p><br>			
 
 				<h3>Fonte Oficial: </h3>
 				<div class="fonte-gini"></div>
@@ -345,22 +371,22 @@
 
 				<h2>Indice de Desenvolvimento Humano - Geral</h2>
 				<p>
-					<canvas id="idh-variacao" height="300"></canvas>
+					<canvas id="idh-variacao" style="height:50vh; width:80vw"></canvas>
 				</p>
 
 				<h2>Indice de Desenvolvimento Humano - Por Sexo</h2>
 				<p>
-					<canvas id="idh-sexo" height="300"></canvas>
+					<canvas id="idh-sexo" style="height:50vh; width:80vw"></canvas>
 				</p>
 
 				<h2>Expectativa de Vida - Geral</h2>
 				<p>
-					<canvas id="idh-ev" height="300"></canvas>
+					<canvas id="idh-ev" style="height:50vh; width:80vw"></canvas>
 				</p>
 
 				<h2>Expectativa de Vida - Por Sexo</h2>
 				<p>
-					<canvas id="idh-ev-sexo" height="300"></canvas>
+					<canvas id="idh-ev-sexo" style="height:50vh; width:80vw"></canvas>
 				</p>
 				<p>
 					<a href="/idh" target="_blank" class="button icon solid fa-search-location">Dados Detalhados</a>
@@ -381,22 +407,44 @@
 				<div class="atualizacao-idh"></div>
 			</article>
 
-			<!-- About -->
-			<article id="about">
-				<h2 class="major">About</h2>
-				<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-				<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at
-					eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula
-					lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada
-					fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum
-					dolor sit amet.</p>
-			</article>
-
 			<!-- Breve -->
 			<article id="breve">
 				<h2 class="major">Em Breve</h2>
 				<span class="image main"><img src="images/breve.jpeg" alt="" /></span>
 				<p>Indice em Construção</p>
+			</article>
+
+
+
+			<!-- Sobre -->
+			<article id="sobre">
+				<h2 class="major">Sobre</h2>
+				<form method="post" action="#">
+					<div class="fields">
+						<div class="field half">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" />
+						</div>
+						<div class="field half">
+							<label for="email">Email</label>
+							<input type="text" name="email" id="email" />
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="4"></textarea>
+						</div>
+					</div>
+					<ul class="actions">
+						<li><input type="submit" value="Send Message" class="primary" /></li>
+						<li><input type="reset" value="Reset" /></li>
+					</ul>
+				</form>
+				<ul class="icons">
+					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
 			</article>
 
 			<!-- Contact -->
@@ -706,7 +754,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	<script src="/assets/js/selic.js"></script>
 	<script src="/assets/js/gini.js"></script>
 	<script src="/assets/js/idh.js"></script>
-
 
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9GQ3VE9HVC"></script>

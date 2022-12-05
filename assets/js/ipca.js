@@ -11,7 +11,7 @@ $.get(
     var raw = JSON.parse(data);
 
     raw.data.forEach((element) => {
-      console.log(element);
+      
       temp = {
         x: element.mes_ano,
         y: element.variacao_mes,
@@ -100,7 +100,7 @@ $.get(
     var raw = JSON.parse(data);
 
     raw.data.forEach((element) => {
-      console.log(element);
+      
       temp = {
         x: element.mes_ano,
         y: element.acumulado_ano,

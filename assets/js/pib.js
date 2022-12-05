@@ -13,7 +13,7 @@ $.get(
     raw.data.sort((a, b) => a.ano - b.ano);
 
     raw.data.forEach((element) => {
-      console.log(element);
+      
       temp = {
         x: element.ano,
         y: element.valor,
@@ -98,7 +98,7 @@ $.get(
     var raw = JSON.parse(data);
 
     raw.data.forEach((element) => {
-      console.log(element);
+      
       temp = {
         x: element.periodo,
         y: element.valor,
@@ -183,7 +183,7 @@ $.get(
     var raw = JSON.parse(data);
 
     raw.data.forEach((element) => {
-      console.log(element);
+      
       temp = {
         x: element.ano_trimestre,
         y: element.valor,
@@ -206,7 +206,9 @@ $.get(
         ],
       },
       options: {
-        responsive: true,
+        // responsive: true,
+        // aspectRatio: 1.5,
+        // maintainAspectRatio: true,
         scales: {
           x: {
             display: true,
@@ -268,7 +270,7 @@ $.get(
     var raw = JSON.parse(data);
 
     raw.data.forEach((element) => {
-      console.log(element);
+      
       temp = {
         x: element.ano,
         y: element.valor,

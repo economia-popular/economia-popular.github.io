@@ -9,7 +9,7 @@ $.get(
     var raw = JSON.parse(data);
 
     raw.data.forEach((element) => {
-      console.log(element);
+      
       temp = {
         x: element.ano_referencia,
         y: element.valor,

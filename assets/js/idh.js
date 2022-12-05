@@ -13,7 +13,7 @@ $.get(
     var raw = JSON.parse(data);
 
     raw.data.forEach((element) => {
-      console.log(element);
+      
       temp = {
         x: element.ano_referencia,
         y: element.idh,
@@ -98,7 +98,7 @@ $.get(
     const dataset_f = [];
 
     raw.data.forEach((element) => {
-      console.log(element);
+      
 
       if (element.idh_masculino > 0) {
         // Masculino
@@ -199,7 +199,7 @@ $.get(
     const dataset_ev = []
 
     raw.data.forEach((element) => {
-        console.log(element);
+        
         temp = {
           x: element.ano_referencia,
           y: element.expectativa_de_vida,
