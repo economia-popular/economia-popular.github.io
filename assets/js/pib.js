@@ -71,7 +71,7 @@ $.get(
         plugins: {
           title: {
             display: true,
-            text: "PIB - Acumulado de Valor (Trimestral)",
+            text: "PIB - Acumulado de Valor (Anual)",
             color: "#FFFFFF",
             padding: {
               top: 10,
