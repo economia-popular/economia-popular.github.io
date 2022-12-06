@@ -17,6 +17,28 @@ $.get(
       dataset.push(temp);
     });
 
+        // Data Grid
+        var columnDefs = [
+          { headerName: "Período", field: "mes_ano" },
+          { headerName: "Variação", field: "variacao_mes" }
+        ];
+    
+        var gridOptions = {
+          defaultColDef: {
+            flex: 1,
+            sortable: true,
+            filter: true,
+          },
+          columnDefs: columnDefs,
+          rowData: raw.data.reverse(),
+          animateRows: true,
+          accentedSort: true
+        };
+    
+        var eGridDiv = document.querySelector('#igpm-grid');
+    
+        new agGrid.Grid(eGridDiv, gridOptions);
+
     new Chart(igpm_variacao, {
       type: "line",
       data: {
