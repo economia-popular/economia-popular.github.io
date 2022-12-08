@@ -40,7 +40,7 @@ $.get(
     new agGrid.Grid(eGridDiv, gridOptions);
 
     new Chart(gini_variacao, {
-      type: "line",
+      type: "bar",
       data: {
         backgroundColor: "#FFFFFF",
         datasets: [

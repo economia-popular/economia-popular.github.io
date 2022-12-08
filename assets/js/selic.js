@@ -23,7 +23,7 @@ $.get(
       { headerName: "Periodo", field: "periodo" },
       { headerName: "Data Reunião", field: "data_reuniao" },
       { headerName: "Inicio da Vigência", field: "inicio_vigencia" },
-      { headerName: "Valor", field: "valor" },
+      { headerName: "Valor %", field: "valor" },
     ];
 
     var gridOptions = {
