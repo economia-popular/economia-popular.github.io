@@ -64,7 +64,7 @@
 				<h1>Evolução do PIB</h1>
 				<p>A evolução do PIB é acompanhada de forma trimestral. Esse indicador leva em conta o crescimento ou
 					queda do PIB em relação <b>ao mesmo trimestre do ano anterior</b></p>
-					
+
 				<canvas id="pib-variacao" style="height:50vh; width:80vw"></canvas>
 
 				<h3>Datasets</h3>
@@ -79,7 +79,7 @@
 				<p>
 					<canvas id="pib-acumulado" style="height:50vh; width:80vw"></canvas>
 				</p>
-				
+
 				<h3>Datasets</h3>
 				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/pib/pib-acumulado.json"
 					target="_blank" class="button primary icon solid fa-download" download>JSON</a>
@@ -279,9 +279,23 @@
 					serviços que tomam a Selic como báse de preço.</p>
 				<p>O mesmo ocorre quando a inflação está abaixo da meta. A Selic é diminuida para estimular o consumo e
 					contratações de empréstimos de Pessoa Física e Pessoa Jurídica e aquecer a economia. </p>
+
+				<h2>Taxa Selic - Meta</h2>
+				<p>
+					<canvas id="selic-meta" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<div id="selic-meta-grid" style="height:60vh; width:80vw" class="ag-theme-alpine-dark"></div>
+				<br><br>
+
+				<h3>Datasets</h3>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/selic/selic-meta.json"
+					target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/selic/selic-meta.csv"
+					target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+				<p></p><br>
+
 				<h2>Taxa Selic - Acumulada ao Ano</h2>
-
-
 				<p>
 					<canvas id="selic-acumulado" style="height:50vh; width:80vw"></canvas>
 				</p>
@@ -346,7 +360,7 @@
 					target="_blank" class="button primary icon solid fa-download" download>JSON</a>
 				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/gini/gini.csv"
 					target="_blank" class="button primary icon solid fa-download" download>CSV</a>
-				<p></p><br>			
+				<p></p><br>
 
 				<h3>Fonte Oficial: </h3>
 				<div class="fonte-gini"></div>
@@ -402,7 +416,8 @@
 					<canvas id="idh-as-sexo" style="height:50vh; width:80vw"></canvas>
 				</p>
 
-				<div id="idh-grid" style="height:60vh; width:71vw; display: block; box-sizing: inherit" class="ag-theme-alpine-dark grid"></div>
+				<div id="idh-grid" style="height:60vh; width:71vw; display: block; box-sizing: inherit"
+					class="ag-theme-alpine-dark grid"></div>
 				<br>
 				<p>
 					<a href="/idh" target="_blank" class="button icon solid fa-search-location">Dados Detalhados</a>
