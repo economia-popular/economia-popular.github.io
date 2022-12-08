@@ -39,8 +39,8 @@
 				<ul>
 					<li><a href="#gini">Gini</a></li>
 					<li><a href="#idh">IDH</a></li>
+					<li><a href="#social">Sociais</a></li>
 					<li><a href="#breve">Bovespa</a></li>
-					<li><a href="#breve">Sociais</a></li>
 					<li><a href="#breve">Ambientais</a></li>
 				</ul>
 				<!-- <br><br>
@@ -438,6 +438,43 @@
 				<div class="atualizacao-idh"></div>
 			</article>
 
+
+			<!-- GINI -->
+			<article id="social">
+				<h2 class="major">Indicadores Sociais</h2>
+				<h1>Pobreza e Miséria</h1>
+				<h2>Indicadores - Cadastro Único</h2>
+				<p>Indices compilados e baseados através dos dados do <b>Cadastro Único</b> fornecidos através do <b>DadosGov</b> e do portal da <b>Cidadania de Benecifios Populares</b></p>
+				<p>O <b>Cadastro Único</b> se baseia em faixas saláriais para classificar o número de pessoas entre <b>Pobreza</b> e <b>Extrema Pobreza</b></p>
+				<p>
+					<b>Extrema Pobreza:</b> Famílias com renda de até <b>R$ 89,00</b> por pessoa
+					<br> 
+					<b>Pobreza:</b>  Famílias com renda de <b>R$ 89,01</b> até <b> R$ 178,00</b> por pessoa
+				</p>
+				<p>
+					<canvas id="pobreza-variacao" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<p>
+					<canvas id="pobreza-evolucao" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<div id="pobreza-grid" style="height:60vh; width:80vw" class="ag-theme-alpine-dark"></div>
+				<br><br>
+				<h3>Datasets</h3>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/sociais/indices_pobreza_consolidado.json"
+					target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/sociais/indices_pobreza_consolidado.json"
+					target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+				<p></p><br>
+
+				<h3>Fonte Oficial: </h3>
+				<div class="fonte-social"></div>
+				<br><br>
+				<h3>Ultima atualização: </h3>
+				<div class="atualizacao-social"></div>
+			</article>
+
 			<!-- Breve -->
 			<article id="breve">
 				<h2 class="major">Em Breve</h2>
@@ -786,6 +823,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	<script src="/assets/js/selic.js"></script>
 	<script src="/assets/js/gini.js"></script>
 	<script src="/assets/js/idh.js"></script>
+	<script src="/assets/js/pobreza.js"></script>
 
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9GQ3VE9HVC"></script>
