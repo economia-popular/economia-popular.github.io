@@ -5,11 +5,12 @@ $.get(
   "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/igpm/igpm.json",
   function (data, textStatus, jqXHR) {
     const dataset = [];
+    const dataset_acumulado = []
 
     var raw = JSON.parse(data);
 
     raw.data.forEach((element) => {
-      
+
       temp = {
         x: element.mes_ano,
         y: element.variacao_mes,
@@ -17,27 +18,37 @@ $.get(
       dataset.push(temp);
     });
 
-        // Data Grid
-        var columnDefs = [
-          { headerName: "Período", field: "mes_ano" },
-          { headerName: "Variação", field: "variacao_mes" }
-        ];
-    
-        var gridOptions = {
-          defaultColDef: {
-            flex: 1,
-            sortable: true,
-            filter: true,
-          },
-          columnDefs: columnDefs,
-          rowData: raw.data.reverse(),
-          animateRows: true,
-          accentedSort: true
-        };
-    
-        var eGridDiv = document.querySelector('#igpm-grid');
-    
-        new agGrid.Grid(eGridDiv, gridOptions);
+    raw.data.forEach((element) => {
+
+      temp = {
+        x: element.mes_ano,
+        y: element.acumulado_ano,
+      };
+      dataset_acumulado.push(temp);
+    });
+
+    // Data Grid
+    var columnDefs = [
+      { headerName: "Periodo", field: "mes_ano" },
+      { headerName: "Variação", field: "variacao_mes" },
+      { headerName: "Acumulado Ano", field: "acumulado_ano" }
+    ];
+
+    var gridOptions = {
+      defaultColDef: {
+        flex: 1,
+        sortable: true,
+        filter: true,
+      },
+      columnDefs: columnDefs,
+      rowData: raw.data.reverse(),
+      animateRows: true,
+      accentedSort: true
+    };
+
+    var eGridDiv = document.querySelector('#igpm-grid');
+
+    new agGrid.Grid(eGridDiv, gridOptions);
 
     new Chart(igpm_variacao, {
       type: "line",
@@ -49,6 +60,15 @@ $.get(
             borderWidth: 1,
             borderColor: "#FFFFFF",
             backgroundColor: "#FFFFFF",
+            type: "line"
+          },
+          {
+            label: "% acumulo anual",
+            data: dataset_acumulado,
+            borderWidth: 1,
+            borderColor: "#5D6D2F",
+            backgroundColor: "#5D6D2F",
+            type: "bar"
           },
         ],
       },
