@@ -34,7 +34,7 @@ $.get(
                         borderWidth: 1,
                         borderColor: "#5D6D2F",
                         backgroundColor: "#5D6D2F",
-                    },
+                    }
                 ],
             },
             options: {
@@ -133,7 +133,7 @@ $.get(
                         borderWidth: 1,
                         borderColor: "#5D6D2F",
                         backgroundColor: "#5D6D2F",
-                    },
+                    }
                 ],
             },
             options: {
