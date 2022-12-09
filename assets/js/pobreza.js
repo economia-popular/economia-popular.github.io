@@ -91,7 +91,7 @@ $.get(
         },
         scales: {
           x: {
-            display: true,
+            display: true, 
             title: {
               display: true,
             },
@@ -99,10 +99,6 @@ $.get(
               color: "#FFFFFF",
             },
             ticks: {
-              color: "#FFFFFF",
-              callback: function (val, index) {
-                return index % 2 === 0 ? this.getLabelForValue(val) : "";
-              },
               major: {
                 enabled: true,
               },
@@ -124,6 +120,91 @@ $.get(
           title: {
             display: true,
             text: "Quantidade de Brasileiro em Situação de Vulnerabilidade",
+            color: "#FFFFFF",
+          },
+          subtitle: {
+            display: true,
+            color: "#FFFFFF",
+            text: raw.unidade_medida,
+          },
+        },
+      },
+    });
+
+    new Chart(pobreza_variacao, {
+      type: "bar",
+      data: {
+        backgroundColor: "#FFFFFF",
+        datasets: [
+          {
+            label: "Situacão de Pobreza",
+            data: dataset_pobreza,
+            borderWidth: 1,
+            borderColor: "#5D6D2F",
+            backgroundColor: "#5D6D2F",
+          },
+          {
+            label: "Situacão de Extrema Pobreza",
+            data: dataset_extrema,
+            borderWidth: 1,
+            borderColor: "#114247",
+            backgroundColor: "#114247",
+          },
+          {
+            label: "Situacão de Vulnerabilidade",
+            data: dataset_total,
+            borderWidth: 1,
+            borderColor: "#537bc4",
+            backgroundColor: "#537bc4",
+          },
+          {
+            label: "Evolução",
+            data: dataset_total,
+            borderWidth: 1,
+            borderColor: "#FFFFFF",
+            backgroundColor: "#FFFFFF",
+            type: "line",
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        hover: {
+          mode: "index",
+          intersec: false,
+        },
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+            },
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+              major: {
+                enabled: true,
+              },
+            },
+          },
+          y: {
+            display: true,
+            color: "#FFFFFF",
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+            },
+          },
+        },
+        layouts: {},
+        plugins: {
+          title: {
+            display: true,
+            text: "Quantidade de Brasileiro em Situação de Pobreza / Vulnerabilidade",
             color: "#FFFFFF",
           },
           subtitle: {
@@ -183,9 +264,6 @@ $.get(
             },
             ticks: {
               color: "#FFFFFF",
-              callback: function (val, index) {
-                return index % 2 === 0 ? this.getLabelForValue(val) : "";
-              },
               major: {
                 enabled: true,
               },
@@ -218,93 +296,6 @@ $.get(
       },
     });
 
-    new Chart(pobreza_variacao, {
-      type: "bar",
-      data: {
-        backgroundColor: "#FFFFFF",
-        datasets: [
-          {
-            label: "Situacão de Pobreza",
-            data: dataset_pobreza,
-            borderWidth: 1,
-            borderColor: "#5D6D2F",
-            backgroundColor: "#5D6D2F",
-          },
-          {
-            label: "Situacão de Extrema Pobreza",
-            data: dataset_extrema,
-            borderWidth: 1,
-            borderColor: "#114247",
-            backgroundColor: "#114247",
-          },
-          {
-            label: "Situacão de Vulnerabilidade",
-            data: dataset_total,
-            borderWidth: 1,
-            borderColor: "#537bc4",
-            backgroundColor: "#537bc4",
-          },
-          {
-            label: "Situacão de Vulnerabilidade",
-            data: dataset_total,
-            borderWidth: 1,
-            borderColor: "#FFFFFF",
-            backgroundColor: "#FFFFFF",
-            type: "line",
-          },
-        ],
-      },
-      options: {
-        responsive: true,
-        hover: {
-          mode: "index",
-          intersec: false,
-        },
-        scales: {
-          x: {
-            display: true,
-            title: {
-              display: true,
-            },
-            grid: {
-              color: "#FFFFFF",
-            },
-            ticks: {
-              color: "#FFFFFF",
-              callback: function (val, index) {
-                return index % 2 === 0 ? this.getLabelForValue(val) : "";
-              },
-              major: {
-                enabled: true,
-              },
-            },
-          },
-          y: {
-            display: true,
-            color: "#FFFFFF",
-            grid: {
-              color: "#FFFFFF",
-            },
-            ticks: {
-              color: "#FFFFFF",
-            },
-          },
-        },
-        layouts: {},
-        plugins: {
-          title: {
-            display: true,
-            text: "Quantidade de Brasileiro em Situação de Pobreza / Vulnerabilidade",
-            color: "#FFFFFF",
-          },
-          subtitle: {
-            display: true,
-            color: "#FFFFFF",
-            text: raw.unidade_medida,
-          },
-        },
-      },
-    });
 
     // Fonte Social
     $("div.fonte-social").text(raw.fonte);
@@ -394,14 +385,14 @@ $.get(
           {
             label: "Situacão de Pobreza",
             data: dataset_pobreza,
-            borderColor: "#114247",
+            borderColor: "#5D6D2F",
             backgroundColor: "#5D6D2F",
             fill: true,
           },
           {
             label: "Situacão de Extrema Pobreza",
             data: dataset_extrema,
-            borderColor: "#5D6D2F",
+            borderColor: "#114247",
             backgroundColor: "#114247",
             fill: true,
           },
@@ -424,9 +415,6 @@ $.get(
             },
             ticks: {
               color: "#FFFFFF",
-              callback: function (val, index) {
-                return index % 2 === 0 ? this.getLabelForValue(val) : "";
-              },
               major: {
                 enabled: true,
               },
