@@ -2,19 +2,26 @@ const populacao_estimativa = document.getElementById("populacao-estimativa");
 const pobreza_variacao = document.getElementById("pobreza-variacao");
 const pobreza_evolucao = document.getElementById("pobreza-evolucao");
 const pobreza_porcentagem = document.getElementById("pobreza-porcentagem");
+const pobreza_familia = document.getElementById("pobreza-familia");
 
 // GINI - Variação
 $.get(
   "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/sociais/indices_pobreza_consolidado_anual.json",
   function (data, textStatus, jqXHR) {
+    const dataset_populacao = [];
+
     const dataset_pobreza = [];
     const dataset_extrema = [];
     const dataset_total = [];
-    const dataset_populacao = [];
-
+    
     const dataset_pobreza_percent = [];
     const dataset_extrema_percent = [];
     const dataset_total_percent = [];
+
+    const dataset_familias_pobreza = [];
+    const dataset_familias_extrema = [];
+    const dataset_familias_total = [];
+    
 
     var raw = JSON.parse(data);
 
@@ -31,9 +38,24 @@ $.get(
         x: element.referencia,
         y: element.porcentagem_vulnerabilidade * 100,
       };
+      temp_familias_pobreza = {
+        x: element.referencia,
+        y: element.familias_pobreza
+      }
+      temp_familias_extrema = {
+        x: element.referencia,
+        y: element.familias_extrema_pobreza
+      }
+      temp_familias_vunerabilidade = {
+        x: element.referencia,
+        y: element.familias_vulnerabilidade
+      }      
       dataset_pobreza_percent.push(temp_pobreza);
       dataset_extrema_percent.push(temp_extrema);
       dataset_total_percent.push(temp_vulnerabilidade);
+      dataset_familias_pobreza.push(temp_familias_pobreza);
+      dataset_familias_extrema.push(temp_familias_extrema);
+      dataset_familias_total.push(temp_familias_vunerabilidade)
     });
 
     raw.data.forEach((element) => {
@@ -293,6 +315,91 @@ $.get(
             display: true,
             color: "#FFFFFF",
             text: raw.unidade_medida,
+          },
+        },
+      },
+    });
+
+    new Chart(pobreza_familia, {
+      type: "bar",
+      data: {
+        backgroundColor: "#FFFFFF",
+        datasets: [
+          {
+            label: "Familias - Situacão de Pobreza",
+            data: dataset_familias_pobreza,
+            borderWidth: 1,
+            borderColor: "#5D6D2F",
+            backgroundColor: "#5D6D2F",
+          },
+          {
+            label: "Familias - Situacão de Extrema Pobreza",
+            data: dataset_familias_extrema,
+            borderWidth: 1,
+            borderColor: "#114247",
+            backgroundColor: "#114247",
+          },
+          {
+            label: "Familias - Situacão de Vulnerabilidade",
+            data: dataset_familias_total,
+            borderWidth: 1,
+            borderColor: "#537bc4",
+            backgroundColor: "#537bc4",
+          },
+          {
+            label: "Evolução",
+            data: dataset_familias_total,
+            borderWidth: 1,
+            borderColor: "#FFFFFF",
+            backgroundColor: "#FFFFFF",
+            type: "line",
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        hover: {
+          mode: "index",
+          intersec: false,
+        },
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+            },
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+              major: {
+                enabled: true,
+              },
+            },
+          },
+          y: {
+            display: true,
+            color: "#FFFFFF",
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+            },
+          },
+        },
+        layouts: {},
+        plugins: {
+          title: {
+            display: true,
+            text: "Familias em Situação de Pobreza / Vulnerabilidade",
+            color: "#FFFFFF",
+          },
+          subtitle: {
+            display: true,
+            color: "#FFFFFF",
+            text: "Numero de Familias",
           },
         },
       },
