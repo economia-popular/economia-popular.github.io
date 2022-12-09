@@ -68,6 +68,8 @@ $.get(
       dataset_total.push(temp);
     });
 
+    // console.log(dataset_extrema, dataset_pobreza, dataset_total)
+
     new Chart(populacao_estimativa, {
       type: "line",
       data: {
