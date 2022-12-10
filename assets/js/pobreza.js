@@ -389,21 +389,21 @@ $.get(
         backgroundColor: "#FFFFFF",
         datasets: [
           {
-            label: "Familias Indigenas - Situacão de Pobreza",
+            label: "Familias - Situacão de Pobreza",
             data: dataset_familias_pobreza,
             borderWidth: 1,
             borderColor: "#5D6D2F",
             backgroundColor: "#5D6D2F",
           },
           {
-            label: "Familias Indigenas - Situacão de Extrema Pobreza",
+            label: "Familias - Situacão de Extrema Pobreza",
             data: dataset_familias_extrema,
             borderWidth: 1,
             borderColor: "#114247",
             backgroundColor: "#114247",
           },
           {
-            label: "Familias Indigenas - Situacão de Vulnerabilidade",
+            label: "Familias - Situacão de Vulnerabilidade",
             data: dataset_familias_total,
             borderWidth: 1,
             borderColor: "#537bc4",
