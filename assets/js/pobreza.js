@@ -3,6 +3,9 @@ const pobreza_variacao = document.getElementById("pobreza-variacao");
 const pobreza_evolucao = document.getElementById("pobreza-evolucao");
 const pobreza_porcentagem = document.getElementById("pobreza-porcentagem");
 const pobreza_familia = document.getElementById("pobreza-familia");
+const pobreza_indigena = document.getElementById("pobreza-indigena");
+const pobreza_quilombolas = document.getElementById("pobreza-quilombolas");
+const pobreza_ciganos = document.getElementById("pobreza-ciganos");
 
 // GINI - Variação
 $.get(
@@ -22,6 +25,18 @@ $.get(
     const dataset_familias_extrema = [];
     const dataset_familias_total = [];
     
+
+    const dataset_indigenas_pobreza = [];
+    const dataset_indigenas_extrema = [];
+    const dataset_indigenas_total = [];
+
+    const dataset_quilombolas_pobreza = [];
+    const dataset_quilombolas_extrema = [];
+    const dataset_quilombolas_total = [];
+
+    const dataset_ciganos_pobreza = [];
+    const dataset_ciganos_extrema = [];
+    const dataset_ciganos_total = [];
 
     var raw = JSON.parse(data);
 
@@ -49,13 +64,61 @@ $.get(
       temp_familias_vunerabilidade = {
         x: element.referencia,
         y: element.familias_vulnerabilidade
-      }      
+      }
+      temp_indigenas_pobreza = {
+        x: element.referencia,
+        y: element.indigenas_pobreza
+      }     
+      temp_indigenas_extrema = {
+        x: element.referencia,
+        y: element.indigenas_extrema_pobreza
+      }
+      temp_indigenas_vulnerabilidade = {
+        x: element.referencia,
+        y: element.indigenas_vulnerabilidade
+      }
+      temp_quilombolas_pobreza = {
+        x: element.referencia,
+        y: element.quilombolas_pobreza
+      }     
+      temp_quilombolas_extrema = {
+        x: element.referencia,
+        y: element.quilombolas_extrema_pobreza
+      }
+      temp_quilombolas_vulnerabilidade = {
+        x: element.referencia,
+        y: element.quilombolas_vulnerabilidade
+      }
+      temp_ciganos_pobreza = {
+        x: element.referencia,
+        y: element.ciganos_pobreza
+      }     
+      temp_ciganos_extrema = {
+        x: element.referencia,
+        y: element.ciganos_extrema_pobreza
+      }
+      temp_ciganos_vulnerabilidade = {
+        x: element.referencia,
+        y: element.ciganos_vulnerabilidade
+      }  
       dataset_pobreza_percent.push(temp_pobreza);
       dataset_extrema_percent.push(temp_extrema);
       dataset_total_percent.push(temp_vulnerabilidade);
       dataset_familias_pobreza.push(temp_familias_pobreza);
       dataset_familias_extrema.push(temp_familias_extrema);
       dataset_familias_total.push(temp_familias_vunerabilidade)
+
+      dataset_indigenas_pobreza.push(temp_indigenas_pobreza);
+      dataset_indigenas_extrema.push(temp_indigenas_extrema);
+      dataset_indigenas_total.push(temp_indigenas_vulnerabilidade)
+
+      dataset_quilombolas_pobreza.push(temp_quilombolas_pobreza);
+      dataset_quilombolas_extrema.push(temp_quilombolas_extrema);
+      dataset_quilombolas_total.push(temp_quilombolas_vulnerabilidade)
+
+      dataset_ciganos_pobreza.push(temp_ciganos_pobreza);
+      dataset_ciganos_extrema.push(temp_ciganos_extrema);
+      dataset_ciganos_total.push(temp_ciganos_vulnerabilidade)
     });
 
     raw.data.forEach((element) => {
@@ -326,21 +389,21 @@ $.get(
         backgroundColor: "#FFFFFF",
         datasets: [
           {
-            label: "Familias - Situacão de Pobreza",
+            label: "Familias Indigenas - Situacão de Pobreza",
             data: dataset_familias_pobreza,
             borderWidth: 1,
             borderColor: "#5D6D2F",
             backgroundColor: "#5D6D2F",
           },
           {
-            label: "Familias - Situacão de Extrema Pobreza",
+            label: "Familias Indigenas - Situacão de Extrema Pobreza",
             data: dataset_familias_extrema,
             borderWidth: 1,
             borderColor: "#114247",
             backgroundColor: "#114247",
           },
           {
-            label: "Familias - Situacão de Vulnerabilidade",
+            label: "Familias Indigenas - Situacão de Vulnerabilidade",
             data: dataset_familias_total,
             borderWidth: 1,
             borderColor: "#537bc4",
@@ -405,10 +468,260 @@ $.get(
       },
     });
 
+    new Chart(pobreza_indigena, {
+      type: "bar",
+      data: {
+        backgroundColor: "#FFFFFF",
+        datasets: [
+          {
+            label: "Familias Indigenas - Situacão de Pobreza",
+            data: dataset_indigenas_pobreza,
+            borderWidth: 1,
+            borderColor: "#5D6D2F",
+            backgroundColor: "#5D6D2F",
+          },
+          {
+            label: "Familias Indigenas - Situacão de Extrema Pobreza",
+            data: dataset_indigenas_extrema,
+            borderWidth: 1,
+            borderColor: "#114247",
+            backgroundColor: "#114247",
+          },
+          {
+            label: "Familias Indigenas - Situacão de Vulnerabilidade",
+            data: dataset_indigenas_total,
+            borderWidth: 1,
+            borderColor: "#537bc4",
+            backgroundColor: "#537bc4",
+          },
+          {
+            label: "Evolução",
+            data: dataset_indigenas_total,
+            borderWidth: 1,
+            borderColor: "#FFFFFF",
+            backgroundColor: "#FFFFFF",
+            type: "line",
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        hover: {
+          mode: "index",
+          intersec: false,
+        },
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+            },
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+              major: {
+                enabled: true,
+              },
+            },
+          },
+          y: {
+            display: true,
+            color: "#FFFFFF",
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+            },
+          },
+        },
+        layouts: {},
+        plugins: {
+          title: {
+            display: true,
+            text: "Familias Indigenas em Situação de Pobreza / Vulnerabilidade",
+            color: "#FFFFFF",
+          },
+          subtitle: {
+            display: true,
+            color: "#FFFFFF",
+            text: "Numero de Familias Indigenas",
+          },
+        },
+      },
+    });
 
-    // Fonte Social
-    $("div.fonte-social").text(raw.fonte);
-    $("div.atualizacao-social").text(raw.data_atualizacao);
+    new Chart(pobreza_quilombolas, {
+      type: "bar",
+      data: {
+        backgroundColor: "#FFFFFF",
+        datasets: [
+          {
+            label: "Familias Quilombolas - Situacão de Pobreza",
+            data: dataset_quilombolas_pobreza,
+            borderWidth: 1,
+            borderColor: "#5D6D2F",
+            backgroundColor: "#5D6D2F",
+          },
+          {
+            label: "Familias Quilombolas - Situacão de Extrema Pobreza",
+            data: dataset_quilombolas_extrema,
+            borderWidth: 1,
+            borderColor: "#114247",
+            backgroundColor: "#114247",
+          },
+          {
+            label: "Familias Quilombolas - Situacão de Vulnerabilidade",
+            data: dataset_quilombolas_total,
+            borderWidth: 1,
+            borderColor: "#537bc4",
+            backgroundColor: "#537bc4",
+          },
+          {
+            label: "Evolução",
+            data: dataset_quilombolas_total,
+            borderWidth: 1,
+            borderColor: "#FFFFFF",
+            backgroundColor: "#FFFFFF",
+            type: "line",
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        hover: {
+          mode: "index",
+          intersec: false,
+        },
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+            },
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+              major: {
+                enabled: true,
+              },
+            },
+          },
+          y: {
+            display: true,
+            color: "#FFFFFF",
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+            },
+          },
+        },
+        layouts: {},
+        plugins: {
+          title: {
+            display: true,
+            text: "Familias Quilombolas em Situação de Pobreza / Vulnerabilidade",
+            color: "#FFFFFF",
+          },
+          subtitle: {
+            display: true,
+            color: "#FFFFFF",
+            text: "Numero de Familias Quilombolas",
+          },
+        },
+      },
+    });
+
+    new Chart(pobreza_ciganos, {
+      type: "bar",
+      data: {
+        backgroundColor: "#FFFFFF",
+        datasets: [
+          {
+            label: "Familias Ciganas - Situacão de Pobreza",
+            data: dataset_ciganos_pobreza,
+            borderWidth: 1,
+            borderColor: "#5D6D2F",
+            backgroundColor: "#5D6D2F",
+          },
+          {
+            label: "Familias Ciganas - Situacão de Extrema Pobreza",
+            data: dataset_ciganos_extrema,
+            borderWidth: 1,
+            borderColor: "#114247",
+            backgroundColor: "#114247",
+          },
+          {
+            label: "Familias Ciganas - Situacão de Vulnerabilidade",
+            data: dataset_ciganos_total,
+            borderWidth: 1,
+            borderColor: "#537bc4",
+            backgroundColor: "#537bc4",
+          },
+          {
+            label: "Evolução",
+            data: dataset_ciganos_total,
+            borderWidth: 1,
+            borderColor: "#FFFFFF",
+            backgroundColor: "#FFFFFF",
+            type: "line",
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        hover: {
+          mode: "index",
+          intersec: false,
+        },
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+            },
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+              major: {
+                enabled: true,
+              },
+            },
+          },
+          y: {
+            display: true,
+            color: "#FFFFFF",
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+            },
+          },
+        },
+        layouts: {},
+        plugins: {
+          title: {
+            display: true,
+            text: "Familias Ciganas em Situação de Pobreza / Vulnerabilidade",
+            color: "#FFFFFF",
+          },
+          subtitle: {
+            display: true,
+            color: "#FFFFFF",
+            text: "Numero de Familias Ciganas",
+          },
+        },
+      },
+    });
   }
 );
 
