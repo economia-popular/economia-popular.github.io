@@ -69,6 +69,7 @@ tr,
 th,
 td,
 article,
+panel,
 aside,
 canvas,
 details,
@@ -97,6 +98,7 @@ video {
 }
 
 article,
+panel,
 aside,
 details,
 figcaption,
@@ -1291,6 +1293,17 @@ body.is-article-visible #bg:after {
 	filter: blur(0.2rem);
 }
 
+body.is-panel-visible #bg:after {
+	-moz-transform: scale(1.0825);
+	-webkit-transform: scale(1.0825);
+	-ms-transform: scale(1.0825);
+	transform: scale(1.0825);
+	-moz-filter: blur(0.2rem);
+	-webkit-filter: blur(0.2rem);
+	-ms-filter: blur(0.2rem);
+	filter: blur(0.2rem);
+}
+
 body.is-preload #bg:before {
 	background-color: #000000;
 }
@@ -1666,7 +1679,34 @@ body.is-preload #header .content .inner {
 	opacity: 0;
 }
 
+
+#panel {
+	-moz-transform: translateY(0.25rem);
+	-webkit-transform: translateY(0.25rem);
+	-ms-transform: translateY(0.25rem);
+	transform: translateY(0.25rem);
+	-moz-transition: opacity 0.325s ease-in-out, -moz-transform 0.325s ease-in-out;
+	-webkit-transition: opacity 0.325s ease-in-out, -webkit-transform 0.325s ease-in-out;
+	-ms-transition: opacity 0.325s ease-in-out, -ms-transform 0.325s ease-in-out;
+	transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
+	padding: 4.5rem 2.5rem 1.5rem 2.5rem;
+	position: relative;
+	width: 80rem;
+	max-width: 100%;
+	background-color: rgba(27, 31, 34, 0.85);
+	border-radius: 4px;
+	opacity: 1;
+}
+
 #main article.active {
+	-moz-transform: translateY(0);
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+	opacity: 1;
+}
+
+#main article.fixed {
 	-moz-transform: translateY(0);
 	-webkit-transform: translateY(0);
 	-ms-transform: translateY(0);
