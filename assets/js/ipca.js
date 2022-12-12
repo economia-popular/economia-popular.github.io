@@ -11,8 +11,6 @@ $.get(
 
     var raw = JSON.parse(data);
 
-    console.log(raw.data)
-
     raw.data.forEach((element) => {
       
       temp = {
