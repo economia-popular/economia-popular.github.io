@@ -179,6 +179,22 @@
 
 				<div id="ipca-grid" style="height:60vh; width:80vw" class="ag-theme-alpine-dark"></div>
 				<br><br>
+
+
+				<h1>IPCA15</h1>
+				<p>O IPCA15 é uma prévia do IPCA. <b>Índice Nacional de Preços ao Consumidor Amplo 15 – IPCA-15</b> difere do <b> Índice Nacional de Preços ao Consumidor Amplo – IPCA </b>, apenas no período de coleta que abrange, em geral, <b>do dia 16 do mês anterior ao 15 do mês de referência</b> </p>
+
+				<h2>Variação Mensal do IPCA15</h2>
+				<p>
+					<canvas id="ipca15-variacao" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<h2>Variação do IPCA15 - Acumulado</h2>
+				<p>
+					<canvas id="ipca15-acumulado" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<br><br>
 				<h3>Datasets</h3>
 				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/inflacao/ipca.json"
 					target="_blank" class="button primary icon solid fa-download" download>JSON</a>
@@ -531,6 +547,41 @@
 				<a href="https://www.kaggle.com/datasets/fidelissauro/indices-pobreza-brasil"
 					target="_blank" class="button primary icon solid fa-download" download>Kaggle</a>
 				<p></p><br>
+
+				<h2>Auxilio Brasil - Cadastro Único</h2>
+				<p>
+					O Auxílio Brasil integra em apenas um programa várias políticas públicas de assistência social, saúde, educação, emprego e renda. O novo programa social de transferência direta e indireta de renda é destinado às famílias em situação de pobreza e de extrema pobreza em todo o país. Além de garantir uma renda básica a essas famílias, o programa busca simplificar a cesta de benefícios e estimular a emancipação dessas famílias para que alcancem autonomia e superem situações de vulnerabilidade social.
+				</p>
+				<p>
+					O Auxílio Brasil é coordenado pelo <b>Ministério da Cidadania</b>, responsável por gerenciar os benefícios do programa e o envio de recursos para pagamento.
+				</p>
+				
+				<p>
+					<canvas id="auxilio-brasil-variacao" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<p>
+					<canvas id="auxilio-brasil-cobertura" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<p>
+					<canvas id="auxilio-brasil-valor" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<p>
+					<canvas id="auxilio-brasil-valor-total" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+
+				<div id="auxilio-brasil-grid" style="height:60vh; width:80vw" class="ag-theme-alpine-dark"></div>
+				<br><br>
+				<h3>Datasets</h3>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/sociais/auxilio_brasil_consolido.json"
+					target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/sociais/auxilio_brasil_consolido.csv"
+					target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+				<p></p><br>
+
 
 				<h3>Fonte Oficial: </h3>
 				<div class="fonte-social"></div>
@@ -890,7 +941,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	<script src="/assets/js/gini.js"></script>
 	<script src="/assets/js/idh.js"></script>
 	<script src="/assets/js/pobreza.js"></script>
-
+	<script src="/assets/js/auxilio-brasil.js"></script>
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9GQ3VE9HVC"></script>
 	<script>
