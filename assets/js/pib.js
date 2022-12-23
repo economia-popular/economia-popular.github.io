@@ -5,7 +5,7 @@ const pib_acumulado_anual = document.getElementById("pib-acumulado-anual");
 
 // PIB - Anual
 $.get(
-  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/pib/pib-acumulado-ano.json",
+  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/pib/pib-acumulado-ano.json",
   function (data, textStatus, jqXHR) {
     const dataset = [];
     var raw = JSON.parse(data);
@@ -88,7 +88,7 @@ $.get(
 
 // PIB - Acumulado
 $.get(
-  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/pib/pib-acumulado.json",
+  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/pib/pib-acumulado.json",
   function (data, textStatus, jqXHR) {
     const dataset = [];
 
@@ -170,7 +170,7 @@ $.get(
 
 // PIB - Variação
 $.get(
-  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/pib/pib-variacao.json",
+  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/pib/pib-variacao.json",
   function (data, textStatus, jqXHR) {
     const dataset = [];
 
@@ -254,7 +254,7 @@ $.get(
 
 // PIB - Per Capta
 $.get(
-  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/pib/pib-per-capta.json",
+  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/pib/pib-per-capta.json",
   function (data, textStatus, jqXHR) {
     const dataset = [];
 
