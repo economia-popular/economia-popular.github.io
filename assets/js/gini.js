@@ -2,7 +2,7 @@ const gini_variacao = document.getElementById("gini-variacao");
 
 // GINI - Variação
 $.get(
-  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/gini/gini.json",
+  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/gini/gini.json",
   function (data, textStatus, jqXHR) {
     const dataset = [];
 

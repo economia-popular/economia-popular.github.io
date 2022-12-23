@@ -8,7 +8,7 @@ const idh_as_sexo = document.getElementById("idh-as-sexo");
 
 // IDH
 $.get(
-    "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/idh/idh.json",
+    "https://economia-popular-delivery-content-indices.s3.amazonaws.com/idh/idh.json",
     function (data, textStatus, jqXHR) {
         const dataset = [];
 

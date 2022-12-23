@@ -67,7 +67,7 @@ $.get(
         datasets: [
           {
             label: "% em relação ao mês anterior",
-            data: dataset.slice(-120), // Ultimos 10 anos
+            data: dataset,
             borderWidth: 1,
             borderColor: "#FFFFFF",
             backgroundColor: "#FFFFFF",

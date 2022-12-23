@@ -4,7 +4,7 @@ const inpc_acumulado = document.getElementById("inpc-acumulado");
 
 // INPC - Variação
 $.get(
-  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/inflacao/inflacao.json",
+  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/inflacao/inflacao.json",
   function (data, textStatus, jqXHR) {
     const dataset = [];
     const dataset_acumulado = [];

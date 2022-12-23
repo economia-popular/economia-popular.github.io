@@ -9,7 +9,7 @@ const pobreza_ciganos = document.getElementById("pobreza-ciganos");
 
 // GINI - Variação
 $.get(
-  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/sociais/indices_pobreza_consolidado_anual.json",
+  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/sociais/indices_pobreza_consolidado_anual.json",
   function (data, textStatus, jqXHR) {
     const dataset_populacao = [];
 
@@ -727,7 +727,7 @@ $.get(
 
 // Pobreza
 $.get(
-  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/sociais/indices_pobreza_consolidado.json",
+  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/sociais/indices_pobreza_consolidado.json",
   function (data, textStatus, jqXHR) {
     const dataset_pobreza = [];
     const dataset_extrema = [];

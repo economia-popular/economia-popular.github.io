@@ -10,7 +10,7 @@ const auxilio_brasil_valor_total = document.getElementById(
 );
 
 $.get(
-  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/sociais/auxilio_brasil_consolido.json",
+  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/sociais/auxilio_brasil_consolido.json",
   function (data, textStatus, jqXHR) {
     const dataset = [];
     const dataset_familias = [];
@@ -219,7 +219,7 @@ $.get(
 
 
 $.get(
-    "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/sociais/auxilio_brasil.json",
+    "https://economia-popular-delivery-content-indices.s3.amazonaws.com/sociais/auxilio_brasil.json",
     function (data, textStatus, jqXHR) {
 
       const dataset_valor = [];
