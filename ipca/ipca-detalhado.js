@@ -6,7 +6,7 @@ const ipca15_acumulado = document.getElementById("ipca15-acumulado");
 
 // IPCA - Variação
 $.get(
-  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/inflacao/inflacao.json",
+  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/inflacao/inflacao.json",
   function (data, textStatus, jqXHR) {
     const dataset = [];
     const dataset_acumulado = []
@@ -67,7 +67,7 @@ $.get(
         datasets: [
           {
             label: "% em relação ao mês anterior",
-            data: dataset, // Ultimos 10 anos
+            data: dataset.slice(-120), // Ultimos 10 anos
             borderWidth: 1,
             borderColor: "#FFFFFF",
             backgroundColor: "#FFFFFF",
@@ -126,20 +126,21 @@ $.get(
 
 
     new Chart(ipca_acumulado, {
-      type: "line",
+      type: "bar",
       data: {
         backgroundColor: "#FFFFFF",
         datasets: [
           {
             label: "% acumulo anual",
-            data: dataset_acumulado, // Ultimos 10 anos
+            data: dataset_acumulado,
             borderWidth: 1,
             borderColor: "#5D6D2F",
             backgroundColor: "#5D6D2F",
           },
           {
             label: "% acumulado 12 meses",
-            data: dataset_12_meses, // Ultimos 10 anos
+            type: "line",
+            data: dataset_12_meses,
             borderWidth: 1,
             borderColor: "#114247",
             backgroundColor: "#114247",
@@ -201,67 +202,10 @@ $.get(
   }
 );
 
-//IPCA - Acumulado
-$.get(
-  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/ipca/ipca.json",
-  function (data, textStatus, jqXHR) {
-    const dataset = [];
-
-    var raw = JSON.parse(data);
-
-    raw.data.forEach((element) => {
-      
-      temp = {
-        x: element.mes_ano,
-        y: element.acumulado_ano,
-      };
-      dataset.push(temp);
-    });
-
-    new Chart(ipca_acumulado, {
-      type: "bar",
-      data: {
-        backgroundColor: "#FFFFFF",
-        datasets: [
-          {
-            label: "IPCA Acumulado no ano %",
-            data: dataset,
-            borderWidth: 1,
-            borderColor: "#FFFFFF",
-            backgroundColor: "#FFFFFF",
-          },
-        ],
-      },
-      options: {
-        responsive: true,
-        scales: {},
-        layouts: {},
-        plugins: {
-          title: {
-            display: true,
-            text: "Acumulo Anual do IPCA",
-            color: "#FFFFFF",
-            padding: {
-              top: 10,
-              bottom: 30,
-            },
-          },
-          subtitle: {
-            display: true,
-            color: "#FFFFFF",
-            text: raw.unidade_medida,
-          },
-        },
-      },
-    });
-  }
-);
-
-
 // IPCA15
 
 $.get(
-  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/inflacao/ipca15.json",
+  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/inflacao/inflacao.json",
   function (data, textStatus, jqXHR) {
     const dataset = [];
     const dataset_acumulado = []
@@ -273,17 +217,17 @@ $.get(
       
       temp = {
         x: element.referencia,
-        y: element.variacao,
+        y: element.ipca15_variacao,
       };
 
       temp_ano = {
         x: element.referencia,
-        y: element.acumulado_ano,
+        y: element.ipca15_acumulado_ano,
       };
 
       temp_12_meses = {
         x: element.referencia,
-        y: element.acumulado_doze_meses,
+        y: element.ipca15_acumulado_doze_meses,
       };
 
       dataset.push(temp);
@@ -311,8 +255,6 @@ $.get(
       accentedSort: true
     };
 
-    // var eGridDiv = document.querySelector('#ipca15-grid');
-
     // new agGrid.Grid(eGridDiv, gridOptions);
 
     new Chart(ipca15_variacao, {
@@ -322,7 +264,7 @@ $.get(
         datasets: [
           {
             label: "% em relação ao mês anterior",
-            data: dataset.slice(-120), // Ultimos 10 anos
+            data: dataset,
             borderWidth: 1,
             borderColor: "#FFFFFF",
             backgroundColor: "#FFFFFF",
@@ -381,20 +323,21 @@ $.get(
 
 
     new Chart(ipca15_acumulado, {
-      type: "line",
+      type: "bar",
       data: {
         backgroundColor: "#FFFFFF",
         datasets: [
           {
             label: "% acumulo anual",
-            data: dataset_acumulado, // Ultimos 10 anos
+            data: dataset_acumulado,
             borderWidth: 1,
             borderColor: "#5D6D2F",
             backgroundColor: "#5D6D2F",
           },
           {
             label: "% acumulado 12 meses",
-            data: dataset_12_meses, // Ultimos 10 anos
+            data: dataset_12_meses,
+            type: "line",
             borderWidth: 1,
             borderColor: "#114247",
             backgroundColor: "#114247",
@@ -434,7 +377,7 @@ $.get(
         plugins: {
           title: {
             display: true,
-            text: "Acumulado IPCA %",
+            text: "Acumulado IPCA15 %",
             color: "#FFFFFF",
             padding: {
               top: 10,

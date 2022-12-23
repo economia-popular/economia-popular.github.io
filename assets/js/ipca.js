@@ -6,7 +6,7 @@ const ipca15_acumulado = document.getElementById("ipca15-acumulado");
 
 // IPCA - Variação
 $.get(
-  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/inflacao/inflacao.json",
+  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/inflacao/inflacao.json",
   function (data, textStatus, jqXHR) {
     const dataset = [];
     const dataset_acumulado = []
@@ -126,7 +126,7 @@ $.get(
 
 
     new Chart(ipca_acumulado, {
-      type: "line",
+      type: "bar",
       data: {
         backgroundColor: "#FFFFFF",
         datasets: [
@@ -139,6 +139,7 @@ $.get(
           },
           {
             label: "% acumulado 12 meses",
+            type: "line",
             data: dataset_12_meses.slice(-120), // Ultimos 10 anos
             borderWidth: 1,
             borderColor: "#114247",
@@ -204,7 +205,7 @@ $.get(
 // IPCA15
 
 $.get(
-  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/inflacao/ipca15.json",
+  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/inflacao/inflacao.json",
   function (data, textStatus, jqXHR) {
     const dataset = [];
     const dataset_acumulado = []
@@ -216,17 +217,17 @@ $.get(
       
       temp = {
         x: element.referencia,
-        y: element.variacao,
+        y: element.ipca15_variacao,
       };
 
       temp_ano = {
         x: element.referencia,
-        y: element.acumulado_ano,
+        y: element.ipca15_acumulado_ano,
       };
 
       temp_12_meses = {
         x: element.referencia,
-        y: element.acumulado_doze_meses,
+        y: element.ipca15_acumulado_doze_meses,
       };
 
       dataset.push(temp);
@@ -253,8 +254,6 @@ $.get(
       animateRows: true,
       accentedSort: true
     };
-
-    // var eGridDiv = document.querySelector('#ipca15-grid');
 
     // new agGrid.Grid(eGridDiv, gridOptions);
 
@@ -324,7 +323,7 @@ $.get(
 
 
     new Chart(ipca15_acumulado, {
-      type: "line",
+      type: "bar",
       data: {
         backgroundColor: "#FFFFFF",
         datasets: [
@@ -338,6 +337,7 @@ $.get(
           {
             label: "% acumulado 12 meses",
             data: dataset_12_meses.slice(-120), // Ultimos 10 anos
+            type: "line",
             borderWidth: 1,
             borderColor: "#114247",
             backgroundColor: "#114247",
@@ -377,7 +377,7 @@ $.get(
         plugins: {
           title: {
             display: true,
-            text: "Acumulado IPCA %",
+            text: "Acumulado IPCA15 %",
             color: "#FFFFFF",
             padding: {
               top: 10,
