@@ -50,7 +50,7 @@
 					<li><a href="#gini">Gini</a></li>
 					<li><a href="#idh">IDH</a></li>
 					<li><a href="#social">Sociais</a></li>
-					<li><a href="#breve">Bovespa</a></li>
+					<li><a href="#incc">INCC</a></li>
 					<li><a href="#breve">Ambientais</a></li>
 				</ul>
 				<!-- <br><br>
@@ -590,6 +590,57 @@
 				<div class="atualizacao-social"></div>
 			</article>
 
+			
+			<!-- INCC -->
+			<article id="incc">
+				<h2 class="major">INCC</h2>
+				<h3>Índice Nacional de Custo da Construção</h3>
+				<p>
+					<b>Índice Nacional de Custo da Construção</b> foi o primeiro índice desenvolvido para monitorar a evolução dos preços de materiais, serviços e mão-de-obra destinados a construção de residências no Brasil. 
+				</p>
+				<p>
+					Além de se um dos índices componentes do Índice Geral de Preços (IGP) do FGV IBRE, o INCC continua sendo, mais de 70 anos depois, um dos mais importantes indicadores de preços para o seu segmento.
+				</p>
+
+
+				<h1>Variação Mensal do INCC</h1>
+				<p>
+					<canvas id="incc-variacao" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<h1>Variação do INCC - Acumulado</h1>
+				<p>
+					<canvas id="incc-acumulado" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<div id="incc-grid" style="height:60vh; width:80vw" class="ag-theme-alpine-dark"></div>
+				<br><br>
+
+
+				<br><br>
+				<h3>Datasets</h3>
+				<a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/inflacao/incc.json"
+					target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+				<a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/inflacao/incc.csv"
+					target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+				<a href="https://www.kaggle.com/datasets/fidelissauro/inflacao-brasil" target="_blank"
+					class="button primary icon solid fa-download" download>Kaggle</a>
+				<p></p><br>
+
+
+				<p>
+					<a href="/incc" target="_blank" class="button icon solid fa-search-location">Dados Detalhados</a>
+				</p>
+				<br><br>
+
+				<h3>Fonte Oficial: </h3>
+				<div class="fonte-incc"></div>
+				<br><br>
+				<h3>Ultima atualização: </h3>
+				<div class="atualizacao-incc"></div>
+
+			</article>
+
 			<!-- Breve -->
 			<article id="breve">
 				<h2 class="major">Em Breve</h2>
@@ -936,6 +987,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	<script src="/assets/js/pib.js"></script>
 	<script src="/assets/js/ipca.js"></script>
 	<script src="/assets/js/inpc.js"></script>
+	<script src="/assets/js/incc.js"></script>
 	<script src="/assets/js/igp-m.js"></script>
 	<script src="/assets/js/selic.js"></script>
 	<script src="/assets/js/gini.js"></script>
