@@ -4,6 +4,8 @@ const idh_ev = document.getElementById("idh-ev");
 const idh_ev_sexo = document.getElementById("idh-ev-sexo");
 const idh_as = document.getElementById("idh-as");
 const idh_as_sexo = document.getElementById("idh-as-sexo");
+const idh_as_sexo_m = document.getElementById("idh-as-sexo-m");
+const idh_mort_materna = document.getElementById("idh-mort-materna");
 
 
 // IDH
@@ -357,6 +359,7 @@ $.get(
         // Expectativa de Anos na Escola - Geral
 
         const dataset_as = []
+        const dataset_as_avg = []
 
         raw.data.forEach((element) => {
 
@@ -364,7 +367,12 @@ $.get(
                 x: element.ano_referencia,
                 y: element.expectativa_de_anos_escola,
             };
+            temp_avg = {
+                x: element.ano_referencia,
+                y: element.media_de_anos_escola,
+            };
             dataset_as.push(temp);
+            dataset_as_avg.push(temp_avg)
         })
 
         new Chart(idh_as, {
@@ -372,6 +380,14 @@ $.get(
             data: {
                 backgroundColor: "#FFFFFF",
                 datasets: [
+                    {
+                        label: "Média Efetiva de Anos na Escola",
+                        data: dataset_as_avg,
+                        type: "line",
+                        borderWidth: 1,
+                        borderColor: "#FFFFFF",
+                        backgroundColor: "#FFFFFF",
+                    },
                     {
                         label: "Expectativa de Anos na Escola",
                         data: dataset_as,
@@ -435,23 +451,35 @@ $.get(
         const dataset_as_m = [];
         const dataset_as_f = [];
 
+        const dataset_as_m_avg = [];
+        const dataset_as_f_avg = [];
+
         raw.data.forEach((element) => {
 
             if (element.expectativa_de_vida_feminina > 0 && element.ano_referencia >= 2002) {
                 // Masculino
                 temp_m = {
                     x: element.ano_referencia,
-                    y: element.expectativa_de_anos_escola_feminina,
+                    y: element.expectativa_de_anos_escola_masculina,
+                };
+                temp_m_avg = {
+                    x: element.ano_referencia,
+                    y: element.media_de_anos_escola_masculina,
                 };
                 dataset_as_m.push(temp_m);
+                dataset_as_m_avg.push(temp_m_avg)
 
                 // Feminino
                 temp_f = {
                     x: element.ano_referencia,
-                    y: element.expectativa_de_anos_escola_masculina,
+                    y: element.expectativa_de_anos_escola_feminina,
                 };
-
+                temp_f_avg = {
+                    x: element.ano_referencia,
+                    y: element.media_de_anos_escola_feminina,
+                };
                 dataset_as_f.push(temp_f);
+                dataset_as_f_avg.push(temp_f_avg)
             }
         });
 
@@ -467,7 +495,6 @@ $.get(
                         borderColor: "#114247",
                         backgroundColor: "#114247",
                     },
-
                     {
                         label: "Expectativa Escolar Feminino",
                         data: dataset_as_f,
@@ -527,6 +554,153 @@ $.get(
         });
 
 
+        new Chart(idh_as_sexo_m, {
+            type: "bar",
+            data: {
+                backgroundColor: "#FFFFFF",
+                datasets: [
+                    {
+                        label: "Média de Anos Escolares - Masculino",
+                        data: dataset_as_m_avg,
+                        borderWidth: 1,
+                        borderColor: "#114247",
+                        backgroundColor: "#114247",
+                    },
+
+                    {
+                        label: "Média de Anos Escolares - Feminino",
+                        data: dataset_as_f_avg,
+                        borderWidth: 1,
+                        borderColor: "#5D6D2F",
+                        backgroundColor: "#5D6D2F",
+                    },
+                ],
+            },
+            options: {
+                responsive: true,
+                hover: {
+                    mode: "idh",
+                    intersec: false,
+                },
+                scales: {
+                    x: {
+                        display: true,
+                        title: {
+                            display: true,
+                        },
+                        grid: {
+                            color: "#FFFFFF",
+                        },
+                        ticks: {
+                            color: "#FFFFFF",
+                            major: {
+                                enabled: true,
+                            },
+                        },
+                    },
+                    y: {
+                        display: true,
+                        color: "#FFFFFF",
+                        grid: {
+                            color: "#FFFFFF",
+                        },
+                        ticks: {
+                            color: "#FFFFFF",
+                        },
+                    },
+                },
+                layouts: {},
+                plugins: {
+                    title: {
+                        display: false,
+                        text: "Expectativa de Anos na Escola",
+                        color: "#FFFFFF",
+                    },
+                    subtitle: {
+                        display: true,
+                        color: "#FFFFFF",
+                        text: raw.unidade_medida,
+                    },
+                },
+            },
+        });
+
+        // Taxa de Mortalidade Materna
+
+        const dataset_mort_mat = []
+
+        raw.data.forEach((element) => {
+
+            temp_mort_mat = {
+                x: element.ano_referencia,
+                y: element.taxa_mortalidade_materna,
+            };
+            dataset_mort_mat.push(temp_mort_mat);
+        })
+
+        new Chart(idh_mort_materna, {
+            type: "bar",
+            data: {
+                backgroundColor: "#FFFFFF",
+                datasets: [
+                    {
+                        label: "Taxa de Mortalidade Maternas",
+                        data: dataset_mort_mat,
+                        borderWidth: 1,
+                        borderColor: "#FFFFFF",
+                        backgroundColor: "#FFFFFF",
+                    }
+                ],
+            },
+            options: {
+                responsive: true,
+                hover: {
+                    mode: "idh",
+                    intersec: false,
+                },
+                scales: {
+                    x: {
+                        display: true,
+                        title: {
+                            display: true,
+                        },
+                        grid: {
+                            color: "#FFFFFF",
+                        },
+                        ticks: {
+                            color: "#FFFFFF",
+                            major: {
+                                enabled: true,
+                            },
+                        },
+                    },
+                    y: {
+                        display: true,
+                        color: "#FFFFFF",
+                        grid: {
+                            color: "#FFFFFF",
+                        },
+                        ticks: {
+                            color: "#FFFFFF",
+                        },
+                    },
+                },
+                layouts: {},
+                plugins: {
+                    title: {
+                        display: false,
+                        text: "Taxa de Mortalidade Materna",
+                        color: "#FFFFFF",
+                    },
+                    subtitle: {
+                        display: true,
+                        color: "#FFFFFF",
+                        text: raw.unidade_medida,
+                    },
+                },
+            },
+        });
+
         // Data Grid
         var columnDefs = [
             { headerName: "Período", field: "ano_referencia" },
@@ -536,6 +710,11 @@ $.get(
             { headerName: "Exp Vida", field: "expectativa_de_vida" },
             { headerName: "Exp Vida Masc", field: "expectativa_de_vida_masculina" },
             { headerName: "Exp Vida Fem", field: "expectativa_de_vida_feminina" },
+            { headerName: "Exp Anos na Escola", field: "expectativa_de_anos_escola" },
+            { headerName: "Anos na Escola Masc", field: "expectativa_de_anos_escola_masculina" },
+            { headerName: "Anos na Escola Fem", field: "expectativa_de_anos_escola_feminina" },
+            { headerName: "Mort Materna", field: "taxa_mortalidade_materna" },
+
         ];
 
         var gridOptions = {
