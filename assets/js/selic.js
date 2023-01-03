@@ -49,7 +49,7 @@ $.get(
         datasets: [
           {
             label: "Taxa Selic %",
-            data: dataset,
+            data: dataset.slice(-120), // Ultimos 10 anos,
             borderWidth: 1,
             borderColor: "#FFFFFF",
             backgroundColor: "#FFFFFF",
