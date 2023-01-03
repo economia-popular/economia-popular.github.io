@@ -58,7 +58,7 @@
 					<li><a href="#breve">Pastas</a></li>
 					<li><a href="#breve">Bovespa</a></li>
 					<li><a href="#breve">Agro</a></li>
-					<li><a href="#breve">Análises</a></li>
+					<li><a href="#combustivel">Combustível</a></li>
 				</ul>
 				<br><br>
 				<p>
@@ -732,6 +732,93 @@
 
 			</article>
 
+
+
+			<!-- Combustivel -->
+			<article id="combustivel">
+				<h2 class="major">Combustíveis</h2>
+				<h3>Indicadores de Preços de Combustíveis no Brasil</h3>
+				<p>
+					Os indicadores de preço de combustíveis são publicados mensalmente pela <a href="https://www.gov.br/anp/pt-br">Agência Nacional do Petróleo, Gás Natural e Biocombustíveis (ANP)</a> por meio das políticas de Dados Abertos.
+				</p>
+				<p>
+					Os indices são contabilizados e fornecidos na nível Nacional, Regional e Municipal, realizando uma pesquisa de consulta de postos de abastacimento afim de estabelecer os preços médios, minimos e máximos da venda dos combustíveis na bomba, para medir o impacto orçamentário no bolso do consumidor final. 
+				</p>
+
+
+				<h1>Variação de Preço da Gasolina</h1>
+
+				<h2>Preço da Gasolina Comum</h2>
+				<p>
+					<canvas id="gasolina-comum-variacao" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<h2>Preço da Gasolina Aditivada</h2>
+				<p>
+					<canvas id="gasolina-aditivada-variacao" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<div id="gasolina-grid" style="height:60vh; width:100%" class="ag-theme-alpine-dark"></div>
+				<br><br>
+
+				<h1>Variação de Preço do Etanol</h1>
+
+				<h2>Preço do Etanol Hidratado</h2>
+				<p>
+					<canvas id="etanol-variacao" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<div id="etanol-grid" style="height:60vh; width:100%" class="ag-theme-alpine-dark"></div>
+				<br><br>
+
+				<h1>Variação de Preço do Diesel</h1>
+
+				<p>
+					O Diesel é o combustível mais utilizado em território nacional, principalmente entre a categoria de veículos pesados. 
+				</p>
+
+				<p>
+					Além de caminhões e ônibus, por seu excelente desempenho, é usado também em geradores de energia, trens, transporte marítimo, máquinas agrícolas e maquinários diversos. Portanto sua inflação ou deflação impacta diretamente em outros índices de forma agregada, por estar diretamente ligado a veículos de transporte de carga, alimentício e de materiais de forma geral.
+				</p>
+
+				<h2>Preço do Diesel Comum - S500 </h2>
+				<p>
+					<canvas id="diesel-variacao" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<h2>Preço do Diesel S10</h2>
+				<p>
+					<canvas id="diesel-s10-variacao" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<div id="diesel-grid" style="height:60vh; width:100%" class="ag-theme-alpine-dark"></div>
+				<br><br>
+
+
+				<br><br>
+				<h3>Datasets</h3>
+				<a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/combustiveis/combustiveis-brasil.json"
+					target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+				<a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/combustiveis/combustiveis-brasil.csv"
+					target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+				<a href="https://www.kaggle.com/datasets/fidelissauro/combustiveis-brasil" target="_blank"
+					class="button primary icon solid fa-download" download>Kaggle</a>
+				<p></p><br>
+
+
+				<p>
+					<a href="/combustiveis" target="_blank" class="button icon solid fa-search-location">Dados Detalhados</a>
+				</p>
+				<br><br>
+
+				<h3>Fonte Oficial: </h3>
+				<div class="fonte-combustiveis"></div>
+				<br><br>
+				<h3>Ultima atualização: </h3>
+				<div class="atualizacao-combustiveis"></div>
+
+			</article>
+
 			<!-- Breve -->
 			<article id="breve">
 				<h2 class="major">Em Breve</h2>
@@ -1090,6 +1177,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	<script src="/assets/js/idh.js"></script>
 	<script src="/assets/js/pobreza.js"></script>
 	<script src="/assets/js/auxilio-brasil.js"></script>
+	<script src="/assets/js/combustivel.js"></script>
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9GQ3VE9HVC"></script>
 	<script>
