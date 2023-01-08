@@ -32,8 +32,6 @@ $.get(
 
     var raw = JSON.parse(data);
 
-    console.log(raw)
-
     raw.data.forEach((element) => {
       
       temp_gasolina_comum_avg = {

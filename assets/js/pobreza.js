@@ -1,4 +1,5 @@
 const populacao_estimativa = document.getElementById("populacao-estimativa");
+const salario_minimo = document.getElementById("salario-minimo");
 const pobreza_variacao = document.getElementById("pobreza-variacao");
 const pobreza_evolucao = document.getElementById("pobreza-evolucao");
 const pobreza_porcentagem = document.getElementById("pobreza-porcentagem");
@@ -7,11 +8,12 @@ const pobreza_indigena = document.getElementById("pobreza-indigena");
 const pobreza_quilombolas = document.getElementById("pobreza-quilombolas");
 const pobreza_ciganos = document.getElementById("pobreza-ciganos");
 
-// GINI - Variação
+// Pobreza - Variação
 $.get(
   "https://economia-popular-delivery-content-indices.s3.amazonaws.com/sociais/indices_pobreza_consolidado_anual.json",
   function (data, textStatus, jqXHR) {
     const dataset_populacao = [];
+    const dataset_salario_minimo = [];
 
     const dataset_pobreza = [];
     const dataset_extrema = [];
@@ -878,5 +880,94 @@ $.get(
     // Fonte do gini
     $("div.fonte-social").text(raw.fonte);
     $("div.atualizacao-social").text(raw.data_atualizacao);
+  }
+);
+
+
+$.get(
+  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/sociais/salario_minimo.json",
+  function (data, textStatus, jqXHR) {
+    const dataset_salario_minimo = [];
+
+    var raw = JSON.parse(data);
+
+    console.log(raw)
+
+    raw.data.forEach((element) => {
+
+      if (element.mes == "01") {
+        temp = {
+          x: element.ano,
+          y: element.valor,
+        };
+        dataset_salario_minimo.push(temp);
+      }
+
+    });
+
+
+
+    new Chart(salario_minimo, {
+      type: "bar",
+      data: {
+        backgroundColor: "#FFFFFF",
+        datasets: [
+          {
+            label: "R$",
+            data: dataset_salario_minimo.slice(-24),
+            borderWidth: 1,
+            borderColor: "#FFFFFF",
+            backgroundColor: "#FFFFFF",
+            fill: true,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        hover: {
+          mode: "index",
+          intersec: false,
+        },
+        scales: {
+          x: {
+            display: true, 
+            title: {
+              display: true,
+            },
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              major: {
+                enabled: true,
+              },
+            },
+          },
+          y: {
+            display: true,
+            color: "#FFFFFF",
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+            },
+          },
+        },
+        layouts: {},
+        plugins: {
+          title: {
+            display: true,
+            text: "Valor do Salário Minimo Brasileiro",
+            color: "#FFFFFF",
+          },
+          subtitle: {
+            display: true,
+            color: "#FFFFFF",
+            text: "R$",
+          },
+        },
+      },
+    });
   }
 );
