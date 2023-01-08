@@ -891,8 +891,6 @@ $.get(
 
     var raw = JSON.parse(data);
 
-    console.log(raw)
-
     raw.data.forEach((element) => {
 
       if (element.mes == "01") {
