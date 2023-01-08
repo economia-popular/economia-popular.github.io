@@ -42,14 +42,14 @@ $.get(
     new Chart(gini_variacao, {
       type: "bar",
       data: {
-        backgroundColor: "#FFFFFF",
+        backgroundColor: "#BA6338",
         datasets: [
           {
             label: "index",
             data: dataset,
             borderWidth: 1,
-            borderColor: "#FFFFFF",
-            backgroundColor: "#FFFFFF",
+            borderColor: "#BA6338",
+            backgroundColor: "#BA6338",
           },
         ],
       },
