@@ -3,7 +3,7 @@ const incc_acumulado = document.getElementById("incc-acumulado");
 
 // INCC - Variação
 $.get(
-  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/inflacao/inflacao.json",
+  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/inflacao/incc.json",
   function (data, textStatus, jqXHR) {
     const dataset = [];
     const dataset_acumulado = [];
@@ -14,11 +14,11 @@ $.get(
       
       temp = {
         x: element.referencia,
-        y: element.incc_variacao,
+        y: element.variacao,
       };
       temp_acumulado = {
         x: element.referencia,
-        y: element.incc_acumulado_ano,
+        y: element.acumulado_ano,
       };
       dataset.push(temp);
       dataset_acumulado.push(temp_acumulado);
@@ -27,8 +27,8 @@ $.get(
     // Data Grid
     var columnDefs = [
       { headerName: "Referencia", field: "referencia" },
-      { headerName: "Variação Mensal", field: "incc_variacao" },
-      { headerName: "Acumulado Ano", field: "incc_acumulado_ano" },
+      { headerName: "Variação Mensal", field: "variacao" },
+      { headerName: "Acumulado Ano", field: "acumulado_ano" },
     ];
 
     var gridOptions = {

@@ -3,7 +3,7 @@ const ipa_acumulado = document.getElementById("ipa-acumulado");
 
 // IPA - Variação
 $.get(
-  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/inflacao/inflacao.json",
+  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/inflacao/ipa.json",
   function (data, textStatus, jqXHR) {
     const dataset = [];
     const dataset_acumulado = [];
@@ -14,11 +14,11 @@ $.get(
       
       temp = {
         x: element.referencia,
-        y: element.ipa_variacao,
+        y: element.variacao,
       };
       temp_acumulado = {
         x: element.referencia,
-        y: element.ipa_acumulado_ano,
+        y: element.acumulado_ano,
       };
       dataset.push(temp);
       dataset_acumulado.push(temp_acumulado);
@@ -27,8 +27,8 @@ $.get(
     // Data Grid
     var columnDefs = [
       { headerName: "Referencia", field: "referencia" },
-      { headerName: "Variação Mensal", field: "ipa_variacao" },
-      { headerName: "Acumulado Ano", field: "ipa_acumulado_ano" },
+      { headerName: "Variação Mensal", field: "variacao" },
+      { headerName: "Acumulado Ano", field: "acumulado_ano" },
     ];
 
     var gridOptions = {
