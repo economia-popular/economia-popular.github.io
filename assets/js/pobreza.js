@@ -910,14 +910,14 @@ $.get(
     new Chart(salario_minimo, {
       type: "bar",
       data: {
-        backgroundColor: "#FFFFFF",
+        backgroundColor: "#587F49",
         datasets: [
           {
             label: "R$",
             data: dataset_salario_minimo.slice(-24),
             borderWidth: 1,
-            borderColor: "#FFFFFF",
-            backgroundColor: "#FFFFFF",
+            borderColor: "#587F49",
+            backgroundColor: "#587F49",
             fill: true,
           },
         ],
