@@ -6,6 +6,9 @@ const etanol_variacao = document.getElementById("etanol-variacao");
 const diesel_variacao = document.getElementById("diesel-variacao");
 const diesel_s10_variacao = document.getElementById("diesel-s10-variacao");
 
+const gas_veicular_variacao = document.getElementById("gas-veicular-variacao");
+
+
 $.get(
   "https://economia-popular-delivery-content-indices.s3.amazonaws.com/combustiveis/combustiveis-brasil.json",
   function (data, textStatus, jqXHR) {
@@ -30,6 +33,10 @@ $.get(
     const dataset_diesel_s10_min = [];
     const dataset_diesel_s10_max = [];
 
+    const dataset_gas_veicular_avg = [];
+    const dataset_gas_veicular_min = [];
+    const dataset_gas_veicular_max = [];
+    
     var raw = JSON.parse(data);
 
     raw.data.forEach((element) => {
@@ -71,6 +78,29 @@ $.get(
           dataset_gasolina_aditivada_max.push(temp_gasolina_aditivada_max);
 
       }
+
+      if (element.gas_natural_veicular_gnv_preco_revenda_avg != null) {
+
+          temp_gas_veicular_avg = {
+            x: element.referencia,
+            y: element.gas_natural_veicular_gnv_preco_revenda_avg,
+          };
+    
+          temp_gas_veicular_min = {
+            x: element.referencia,
+            y: element.gas_natural_veicular_gnv_preco_revenda_min,
+          };
+    
+          temp_gas_veicular_max = {
+            x: element.referencia,
+            y: element.gas_natural_veicular_gnv_preco_revenda_max,
+          };
+
+          dataset_gas_veicular_avg.push(temp_gas_veicular_avg);
+          dataset_gas_veicular_min.push(temp_gas_veicular_min);
+          dataset_gas_veicular_max.push(temp_gas_veicular_max);
+
+      }      
 
       temp_etanol_hidratado_avg = {
         x: element.referencia,
@@ -210,6 +240,30 @@ $.get(
   
       var eGridDivDiesel = document.querySelector('#diesel-grid');
       new agGrid.Grid(eGridDivDiesel, gridOptionsDiesel);  
+
+
+    // Data Grid - Gás Veicular
+    var columnDefsGasVeicular = [
+      { headerName: "Referencia", field: "referencia" },
+      { headerName: "Gás Veicular Média", field: "gas_natural_veicular_gnv_preco_revenda_avg" },
+      { headerName: "Gás Veicular Min", field: "gas_natural_veicular_gnv_preco_revenda_min" },
+      { headerName: "Gás Veicular Max", field: "gas_natural_veicular_gnv_preco_revenda_max" },
+    ];
+
+    var gridOptionsGasVeicular = {
+      defaultColDef: {
+        flex: 1,
+        sortable: true,
+        filter: true,
+      },
+      columnDefs: columnDefsGasVeicular,
+      rowData: raw.data,
+      animateRows: true,
+      accentedSort: true
+    };
+
+    var eGridDivGasVeicular = document.querySelector('#gas-veicular-grid');
+    new agGrid.Grid(eGridDivGasVeicular, gridOptionsGasVeicular);       
 
 
     new Chart(gasolina_comum_variacao, {
@@ -631,6 +685,90 @@ $.get(
           },
         },
     });   
+
+    new Chart(gas_veicular_variacao, {
+      type: "line",
+      data: {
+        backgroundColor: "#FFFFFF",
+        datasets: [
+          {
+            type: "line",
+            label: "Preço minimo do Gás Veicular",
+            data: dataset_gas_veicular_min.slice(-120), // Ultimos 10 anos,
+            borderWidth: 1,
+            borderColor: "#9EC1C9",
+            backgroundColor: "#9EC1C9",
+            fill: false
+          },
+          {
+            type: "line",
+            label: "Preço médio do Gás Veicular",
+            data: dataset_gas_veicular_avg.slice(-120), // Ultimos 10 anos,
+            borderWidth: 1,
+            borderColor: "#587F49",
+            backgroundColor: "#587F49",
+            fill: false
+          },            
+          {
+            type: "line",
+            label: "Preço máximo do Gás Veicular",
+            data: dataset_gas_veicular_max.slice(-120), // Ultimos 10 anos,
+            borderWidth: 1,
+            borderColor: "#BA6338",
+            backgroundColor: "#BA6338",
+            fill: false
+          },        
+        ],
+      },
+      options: {
+        responsive: true,
+        hover: {
+            mode: 'index',
+            intersec: false
+        },
+        scales: {
+          x: {
+            display: true,
+            title: {
+                display: true
+            },
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+              major : {
+                enabled: true
+              }
+            },
+            
+          },
+          y: {
+            display: true,
+            color: "#FFFFFF",
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+            }
+          },
+        },
+        layouts: {},
+        plugins: {
+          title: {
+            display: true,
+            text: "Preços do Gás Natural Veicular GNV - Revenda",
+            color: "#FFFFFF",
+          },
+          subtitle: {
+            display: true,
+            color: "#FFFFFF",
+            text: "Em R$",
+          },
+        },
+      },
+  });   
 
 
     $("div.fonte-combustiveis").text(raw.fonte);
