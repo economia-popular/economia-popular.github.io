@@ -2,7 +2,7 @@ const igpm_variacao = document.getElementById("igpm-variacao");
 
 // IGP-M - Variação
 $.get(
-  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/igpm/igpm.json",
+  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/app/data/igpm/igpm.json",
   function (data, textStatus, jqXHR) {
     const dataset = [];
     const dataset_acumulado = []

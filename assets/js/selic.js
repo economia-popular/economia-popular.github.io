@@ -4,7 +4,7 @@ const selic_meta = document.getElementById("selic-meta");
 
 // Meta Selic
 $.get(
-  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/selic/selic-meta.json",
+  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/app/data/selic/selic-meta.json",
   function (data, textStatus, jqXHR) {
     const dataset = [];
 
@@ -113,7 +113,7 @@ $.get(
 
 // SELIC - Variação
 $.get(
-  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/selic/selic-variacao-mes.json",
+  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/app/data/selic/selic-variacao-mes.json",
   function (data, textStatus, jqXHR) {
     const dataset = [];
 
@@ -198,7 +198,7 @@ $.get(
 
 // SELIC - Percentual / Ano
 $.get(
-  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/data/selic/selic-percentual-ano.json",
+  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/app/data/selic/selic-percentual-ano.json",
   function (data, textStatus, jqXHR) {
     const dataset = [];
 
