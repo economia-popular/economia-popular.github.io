@@ -205,7 +205,7 @@ $.get(
 // IPCA15
 
 $.get(
-  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/inflacao/inflacao.json",
+  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/inflacao/ipca15.json",
   function (data, textStatus, jqXHR) {
     const dataset = [];
     const dataset_acumulado = []
@@ -217,17 +217,17 @@ $.get(
       
       temp = {
         x: element.referencia,
-        y: element.ipca15_variacao,
+        y: element.variacao,
       };
 
       temp_ano = {
         x: element.referencia,
-        y: element.ipca15_acumulado_ano,
+        y: element.acumulado_ano,
       };
 
       temp_12_meses = {
         x: element.referencia,
-        y: element.ipca15_acumulado_doze_meses,
+        y: element.acumulado_doze_meses,
       };
 
       dataset.push(temp);

@@ -205,7 +205,7 @@ $.get(
 // IPCA15
 
 $.get(
-  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/inflacao/inflacao.json",
+  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/inflacao/ipca15.json",
   function (data, textStatus, jqXHR) {
     const dataset = [];
     const dataset_acumulado = []
@@ -217,17 +217,17 @@ $.get(
       
       temp = {
         x: element.referencia,
-        y: element.ipca15_variacao,
+        y: element.variacao,
       };
 
       temp_ano = {
         x: element.referencia,
-        y: element.ipca15_acumulado_ano,
+        y: element.acumulado_ano,
       };
 
       temp_12_meses = {
         x: element.referencia,
-        y: element.ipca15_acumulado_doze_meses,
+        y: element.acumulado_doze_meses,
       };
 
       dataset.push(temp);
@@ -238,9 +238,9 @@ $.get(
     // Data Grid
     var columnDefs = [
       { headerName: "Periodo", field: "referencia" },
-      { headerName: "Variação %", field: "ipca_variacao" },
-      { headerName: "Acumulado Ano %", field: "ipca_acumulado_ano" },
-      { headerName: "Acumulado 12 Meses %", field: "ipca_acumulado_doze_meses" }
+      { headerName: "Variação %", field: "variacao" },
+      { headerName: "Acumulado Ano %", field: "acumulado_ano" },
+      { headerName: "Acumulado 12 Meses %", field: "acumulado_doze_meses" }
     ];
 
     var gridOptions = {
@@ -255,7 +255,9 @@ $.get(
       accentedSort: true
     };
 
-    // new agGrid.Grid(eGridDiv, gridOptions);
+    var eGridDiv = document.querySelector('#ipca15-grid');
+
+    new agGrid.Grid(eGridDiv, gridOptions);
 
     new Chart(ipca15_variacao, {
       type: "line",
