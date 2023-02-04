@@ -422,7 +422,7 @@ $.get(
           plugins: {
             title: {
               display: true,
-              text: "Preços da Gasolina Comum - Revenda",
+              text: "Preços da Gasolina Aditivada - Revenda",
               color: "#FFFFFF",
             },
             subtitle: {
