@@ -731,8 +731,8 @@ $.get(
                         label: "Toneladas de CO2 per capita",
                         data: dataset_co2,
                         borderWidth: 1,
-                        borderColor: "#b94d29",
-                        backgroundColor: "#b94d29",
+                        borderColor: "#844525",
+                        backgroundColor: "#844525",
                     }
                 ],
             },
@@ -794,8 +794,8 @@ $.get(
                         label: "Material Footprint",
                         data: dataset_material,
                         borderWidth: 1,
-                        borderColor: "#b94d29",
-                        backgroundColor: "#b94d29",
+                        borderColor: "#cf844d",
+                        backgroundColor: "#cf844d",
                     }
                 ],
             },
