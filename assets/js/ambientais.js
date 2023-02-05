@@ -1,5 +1,4 @@
 const desmatamento_variacao = document.getElementById("desmatamento-variacao");
-
 const desmatamento_regioes_variacao = document.getElementById("desmatamento-regioes-variacao");
 
 
@@ -14,13 +13,9 @@ $.get(
         dataset_desmatamento_maranhao = [];
         dataset_desmatamento_mato_grosso = [];
         dataset_desmatamento_para = [];
-
         dataset_desmatamento_rondonia = [];
         dataset_desmatamento_roraima = [];
         dataset_desmatamento_tocantins = [];
-
-
-        console.log(data)
 
         var raw = JSON.parse(data);
 

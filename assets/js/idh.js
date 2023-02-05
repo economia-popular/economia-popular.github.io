@@ -6,7 +6,8 @@ const idh_as = document.getElementById("idh-as");
 const idh_as_sexo = document.getElementById("idh-as-sexo");
 const idh_as_sexo_m = document.getElementById("idh-as-sexo-m");
 const idh_mort_materna = document.getElementById("idh-mort-materna");
-
+const idh_co2 = document.getElementById("idh-co2-per-capta");
+const idh_footprint = document.getElementById("idh-footprint");
 
 // IDH
 $.get(
@@ -647,8 +648,8 @@ $.get(
                         label: "Taxa de Mortalidade Maternas",
                         data: dataset_mort_mat,
                         borderWidth: 1,
-                        borderColor: "#FFFFFF",
-                        backgroundColor: "#FFFFFF",
+                        borderColor: "#b94d29",
+                        backgroundColor: "#b94d29",
                     }
                 ],
             },
@@ -690,6 +691,152 @@ $.get(
                     title: {
                         display: false,
                         text: "Taxa de Mortalidade Materna",
+                        color: "#FFFFFF",
+                    },
+                    subtitle: {
+                        display: true,
+                        color: "#FFFFFF",
+                        text: raw.unidade_medida,
+                    },
+                },
+            },
+        });
+
+
+        // Taxa de Mortalidade Materna
+
+        const dataset_co2 = []
+        const dataset_material = []
+
+        raw.data.forEach((element) => {
+            temp = {
+                x: element.ano_referencia,
+                y: element.emissao_toneladas_co2_per_capta,
+            };
+
+            temp_material = {
+                x: element.ano_referencia,
+                y: element.material_footprint_toneladas_per_capta,
+            }
+            dataset_co2.push(temp);
+            dataset_material.push(temp_material);
+        })
+
+        new Chart(idh_co2, {
+            type: "bar",
+            data: {
+                backgroundColor: "#FFFFFF",
+                datasets: [
+                    {
+                        label: "Toneladas de CO2 per capita",
+                        data: dataset_co2,
+                        borderWidth: 1,
+                        borderColor: "#b94d29",
+                        backgroundColor: "#b94d29",
+                    }
+                ],
+            },
+            options: {
+                responsive: true,
+                hover: {
+                    mode: "idh",
+                    intersec: false,
+                },
+                scales: {
+                    x: {
+                        display: true,
+                        title: {
+                            display: true,
+                        },
+                        grid: {
+                            color: "#FFFFFF",
+                        },
+                        ticks: {
+                            color: "#FFFFFF",
+                            major: {
+                                enabled: true,
+                            },
+                        },
+                    },
+                    y: {
+                        display: true,
+                        color: "#FFFFFF",
+                        grid: {
+                            color: "#FFFFFF",
+                        },
+                        ticks: {
+                            color: "#FFFFFF",
+                        },
+                    },
+                },
+                layouts: {},
+                plugins: {
+                    title: {
+                        display: false,
+                        text: "Taxa de Mortalidade Materna",
+                        color: "#FFFFFF",
+                    },
+                    subtitle: {
+                        display: true,
+                        color: "#FFFFFF",
+                        text: raw.unidade_medida,
+                    },
+                },
+            },
+        });
+
+        new Chart(idh_footprint, {
+            type: "bar",
+            data: {
+                backgroundColor: "#FFFFFF",
+                datasets: [
+                    {
+                        label: "Material Footprint",
+                        data: dataset_material,
+                        borderWidth: 1,
+                        borderColor: "#b94d29",
+                        backgroundColor: "#b94d29",
+                    }
+                ],
+            },
+            options: {
+                responsive: true,
+                hover: {
+                    mode: "idh",
+                    intersec: false,
+                },
+                scales: {
+                    x: {
+                        display: true,
+                        title: {
+                            display: true,
+                        },
+                        grid: {
+                            color: "#FFFFFF",
+                        },
+                        ticks: {
+                            color: "#FFFFFF",
+                            major: {
+                                enabled: true,
+                            },
+                        },
+                    },
+                    y: {
+                        display: true,
+                        color: "#FFFFFF",
+                        grid: {
+                            color: "#FFFFFF",
+                        },
+                        ticks: {
+                            color: "#FFFFFF",
+                        },
+                    },
+                },
+                layouts: {},
+                plugins: {
+                    title: {
+                        display: false,
+                        text: "Material Footprint",
                         color: "#FFFFFF",
                     },
                     subtitle: {
