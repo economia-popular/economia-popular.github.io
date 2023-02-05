@@ -58,7 +58,7 @@
 					<li><a href="#breve" id="pastas_click">Pastas</a></li>
 					<li><a href="#breve" id="precos_click">Preços</a></li>
 					<li><a href="#breve" id="agro_click">Agro</a></li>
-					<li><a href="#breve" id="ambientais_click">Ambientais</a></li>
+					<li><a href="#ambientais" id="ambientais_click">Ambientais</a></li>
 				</ul>
 				<br><br>
 				<p>
@@ -635,6 +635,59 @@
 				<h3>Ultima atualização: </h3>
 				<div class="atualizacao-social"></div>
 			</article>
+
+
+			<!-- Ambientais -->
+			<article id="ambientais">
+				<h2 class="major">Ambientais</h2>
+				<h3>Séries históricas da temática do Meio Ambiente</h3>
+				<p>
+					Compilado de séries históricas disponibilizados pela politica de Dados Abertos de diversas Instituições e Projetos
+				</p>
+
+				<h2>Amazonia Legal</h2>
+
+				<h3>Desmatamento da Amazonia Legal</h3>
+				<p>
+					Os dados historicos a seguir são coletados a partir do <a href="http://www.obt.inpe.br/OBT/assuntos/programas/amazonia/prodes"><b>PRODES</b></a>, um projeto da <a href="http://www.obt.inpe.br"><b>INPE (Instituto Nacional de Pesquisas Espaciais)</b></a> <br><br>
+					O projeto <a href="http://www.obt.inpe.br/OBT/assuntos/programas/amazonia/prodes"><b>PRODES (Programa de Cálculo do Desflorestamento da Amazônia) </b> </a> realiza o monitoramento por satélites do desmatamento por corte raso na Amazônia Legal e produz, desde 1988, <b>as taxas anuais de desmatamento na região, que são usadas pelo governo brasileiro para o estabelecimento de políticas públicas.</b> 
+					As taxas anuais são estimadas a partir dos incrementos de desmatamento identificados em cada imagem de satélite que cobre a Amazônia Legal. 
+					A primeira apresentação dos dados é realizada até dezembro de cada ano, na forma de estimativa, quando normalmente são processadas aproximadamente 50% das imagens que cobrem a Amazônia Legal. <b>Os dados consolidados são apresentados no primeiro semestre do ano seguinte.</b>
+				</p>
+
+				<p>
+					<canvas id="desmatamento-variacao" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<p>
+					<canvas id="desmatamento-regioes-variacao" style="height:50vh; width:80vw"></canvas>
+					* Os dados do ano de 2022 ainda estão considerados como incompletos. A totalização e sumarização estão previstas para o primeiro semestre de 2023.
+				</p>
+				
+				<div id="desmatamento-grid" style="height:60vh; width:100%" class="ag-theme-alpine-dark"></div>
+				<br><br>
+				<h3>Datasets</h3>
+				<a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/ambientais/desmatamento_prodes.json"
+					target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+				<a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/ambientais/desmatamento_prodes.csv"
+					target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+				<a href="https://www.kaggle.com/datasets/fidelissauro/desmatamento-amazonia" target="_blank"
+					class="button primary icon solid fa-download" download>Kaggle</a>
+				<br><br>
+				<h3>Fonte Oficial: </h3>
+				<div class="fonte-desmatamento"></div>
+				<br><br>
+
+				<p></p><br>
+
+				<p>
+					<a href="/ambientais" target="_blank" class="button icon solid fa-search-location">Dados Detalhados</a>
+				</p>
+				<br><br>
+
+				<h3>Ultima atualização: </h3>
+				<div class="atualizacao-ambientais"></div>
+			</article>			
 
 
 			<!-- INCC -->
@@ -1279,6 +1332,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	<script src="/assets/js/pobreza.js"></script>
 	<script src="/assets/js/auxilio-brasil.js"></script>
 	<script src="/assets/js/combustivel.js"></script>
+	<script src="/assets/js/ambientais.js"></script>
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9GQ3VE9HVC"></script>
 	<script>
