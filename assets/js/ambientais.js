@@ -593,7 +593,7 @@ $.get(
         datasets: [
           {
             stacked: false, 
-            label: "Série Historica de Focos de Queimadas",
+            label: "Série Historica de Focos de Queimadas e Incêndios",
             data: dataset_focos.slice(-400),
             borderWidth: 1,
             borderColor: "#b94d29",
@@ -639,7 +639,7 @@ $.get(
         plugins: {
           title: {
             display: true,
-            text: "Focos de Queimadas",
+            text: "Focos de Incêndios",
             color: "#FFFFFF",
           },
           subtitle: {
@@ -662,7 +662,7 @@ $.get(
         backgroundColor: "#b94d29",
         datasets: [
           {
-            label: "Totalização Anual dos Focos de Queimadas",
+            label: "Totalização Anual dos Focos de Incêndio",
             data: dataset_acumulado,
             borderWidth: 1,
             borderColor: "#b94d29",
@@ -707,7 +707,7 @@ $.get(
         plugins: {
           title: {
             display: true,
-            text: "Focos de Queimada / Ano",
+            text: "Focos de Queimadas e Incêndio / Ano",
             color: "#FFFFFF",
           },
           subtitle: {
