@@ -76,7 +76,7 @@ $.get(
                 layouts: {},
                 plugins: {
                     title: {
-                        display: false,
+                        display: true,
                         text: "Indice de Desenvolvimento Humano",
                         color: "#FFFFFF",
                     },
@@ -172,7 +172,7 @@ $.get(
                 layouts: {},
                 plugins: {
                     title: {
-                        display: false,
+                        display: true,
                         text: "Indice de Desenvolvimento Humano",
                         color: "#FFFFFF",
                     },
@@ -248,7 +248,7 @@ $.get(
                 layouts: {},
                 plugins: {
                     title: {
-                        display: false,
+                        display: true,
                         text: "Expectativa de Vida",
                         color: "#FFFFFF",
                     },
@@ -343,7 +343,7 @@ $.get(
                 layouts: {},
                 plugins: {
                     title: {
-                        display: false,
+                        display: true,
                         text: "Indice de Desenvolvimento Humano",
                         color: "#FFFFFF",
                     },
@@ -434,7 +434,7 @@ $.get(
                 layouts: {},
                 plugins: {
                     title: {
-                        display: false,
+                        display: true,
                         text: "Expectativa de Anos na Escola",
                         color: "#FFFFFF",
                     },
@@ -541,7 +541,7 @@ $.get(
                 layouts: {},
                 plugins: {
                     title: {
-                        display: false,
+                        display: true,
                         text: "Expectativa de Anos na Escola",
                         color: "#FFFFFF",
                     },
@@ -613,7 +613,7 @@ $.get(
                 layouts: {},
                 plugins: {
                     title: {
-                        display: false,
+                        display: true,
                         text: "Expectativa de Anos na Escola",
                         color: "#FFFFFF",
                     },
@@ -689,7 +689,7 @@ $.get(
                 layouts: {},
                 plugins: {
                     title: {
-                        display: false,
+                        display: true,
                         text: "Taxa de Mortalidade Materna",
                         color: "#FFFFFF",
                     },
@@ -772,7 +772,7 @@ $.get(
                 layouts: {},
                 plugins: {
                     title: {
-                        display: false,
+                        display: true,
                         text: "Taxa de Mortalidade Materna",
                         color: "#FFFFFF",
                     },
@@ -835,7 +835,7 @@ $.get(
                 layouts: {},
                 plugins: {
                     title: {
-                        display: false,
+                        display: true,
                         text: "Material Footprint",
                         color: "#FFFFFF",
                     },

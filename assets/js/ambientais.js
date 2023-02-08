@@ -1,6 +1,9 @@
 const desmatamento_variacao = document.getElementById("desmatamento-variacao");
 const desmatamento_regioes_variacao = document.getElementById("desmatamento-regioes-variacao");
 
+const queimadas_variacao = document.getElementById("queimadas-variacao");
+const queimadas_acumulado = document.getElementById("queimadas-acumulado");
+
 const co2_variacao = document.getElementById("co2-variacao");
 const material_variacao = document.getElementById("material-variacao");
 
@@ -191,6 +194,11 @@ $.get(
             color: "#FFFFFF",
             text: raw.unidade_medida,
           },
+          legend: {
+            labels :{
+              color:  "#FFFFFF",
+            }
+          }
         },
       },
     });
@@ -348,6 +356,11 @@ $.get(
             color: "#FFFFFF",
             text: raw.unidade_medida,
           },
+          legend: {
+            labels :{
+              color:  "#FFFFFF",
+            }
+          }
         },
       },
     });
@@ -433,8 +446,8 @@ $.get(
         layouts: {},
         plugins: {
           title: {
-            display: false,
-            text: "Taxa de Mortalidade Materna",
+            display: true,
+            text: "Emissão de Toneladas de CO2 per capita",
             color: "#FFFFFF",
           },
           subtitle: {
@@ -442,6 +455,11 @@ $.get(
             color: "#FFFFFF",
             text: raw.unidade_medida,
           },
+          legend: {
+            labels :{
+              color:  "#FFFFFF",
+            }
+          }
         },
       },
     });
@@ -496,8 +514,8 @@ $.get(
         layouts: {},
         plugins: {
           title: {
-            display: false,
-            text: "Material Footprint",
+            display: true,
+            text: "Material Footprint ao Decorrer dos Anos",
             color: "#FFFFFF",
           },
           subtitle: {
@@ -505,8 +523,208 @@ $.get(
             color: "#FFFFFF",
             text: raw.unidade_medida,
           },
+          legend: {
+            labels :{
+              color:  "#FFFFFF",
+            }
+          }
         },
       },
     });
+  }
+)
+
+$.get(
+  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/ambientais/queimadas.json",
+  function (data, textStatus, jqXHR) {
+    const dataset = [];
+    var raw = JSON.parse(data);
+    
+    console.log(raw)
+
+    const dataset_focos = []
+    const dataset_acumulado = []
+
+    raw.data.forEach((element) => {
+      temp_focos = {
+        x: element.referencia,
+        y: element.focos_incendio,
+      };
+
+      if (element.consolidado == true) {
+        temp_acumulado = {
+          x: element.ano,
+          y: element.acumulado_ano,
+        };
+        dataset_acumulado.push(temp_acumulado)
+      }
+  
+      dataset_focos.push(temp_focos);
+    })
+
+    // Data Grid
+    var columnDefs = [
+      { headerName: "Período", field: "referencia" },
+      { headerName: "Queimadas", field: "focos_incendio"},
+      { headerName: "Acumulativo Ano", field: "acumulado_ano"}
+    ];
+
+  var gridOptions = {
+      defaultColDef: {
+          flex: 1,
+          sortable: true,
+          filter: true,
+      },
+      columnDefs: columnDefs,
+      rowData: raw.data.reverse(),
+      animateRows: true,
+      accentedSort: true
+  };
+
+  var eGridDiv = document.querySelector('#queimadas-grid');
+
+  new agGrid.Grid(eGridDiv, gridOptions);
+
+
+    new Chart(queimadas_variacao, {
+      type: "bar",
+      data: {
+        backgroundColor: "#b94d29",
+        datasets: [
+          {
+            stacked: false, 
+            label: "Série Historica de Focos de Queimadas",
+            data: dataset_focos.slice(-400),
+            borderWidth: 1,
+            borderColor: "#b94d29",
+            backgroundColor: "#b94d29",
+            fill: false,
+          }
+        ],
+      },
+      options: {
+        responsive: true,
+        hover: {
+          mode: "idh",
+          intersec: false,
+        },
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+            },
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+              major: {
+                enabled: true,
+              },
+            },
+          },
+          y: {
+            display: true,
+            color: "#FFFFFF",
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+            },
+          },
+        },
+        layouts: {},
+        plugins: {
+          title: {
+            display: true,
+            text: "Focos de Queimadas",
+            color: "#FFFFFF",
+          },
+          subtitle: {
+            display: true,
+            color: "#FFFFFF",
+            text: raw.unidade_medida,
+          },
+          legend: {
+            labels :{
+              color:  "#FFFFFF",
+            }
+          }
+        },
+      },
+    });
+
+    new Chart(queimadas_acumulado, {
+      type: "bar",
+      data: {
+        backgroundColor: "#b94d29",
+        datasets: [
+          {
+            label: "Totalização Anual dos Focos de Queimadas",
+            data: dataset_acumulado,
+            borderWidth: 1,
+            borderColor: "#b94d29",
+            backgroundColor: "#b94d29",
+          }
+        ],
+      },
+      options: {
+        responsive: true,
+        hover: {
+          mode: "idh",
+          intersec: false,
+        },
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+            },
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+              major: {
+                enabled: true,
+              },
+            },
+          },
+          y: {
+            display: true,
+            color: "#FFFFFF",
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+            },
+          },
+        },
+        layouts: {},
+        plugins: {
+          title: {
+            display: true,
+            text: "Focos de Queimada / Ano",
+            color: "#FFFFFF",
+          },
+          subtitle: {
+            display: true,
+            color: "#FFFFFF",
+            text: raw.unidade_medida,
+          },
+          legend: {
+            labels :{
+              color:  "#FFFFFF",
+            }
+          }
+        },
+      },
+    });
+
+    $("div.fonte-queimadas").text(raw.fonte);
+
   }
 )

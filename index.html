@@ -657,9 +657,9 @@
 			<!-- Ambientais -->
 			<article id="ambientais">
 				<h2 class="major">Ambientais</h2>
-				<h3>Séries históricas da temática do Meio Ambiente</h3>
+				<h3>Séries históricas com o tema do Meio Ambiente e Preservação</h3>
 				<p>
-					Compilado de séries históricas disponibilizados pela politica de Dados Abertos de diversas Instituições e Projetos
+					Compilado de séries históricas disponibilizados pela politica de Dados Abertos de diversas Instituições e Projetos nacionais e internacionais como o <a href="https://www.gov.br/inpe/pt-br"><b>INPE (Instituto Nacional de Pesquisas Espaciais)</b></a>, <a href="https://www.gov.br/ibama/pt-br"><b>IBAMA (Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis)</b></a> e <a href="https://hdr.undp.org"><b>UNDP (United Nations Development Programme)</b></a>.
 				</p>
 
 				<h2>Amazonia Legal</h2>
@@ -682,6 +682,7 @@
 				</p>
 				
 				<div id="desmatamento-grid" style="height:60vh; width:100%" class="ag-theme-alpine-dark"></div>
+
 				<br><br>
 				<h3>Datasets</h3>
 				<a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/ambientais/desmatamento_prodes.json"
@@ -694,6 +695,48 @@
 				<h3>Fonte Oficial: </h3>
 				<div class="fonte-desmatamento"></div>
 				<br><br>
+
+				<h2>Monitoramento de Queimadas e Incêndios</h2>
+
+				<p>
+					Os dados a seguir são um compilado simplificado dos dados abertos de monitoramento de queimadas e focos de incêndios vindos do <a href="https://queimadas.dgi.inpe.br/queimadas/portal"><b>Programa Queimadas do INPE</b></a>.
+				</p>
+				<p>
+					O <b>Programa Queimadas do INPE</b> realiza pesquisa, desenvolvimento tecnológico e a inovação de produtos, processos e geoserviços para o monitoramento e a modelagem da ocorrência e propagação e classificação do fogo ativo na vegetação, seu risco,
+					 extensão e severidade, utilizando técnicas de Sensoriamento Remoto, Geoprocessamento e Modelagem Numérica
+				</p>
+
+				<p>
+					A detecção dos focos de queima de vegetação e de fogo é realizado via satélite, em todas regiões, todos os dias e por anos seguidos, o que <b> permite análises temporais e espaciais da ocorrência do fogo que seriam impossíveis de outra forma</b>, dada a precariedade, descontinuidade e diferença de métodos nas fontes de informação locais.  
+					Em particular, os dados do  <b>"satélite de referência"</b> permitem a comparação entre qualquer país do Planeta. 
+				</p>
+
+				<h3>Quantidade Anual de Focos de Incêndio Detectados</h3>
+
+				<p>
+					<canvas id="queimadas-acumulado" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<h3>Quantidade Mensal de Focos de Incêndio Detectados</h3>
+
+				<p>
+					<canvas id="queimadas-variacao" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<div id="queimadas-grid" style="height:60vh; width:100%" class="ag-theme-alpine-dark"></div>
+				<br><br>
+				<h3>Datasets</h3>
+				<a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/ambientais/queimadas.json"
+					target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+				<a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/ambientais/queimadas.csv"
+					target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+				<a href="https://www.kaggle.com/datasets/fidelissauro/focos_incendio_brasil" target="_blank"
+					class="button primary icon solid fa-download" download>Kaggle</a>
+				<br><br>
+				<h3>Fonte Oficial: </h3>
+				<div class="fonte-queimadas"></div>
+				<br><br>
+
 
 				<h2>Meio Ambiente - Indice de Desenvolvimento Humano</h2>
 				<p>
