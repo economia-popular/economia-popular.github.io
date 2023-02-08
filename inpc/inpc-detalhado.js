@@ -13,7 +13,7 @@ $.get(
     var raw = JSON.parse(data);
 
     raw.data.forEach((element) => {
-      
+
       temp = {
         x: element.referencia,
         y: element.inpc_variacao,
@@ -119,6 +119,11 @@ $.get(
             color: "#FFFFFF",
             text: raw.unidade_medida,
           },
+          legend: {
+            labels: {
+              color: "#FFFFFF",
+            }
+          }
         },
       },
     });
@@ -189,6 +194,11 @@ $.get(
             color: "#FFFFFF",
             text: raw.unidade_medida,
           },
+          legend: {
+            labels: {
+              color: "#FFFFFF",
+            }
+          }
         },
       },
     });

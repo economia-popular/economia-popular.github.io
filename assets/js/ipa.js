@@ -11,7 +11,7 @@ $.get(
     var raw = JSON.parse(data);
 
     raw.data.forEach((element) => {
-      
+
       temp = {
         x: element.referencia,
         y: element.variacao,
@@ -64,25 +64,25 @@ $.get(
       options: {
         responsive: true,
         hover: {
-            mode: 'index',
-            intersec: false
+          mode: 'index',
+          intersec: false
         },
         scales: {
           x: {
             display: true,
             title: {
-                display: true
+              display: true
             },
             grid: {
               color: "#FFFFFF",
             },
             ticks: {
               color: "#FFFFFF",
-              major : {
+              major: {
                 enabled: true
               }
             },
-            
+
           },
           y: {
             display: true,
@@ -107,73 +107,83 @@ $.get(
             color: "#FFFFFF",
             text: raw.unidade_medida,
           },
+          legend: {
+            labels: {
+              color: "#FFFFFF",
+            }
+          }
         },
       },
     });
 
     new Chart(ipa_acumulado, {
-        type: "bar",
-        data: {
-          backgroundColor: "#FFFFFF",
-          datasets: [
-            {
-              label: "Acumulo Anual",
-              data: dataset_acumulado.slice(-120), // Ultimos 10 anos,
-              borderWidth: 1,
-              borderColor: "#FFFFFF",
-              backgroundColor: "#FFFFFF",
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          hover: {
-              mode: 'index',
-              intersec: false
+      type: "bar",
+      data: {
+        backgroundColor: "#FFFFFF",
+        datasets: [
+          {
+            label: "Acumulo Anual",
+            data: dataset_acumulado.slice(-120), // Ultimos 10 anos,
+            borderWidth: 1,
+            borderColor: "#FFFFFF",
+            backgroundColor: "#FFFFFF",
           },
-          scales: {
-            x: {
-              display: true,
-              title: {
-                  display: true
-              },
-              grid: {
-                color: "#FFFFFF",
-              },
-              ticks: {
-                color: "#FFFFFF",
-                major : {
-                  enabled: true
-                }
-              },
-              
+        ],
+      },
+      options: {
+        responsive: true,
+        hover: {
+          mode: 'index',
+          intersec: false
+        },
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true
             },
-            y: {
-              display: true,
+            grid: {
               color: "#FFFFFF",
-              grid: {
-                color: "#FFFFFF",
-              },
-              ticks: {
-                color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+              major: {
+                enabled: true
               }
             },
+
           },
-          layouts: {},
-          plugins: {
-            title: {
-              display: true,
-              text: "Evolução do Acumulo Anual do IPA",
+          y: {
+            display: true,
+            color: "#FFFFFF",
+            grid: {
               color: "#FFFFFF",
             },
-            subtitle: {
-              display: true,
+            ticks: {
               color: "#FFFFFF",
-              text: raw.unidade_medida,
-            },
+            }
           },
         },
-      });
+        layouts: {},
+        plugins: {
+          title: {
+            display: true,
+            text: "Evolução do Acumulo Anual do IPA",
+            color: "#FFFFFF",
+          },
+          subtitle: {
+            display: true,
+            color: "#FFFFFF",
+            text: raw.unidade_medida,
+          },
+          legend: {
+            labels: {
+              color: "#FFFFFF",
+            }
+          }
+        },
+      },
+    });
 
     // Fonte do gini
     $("div.fonte-ipa").text("debit.com.br");

@@ -15,7 +15,7 @@ $.get(
     var raw = JSON.parse(data);
 
     raw.data.forEach((element) => {
-      
+
       temp = {
         x: element.referencia,
         y: element.ipca_variacao,
@@ -120,6 +120,11 @@ $.get(
             color: "#FFFFFF",
             text: raw.unidade_medida,
           },
+          legend: {
+            labels: {
+              color: "#FFFFFF",
+            }
+          }
         },
       },
     });
@@ -192,6 +197,11 @@ $.get(
             color: "#FFFFFF",
             text: raw.unidade_medida,
           },
+          legend: {
+            labels: {
+              color: "#FFFFFF",
+            }
+          }
         },
       },
     });
@@ -214,7 +224,7 @@ $.get(
     var raw = JSON.parse(data);
 
     raw.data.forEach((element) => {
-      
+
       temp = {
         x: element.referencia,
         y: element.variacao,
@@ -317,6 +327,11 @@ $.get(
             color: "#FFFFFF",
             text: raw.unidade_medida,
           },
+          legend: {
+            labels: {
+              color: "#FFFFFF",
+            }
+          }
         },
       },
     });
@@ -389,6 +404,11 @@ $.get(
             color: "#FFFFFF",
             text: raw.unidade_medida,
           },
+          legend: {
+            labels: {
+              color: "#FFFFFF",
+            }
+          }
         },
       },
     });

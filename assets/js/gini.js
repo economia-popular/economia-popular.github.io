@@ -9,7 +9,7 @@ $.get(
     var raw = JSON.parse(data);
 
     raw.data.forEach((element) => {
-      
+
       temp = {
         x: element.ano_referencia,
         y: element.valor,
@@ -56,25 +56,25 @@ $.get(
       options: {
         responsive: true,
         hover: {
-            mode: 'index',
-            intersec: false
+          mode: 'index',
+          intersec: false
         },
         scales: {
           x: {
             display: true,
             title: {
-                display: true
+              display: true
             },
             grid: {
               color: "#FFFFFF",
             },
             ticks: {
               color: "#FFFFFF",
-              major : {
+              major: {
                 enabled: true
               }
             },
-            
+
           },
           y: {
             display: true,
@@ -106,6 +106,11 @@ $.get(
             color: "#FFFFFF",
             text: raw.unidade_medida,
           },
+          legend: {
+            labels: {
+              color: "#FFFFFF",
+            }
+          }
         },
       },
     });

@@ -18,7 +18,7 @@ $.get(
     const dataset_pobreza = [];
     const dataset_extrema = [];
     const dataset_total = [];
-    
+
     const dataset_pobreza_percent = [];
     const dataset_extrema_percent = [];
     const dataset_total_percent = [];
@@ -26,7 +26,7 @@ $.get(
     const dataset_familias_pobreza = [];
     const dataset_familias_extrema = [];
     const dataset_familias_total = [];
-    
+
 
     const dataset_indigenas_pobreza = [];
     const dataset_indigenas_extrema = [];
@@ -70,7 +70,7 @@ $.get(
       temp_indigenas_pobreza = {
         x: element.referencia,
         y: element.indigenas_pobreza
-      }     
+      }
       temp_indigenas_extrema = {
         x: element.referencia,
         y: element.indigenas_extrema_pobreza
@@ -82,7 +82,7 @@ $.get(
       temp_quilombolas_pobreza = {
         x: element.referencia,
         y: element.quilombolas_pobreza
-      }     
+      }
       temp_quilombolas_extrema = {
         x: element.referencia,
         y: element.quilombolas_extrema_pobreza
@@ -94,7 +94,7 @@ $.get(
       temp_ciganos_pobreza = {
         x: element.referencia,
         y: element.ciganos_pobreza
-      }     
+      }
       temp_ciganos_extrema = {
         x: element.referencia,
         y: element.ciganos_extrema_pobreza
@@ -102,7 +102,7 @@ $.get(
       temp_ciganos_vulnerabilidade = {
         x: element.referencia,
         y: element.ciganos_vulnerabilidade
-      }  
+      }
       dataset_pobreza_percent.push(temp_pobreza);
       dataset_extrema_percent.push(temp_extrema);
       dataset_total_percent.push(temp_vulnerabilidade);
@@ -180,7 +180,7 @@ $.get(
         },
         scales: {
           x: {
-            display: true, 
+            display: true,
             title: {
               display: true,
             },
@@ -216,6 +216,11 @@ $.get(
             color: "#FFFFFF",
             text: raw.unidade_medida,
           },
+          legend: {
+            labels: {
+              color: "#FFFFFF",
+            }
+          }
         },
       },
     });
@@ -301,6 +306,11 @@ $.get(
             color: "#FFFFFF",
             text: raw.unidade_medida,
           },
+          legend: {
+            labels: {
+              color: "#FFFFFF",
+            }
+          }
         },
       },
     });
@@ -381,6 +391,11 @@ $.get(
             color: "#FFFFFF",
             text: raw.unidade_medida,
           },
+          legend: {
+            labels: {
+              color: "#FFFFFF",
+            }
+          }
         },
       },
     });
@@ -466,6 +481,11 @@ $.get(
             color: "#FFFFFF",
             text: "Numero de Familias",
           },
+          legend: {
+            labels: {
+              color: "#FFFFFF",
+            }
+          }
         },
       },
     });
@@ -551,6 +571,11 @@ $.get(
             color: "#FFFFFF",
             text: "Numero de Familias Indigenas",
           },
+          legend: {
+            labels: {
+              color: "#FFFFFF",
+            }
+          }
         },
       },
     });
@@ -636,6 +661,11 @@ $.get(
             color: "#FFFFFF",
             text: "Numero de Familias Quilombolas",
           },
+          legend: {
+            labels: {
+              color: "#FFFFFF",
+            }
+          }
         },
       },
     });
@@ -721,6 +751,11 @@ $.get(
             color: "#FFFFFF",
             text: "Numero de Familias Ciganas",
           },
+          legend: {
+            labels: {
+              color: "#FFFFFF",
+            }
+          }
         },
       },
     });
@@ -868,6 +903,11 @@ $.get(
             color: "#FFFFFF",
             text: raw.unidade_medida,
           },
+          legend: {
+            labels: {
+              color: "#FFFFFF",
+            }
+          }
         },
         interaction: {
           mode: "nearest",
@@ -928,7 +968,7 @@ $.get(
         },
         scales: {
           x: {
-            display: true, 
+            display: true,
             title: {
               display: true,
             },
@@ -964,6 +1004,11 @@ $.get(
             color: "#FFFFFF",
             text: "R$",
           },
+          legend: {
+            labels: {
+              color: "#FFFFFF",
+            }
+          }
         },
       },
     });

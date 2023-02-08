@@ -195,8 +195,8 @@ $.get(
             text: raw.unidade_medida,
           },
           legend: {
-            labels :{
-              color:  "#FFFFFF",
+            labels: {
+              color: "#FFFFFF",
             }
           }
         },
@@ -357,8 +357,8 @@ $.get(
             text: raw.unidade_medida,
           },
           legend: {
-            labels :{
-              color:  "#FFFFFF",
+            labels: {
+              color: "#FFFFFF",
             }
           }
         },
@@ -456,8 +456,8 @@ $.get(
             text: raw.unidade_medida,
           },
           legend: {
-            labels :{
-              color:  "#FFFFFF",
+            labels: {
+              color: "#FFFFFF",
             }
           }
         },
@@ -524,8 +524,8 @@ $.get(
             text: raw.unidade_medida,
           },
           legend: {
-            labels :{
-              color:  "#FFFFFF",
+            labels: {
+              color: "#FFFFFF",
             }
           }
         },
@@ -539,7 +539,7 @@ $.get(
   function (data, textStatus, jqXHR) {
     const dataset = [];
     var raw = JSON.parse(data);
-    
+
     console.log(raw)
 
     const dataset_focos = []
@@ -558,32 +558,32 @@ $.get(
         };
         dataset_acumulado.push(temp_acumulado)
       }
-  
+
       dataset_focos.push(temp_focos);
     })
 
     // Data Grid
     var columnDefs = [
       { headerName: "Período", field: "referencia" },
-      { headerName: "Queimadas", field: "focos_incendio"},
-      { headerName: "Acumulativo Ano", field: "acumulado_ano"}
+      { headerName: "Queimadas", field: "focos_incendio" },
+      { headerName: "Acumulativo Ano", field: "acumulado_ano" }
     ];
 
-  var gridOptions = {
+    var gridOptions = {
       defaultColDef: {
-          flex: 1,
-          sortable: true,
-          filter: true,
+        flex: 1,
+        sortable: true,
+        filter: true,
       },
       columnDefs: columnDefs,
       rowData: raw.data.reverse(),
       animateRows: true,
       accentedSort: true
-  };
+    };
 
-  var eGridDiv = document.querySelector('#queimadas-grid');
+    var eGridDiv = document.querySelector('#queimadas-grid');
 
-  new agGrid.Grid(eGridDiv, gridOptions);
+    new agGrid.Grid(eGridDiv, gridOptions);
 
 
     new Chart(queimadas_variacao, {
@@ -592,7 +592,7 @@ $.get(
         backgroundColor: "#b94d29",
         datasets: [
           {
-            stacked: false, 
+            stacked: false,
             label: "Série Historica de Focos de Queimadas e Incêndios",
             data: dataset_focos.slice(-400),
             borderWidth: 1,
@@ -648,8 +648,8 @@ $.get(
             text: raw.unidade_medida,
           },
           legend: {
-            labels :{
-              color:  "#FFFFFF",
+            labels: {
+              color: "#FFFFFF",
             }
           }
         },
@@ -716,8 +716,8 @@ $.get(
             text: raw.unidade_medida,
           },
           legend: {
-            labels :{
-              color:  "#FFFFFF",
+            labels: {
+              color: "#FFFFFF",
             }
           }
         },

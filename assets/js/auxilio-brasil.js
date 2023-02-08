@@ -147,6 +147,11 @@ $.get(
             color: "#FFFFFF",
             text: raw.unidade_medida,
           },
+          legend: {
+            labels: {
+              color: "#FFFFFF",
+            }
+          }
         },
       },
     });
@@ -211,6 +216,11 @@ $.get(
             color: "#FFFFFF",
             text: raw.unidade_medida,
           },
+          legend: {
+            labels: {
+              color: "#FFFFFF",
+            }
+          }
         },
       },
     });
@@ -219,159 +229,169 @@ $.get(
 
 
 $.get(
-    "https://economia-popular-delivery-content-indices.s3.amazonaws.com/sociais/auxilio_brasil.json",
-    function (data, textStatus, jqXHR) {
+  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/sociais/auxilio_brasil.json",
+  function (data, textStatus, jqXHR) {
 
-      const dataset_valor = [];
-      const dataset_valor_total = [];
-  
-      var raw = JSON.parse(data);
-  
-      raw.data.forEach((element) => {
-  
-        temp_valor = {
-          x: element.referencia,
-          y: element.valor_beneficio,
-        };
-  
-        temp_valor_total = {
-          x: element.referencia,
-          y: element.valor_total_repassado,
-        };
-  
-        dataset_valor.push(temp_valor);
-        dataset_valor_total.push(temp_valor_total);
-      });
-    
-  
-      new Chart(auxilio_brasil_valor, {
-        type: "line",
-        data: {
-          backgroundColor: "#FFFFFF",
-          datasets: [
-            {
-              label: "Valor médio do auxilio R$",
-              data: dataset_valor,
-              borderWidth: 1,
-              borderColor: "#FFFFFF",
-              backgroundColor: "#FFFFFF",
-              type: "line",
-              fill: true,
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          scales: {
-            x: {
-              display: true,
-              title: {
-                display: true,
-              },
-              grid: {
-                color: "#FFFFFF",
-              },
-              ticks: {
-                color: "#FFFFFF",
-                major: {
-                  enabled: true,
-                },
-              },
-            },
-            y: {
-              display: true,
-              color: "#FFFFFF",
-              grid: {
-                color: "#FFFFFF",
-              },
-              ticks: {
-                color: "#FFFFFF",
-              },
-            },
+    const dataset_valor = [];
+    const dataset_valor_total = [];
+
+    var raw = JSON.parse(data);
+
+    raw.data.forEach((element) => {
+
+      temp_valor = {
+        x: element.referencia,
+        y: element.valor_beneficio,
+      };
+
+      temp_valor_total = {
+        x: element.referencia,
+        y: element.valor_total_repassado,
+      };
+
+      dataset_valor.push(temp_valor);
+      dataset_valor_total.push(temp_valor_total);
+    });
+
+
+    new Chart(auxilio_brasil_valor, {
+      type: "line",
+      data: {
+        backgroundColor: "#FFFFFF",
+        datasets: [
+          {
+            label: "Valor médio do auxilio R$",
+            data: dataset_valor,
+            borderWidth: 1,
+            borderColor: "#FFFFFF",
+            backgroundColor: "#FFFFFF",
+            type: "line",
+            fill: true,
           },
-          layouts: {},
-          plugins: {
+        ],
+      },
+      options: {
+        responsive: true,
+        scales: {
+          x: {
+            display: true,
             title: {
               display: true,
-              text: "Valor do Auxilio brasil",
+            },
+            grid: {
               color: "#FFFFFF",
-              padding: {
-                top: 10,
-                bottom: 30,
-              },
             },
-            subtitle: {
-              display: true,
+            ticks: {
               color: "#FFFFFF",
-              text: raw.unidade_medida,
-            },
-          },
-        },
-      });
-  
-      new Chart(auxilio_brasil_valor_total, {
-        type: "line",
-        data: {
-          backgroundColor: "#FFFFFF",
-          datasets: [
-            {
-              label: "Valor total repassado ao programa R$",
-              data: dataset_valor_total,
-              borderWidth: 1,
-              borderColor: "#FFFFFF",
-              backgroundColor: "#FFFFFF",
-              type: "line",
-              fill: true,
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          scales: {
-            x: {
-              display: true,
-              title: {
-                display: true,
-              },
-              grid: {
-                color: "#FFFFFF",
-              },
-              ticks: {
-                color: "#FFFFFF",
-                major: {
-                  enabled: true,
-                },
-              },
-            },
-            y: {
-              display: true,
-              color: "#FFFFFF",
-              grid: {
-                color: "#FFFFFF",
-              },
-              ticks: {
-                color: "#FFFFFF",
+              major: {
+                enabled: true,
               },
             },
           },
-          layouts: {},
-          plugins: {
+          y: {
+            display: true,
+            color: "#FFFFFF",
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+            },
+          },
+        },
+        layouts: {},
+        plugins: {
+          title: {
+            display: true,
+            text: "Valor do Auxilio brasil",
+            color: "#FFFFFF",
+            padding: {
+              top: 10,
+              bottom: 30,
+            },
+          },
+          subtitle: {
+            display: true,
+            color: "#FFFFFF",
+            text: raw.unidade_medida,
+          },
+          legend: {
+            labels: {
+              color: "#FFFFFF",
+            }
+          }
+        },
+      },
+    });
+
+    new Chart(auxilio_brasil_valor_total, {
+      type: "line",
+      data: {
+        backgroundColor: "#FFFFFF",
+        datasets: [
+          {
+            label: "Valor total repassado ao programa R$",
+            data: dataset_valor_total,
+            borderWidth: 1,
+            borderColor: "#FFFFFF",
+            backgroundColor: "#FFFFFF",
+            type: "line",
+            fill: true,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        scales: {
+          x: {
+            display: true,
             title: {
               display: true,
-              text: "Total repassado ao Auxilio Brasil",
+            },
+            grid: {
               color: "#FFFFFF",
-              padding: {
-                top: 10,
-                bottom: 30,
+            },
+            ticks: {
+              color: "#FFFFFF",
+              major: {
+                enabled: true,
               },
             },
-            subtitle: {
-              display: true,
+          },
+          y: {
+            display: true,
+            color: "#FFFFFF",
+            grid: {
               color: "#FFFFFF",
-              text: raw.unidade_medida,
+            },
+            ticks: {
+              color: "#FFFFFF",
             },
           },
         },
-      });
-    }
-  );
+        layouts: {},
+        plugins: {
+          title: {
+            display: true,
+            text: "Total repassado ao Auxilio Brasil",
+            color: "#FFFFFF",
+            padding: {
+              top: 10,
+              bottom: 30,
+            },
+          },
+          subtitle: {
+            display: true,
+            color: "#FFFFFF",
+            text: raw.unidade_medida,
+          },
+          legend: {
+            labels: {
+              color: "#FFFFFF",
+            }
+          }
+        },
+      },
+    });
+  }
+);

@@ -117,6 +117,11 @@ $.get(
             color: "#FFFFFF",
             text: raw.unidade_medida,
           },
+          legend: {
+            labels :{
+              color:  "#FFFFFF",
+            }
+          }
         },
       },
     });
