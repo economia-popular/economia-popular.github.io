@@ -399,3 +399,17 @@
 					});
 
 })(jQuery);
+
+const bg_plugin = {
+	id: 'customCanvasBackgroundColor',
+	beforeDraw: (chart, args, options) => {
+
+		console.log(options)
+	  const {ctx} = chart;
+	  ctx.save();
+	  ctx.globalCompositeOperation = 'destination-over';
+	  ctx.fillStyle = options.color || '#000000';
+	  ctx.fillRect(0, 0, chart.width, chart.height);
+	  ctx.restore();
+	}
+};

@@ -168,6 +168,7 @@ $.get(
             borderColor: "#FFFFFF",
             backgroundColor: "#FFFFFF",
             type: "line",
+            fill: true,
           },
         ],
       },

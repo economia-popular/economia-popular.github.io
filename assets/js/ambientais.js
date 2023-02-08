@@ -594,7 +594,7 @@ $.get(
           {
             stacked: false,
             label: "Série Historica de Focos de Queimadas e Incêndios",
-            data: dataset_focos.slice(-400),
+            data: dataset_focos.slice(-120),
             borderWidth: 1,
             borderColor: "#b94d29",
             backgroundColor: "#b94d29",

@@ -39,6 +39,7 @@ $.get(
 
     new agGrid.Grid(eGridDiv, gridOptions);
 
+
     new Chart(gini_variacao, {
       type: "bar",
       data: {
@@ -96,10 +97,6 @@ $.get(
             display: true,
             text: "Evolução do Coeficiente de Gini",
             color: "#FFFFFF",
-            // padding: {
-            //   top: 10,
-            //   bottom: 30,
-            // },
           },
           subtitle: {
             display: true,
@@ -110,9 +107,15 @@ $.get(
             labels: {
               color: "#FFFFFF",
             }
+          },
+          plugins: {
+            customCanvasBackgroundColor: {
+                color: "#ffffff",
+            }
           }
         },
       },
+      // plugins: [ bg_plugin ],
     });
 
     // Fonte do gini

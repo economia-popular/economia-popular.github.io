@@ -134,6 +134,7 @@ $.get(
         backgroundColor: "#FFFFFF",
         datasets: [
           {
+            type: "bar",
             label: "% acumulo anual",
             data: dataset_acumulado.slice(-120), // Ultimos 10 anos
             borderWidth: 1,
@@ -144,8 +145,8 @@ $.get(
             label: "% acumulado 12 meses",
             data: dataset_12_meses.slice(-120), // Ultimos 10 anos
             borderWidth: 1,
-            borderColor: "#114247",
-            backgroundColor: "#114247",
+            borderColor: "#FFFFFF",
+            backgroundColor: "#FFFFFF",
           },
         ],
       },

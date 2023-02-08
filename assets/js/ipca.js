@@ -147,8 +147,8 @@ $.get(
             type: "line",
             data: dataset_12_meses.slice(-120), // Ultimos 10 anos
             borderWidth: 1,
-            borderColor: "#114247",
-            backgroundColor: "#114247",
+            borderColor: "#FFFFFF",
+            backgroundColor: "#FFFFFF",
           },
         ],
       },
@@ -356,8 +356,8 @@ $.get(
             data: dataset_12_meses.slice(-120), // Ultimos 10 anos
             type: "line",
             borderWidth: 1,
-            borderColor: "#114247",
-            backgroundColor: "#114247",
+            borderColor: "#FFFFFF",
+            backgroundColor: "#FFFFFF",
           },
         ],
       },
