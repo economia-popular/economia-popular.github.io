@@ -730,7 +730,7 @@
 					target="_blank" class="button primary icon solid fa-download" download>JSON</a>
 				<a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/ambientais/queimadas.csv"
 					target="_blank" class="button primary icon solid fa-download" download>CSV</a>
-				<a href="https://www.kaggle.com/datasets/fidelissauro/focos_incendio_brasil" target="_blank"
+				<a href="https://www.kaggle.com/datasets/fidelissauro/focos-incendios-brasil" target="_blank"
 					class="button primary icon solid fa-download" download>Kaggle</a>
 				<br><br>
 				<h3>Fonte Oficial: </h3>
@@ -806,17 +806,43 @@
 				</p>
 
 
-				<h1>Variação Mensal do INCC</h1>
+				<h1>INCC-DI</h1>
+				<p>
+					O <b>Índice Nacional de Custo de Construção - Disponibilidade Interna (INCC-DI) </b> tem por objetivo medir a variação do custo dos materiais utilizados nas construções habitacionais confome comentado. <br>
+					<b>A divulgação do INCC-DI ocorre sempre no 1º decêndio do mês</b> seguinte ao da coleta dos dados, cobrindo a <b>variação do período que vai entre o primeiro dia do mês até o último</b>.
+				</p>
+				<h2>Variação Mensal do INCC-DI</h2>
 				<p>
 					<canvas id="incc-variacao" style="height:50vh; width:80vw"></canvas>
 				</p>
 
-				<h1>Variação do INCC - Acumulado</h1>
+				<h2>Variação do INCC-DI - Acumulado</h2>
 				<p>
 					<canvas id="incc-acumulado" style="height:50vh; width:80vw"></canvas>
 				</p>
 
 				<div id="incc-grid" style="height:60vh; width:100%" class="ag-theme-alpine-dark"></div>
+				<br><br>
+
+				<h1>INCC-M</h1>
+
+				<p>
+					O <b>Índice Nacional de Custo de Construção - Mercado  (INCC-M)</b>, assim como as outras medições do Indice INCC tem o objetivo de medir o custo dos materiais utilizados nas contruções habitacionais. <br>
+					<b>A divulgação do INCC-M se dá no final de cada mês de referência. </b> cobrindo as medições realizadas <b>entre o dia 21 do mês anterior e o dia 20 do mês de referência</b>.
+				</p>
+
+				<h2>Variação Mensal do INCC-M</h2>
+
+				<p>
+					<canvas id="incc-m-variacao" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<h2>Variação do INCC-M - Acumulado</h2>
+				<p>
+					<canvas id="incc-m-acumulado" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<div id="incc-m-grid" style="height:60vh; width:100%" class="ag-theme-alpine-dark"></div>
 				<br><br>
 
 
