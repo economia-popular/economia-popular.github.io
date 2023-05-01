@@ -40,7 +40,7 @@
 			</div>
 			<nav>
 				<ul>
-					<li><a href="#pib" 	id="pib_click">PIB</a></li>
+					<li><a href="#pib" id="pib_click">PIB</a></li>
 					<li><a href="#ipca" id="ipca_click">IPCA</a></li>
 					<li><a href="#inpc" id="inpc_click">INPC</a></li>
 					<li><a href="#igpm" id="igpm_click">IGP-M</a></li>
@@ -369,6 +369,41 @@
 					target="_blank" class="button primary icon solid fa-download" download>CSV</a>
 				<p></p><br>
 
+
+				<h2>Juros Reais - Selic / IPCA</h2>
+
+				<p>
+					Os juros reais são uma <b>medida do ganho real de um investimento</b>, levando em consideração a inflação.
+					Eles representam a diferença entre a taxa de juros nominal (ou aparente) de um investimento e a taxa
+					de inflação durante o mesmo período.
+				</p>
+				<p>
+					Em outras palavras, <b>os juros reais refletem o aumento real do poder de compra do dinheiro investido</b>,
+					após descontar a inflação. Se a taxa de juros nominal <b>Selic Acumulado</b> é de 8% ao ano e a inflação é de 4% ao ano,
+					então os juros reais são de 4% ao ano (8% - 4% = 4%). Isso significa que o dinheiro investido está
+					aumentando em valor real em 4% ao ano.
+				</p>
+
+				<p>
+					O indice inflacionário que iremos utilizar para ilustrar os <b>Juros Reais</b> será o <b><a href="/#ipca">IPCA</a></b>
+				</p>
+
+
+				<p>
+					<canvas id="juros-reais" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<div id="juros-reais-grid" style="height:40vh; width:100%" class="ag-theme-alpine-dark"></div>
+				<br><br>
+
+				<h3>Datasets</h3>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/app/data/inflacao/inflacao.json"
+					target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/app/data/inflacao/inflacao.csv"
+					target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+				<p></p><br>
+
+
 				<p>
 					<a href="/selic" target="_blank" class="button icon solid fa-search-location">Dados Detalhados</a>
 				</p>
@@ -482,8 +517,10 @@
 				<h2>Pegada Material / Material Footprint</h2>
 
 				<p>
-					A "Pegada Material", tecnicamente chamado de "Material Footprint" é um indice de extração de material global para atender a demanda interna de um País. <br>
-					O indice é calculado como (Importação de Matéria Prima) + (Extracão de Materia Prima Para Uso Doméstico) - (Exportação de Matéria Prima) <br>
+					A "Pegada Material", tecnicamente chamado de "Material Footprint" é um indice de extração de
+					material global para atender a demanda interna de um País. <br>
+					O indice é calculado como (Importação de Matéria Prima) + (Extracão de Materia Prima Para Uso
+					Doméstico) - (Exportação de Matéria Prima) <br>
 				</p>
 
 				<p>
@@ -659,17 +696,32 @@
 				<h2 class="major">Ambientais</h2>
 				<h3>Séries históricas com o tema do Meio Ambiente e Preservação</h3>
 				<p>
-					Compilado de séries históricas disponibilizados pela politica de Dados Abertos de diversas Instituições e Projetos nacionais e internacionais como o <a href="https://www.gov.br/inpe/pt-br"><b>INPE (Instituto Nacional de Pesquisas Espaciais)</b></a>, <a href="https://www.gov.br/ibama/pt-br"><b>IBAMA (Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis)</b></a> e <a href="https://hdr.undp.org"><b>UNDP (United Nations Development Programme)</b></a>.
+					Compilado de séries históricas disponibilizados pela politica de Dados Abertos de diversas
+					Instituições e Projetos nacionais e internacionais como o <a
+						href="https://www.gov.br/inpe/pt-br"><b>INPE (Instituto Nacional de Pesquisas
+							Espaciais)</b></a>, <a href="https://www.gov.br/ibama/pt-br"><b>IBAMA (Instituto Brasileiro
+							do Meio Ambiente e dos Recursos Naturais Renováveis)</b></a> e <a
+						href="https://hdr.undp.org"><b>UNDP (United Nations Development Programme)</b></a>.
 				</p>
 
 				<h2>Amazonia Legal</h2>
 
 				<h3>Desmatamento da Amazonia Legal</h3>
 				<p>
-					Os dados historicos a seguir são coletados a partir do <a href="http://www.obt.inpe.br/OBT/assuntos/programas/amazonia/prodes"><b>PRODES</b></a>, um projeto da <a href="http://www.obt.inpe.br"><b>INPE (Instituto Nacional de Pesquisas Espaciais)</b></a> <br><br>
-					O projeto <a href="http://www.obt.inpe.br/OBT/assuntos/programas/amazonia/prodes"><b>PRODES (Programa de Cálculo do Desflorestamento da Amazônia) </b> </a> realiza o monitoramento por satélites do desmatamento por corte raso na Amazônia Legal e produz, desde 1988, <b>as taxas anuais de desmatamento na região, que são usadas pelo governo brasileiro para o estabelecimento de políticas públicas.</b> 
-					As taxas anuais são estimadas a partir dos incrementos de desmatamento identificados em cada imagem de satélite que cobre a Amazônia Legal. 
-					A primeira apresentação dos dados é realizada até dezembro de cada ano, na forma de estimativa, quando normalmente são processadas aproximadamente 50% das imagens que cobrem a Amazônia Legal. <b>Os dados consolidados são apresentados no primeiro semestre do ano seguinte.</b>
+					Os dados historicos a seguir são coletados a partir do <a
+						href="http://www.obt.inpe.br/OBT/assuntos/programas/amazonia/prodes"><b>PRODES</b></a>, um
+					projeto da <a href="http://www.obt.inpe.br"><b>INPE (Instituto Nacional de Pesquisas
+							Espaciais)</b></a> <br><br>
+					O projeto <a href="http://www.obt.inpe.br/OBT/assuntos/programas/amazonia/prodes"><b>PRODES
+							(Programa de Cálculo do Desflorestamento da Amazônia) </b> </a> realiza o monitoramento por
+					satélites do desmatamento por corte raso na Amazônia Legal e produz, desde 1988, <b>as taxas anuais
+						de desmatamento na região, que são usadas pelo governo brasileiro para o estabelecimento de
+						políticas públicas.</b>
+					As taxas anuais são estimadas a partir dos incrementos de desmatamento identificados em cada imagem
+					de satélite que cobre a Amazônia Legal.
+					A primeira apresentação dos dados é realizada até dezembro de cada ano, na forma de estimativa,
+					quando normalmente são processadas aproximadamente 50% das imagens que cobrem a Amazônia Legal.
+					<b>Os dados consolidados são apresentados no primeiro semestre do ano seguinte.</b>
 				</p>
 
 				<p>
@@ -678,9 +730,10 @@
 
 				<p>
 					<canvas id="desmatamento-regioes-variacao" style="height:50vh; width:80vw"></canvas>
-					* Os dados do ano de 2022 ainda estão considerados como incompletos. A totalização e sumarização estão previstas para o primeiro semestre de 2023.
+					* Os dados do ano de 2022 ainda estão considerados como incompletos. A totalização e sumarização
+					estão previstas para o primeiro semestre de 2023.
 				</p>
-				
+
 				<div id="desmatamento-grid" style="height:60vh; width:100%" class="ag-theme-alpine-dark"></div>
 
 				<br><br>
@@ -699,16 +752,25 @@
 				<h2>Monitoramento de Queimadas e Incêndios</h2>
 
 				<p>
-					Os dados a seguir são um compilado simplificado dos dados abertos de monitoramento de queimadas e focos de incêndios vindos do <a href="https://queimadas.dgi.inpe.br/queimadas/portal"><b>Programa Queimadas do INPE</b></a>.
+					Os dados a seguir são um compilado simplificado dos dados abertos de monitoramento de queimadas e
+					focos de incêndios vindos do <a href="https://queimadas.dgi.inpe.br/queimadas/portal"><b>Programa
+							Queimadas do INPE</b></a>.
 				</p>
 				<p>
-					O <b>Programa Queimadas do INPE</b> realiza pesquisa, desenvolvimento tecnológico e a inovação de produtos, processos e geoserviços para o monitoramento e a modelagem da ocorrência e propagação e classificação do fogo ativo na vegetação, seu risco,
-					 extensão e severidade, utilizando técnicas de Sensoriamento Remoto, Geoprocessamento e Modelagem Numérica
+					O <b>Programa Queimadas do INPE</b> realiza pesquisa, desenvolvimento tecnológico e a inovação de
+					produtos, processos e geoserviços para o monitoramento e a modelagem da ocorrência e propagação e
+					classificação do fogo ativo na vegetação, seu risco,
+					extensão e severidade, utilizando técnicas de Sensoriamento Remoto, Geoprocessamento e Modelagem
+					Numérica
 				</p>
 
 				<p>
-					A detecção dos focos de queima de vegetação e de fogo é realizado via satélite, em todas regiões, todos os dias e por anos seguidos, o que <b> permite análises temporais e espaciais da ocorrência do fogo que seriam impossíveis de outra forma</b>, dada a precariedade, descontinuidade e diferença de métodos nas fontes de informação locais.  
-					Em particular, os dados do  <b>"satélite de referência"</b> permitem a comparação entre qualquer país do Planeta. 
+					A detecção dos focos de queima de vegetação e de fogo é realizado via satélite, em todas regiões,
+					todos os dias e por anos seguidos, o que <b> permite análises temporais e espaciais da ocorrência do
+						fogo que seriam impossíveis de outra forma</b>, dada a precariedade, descontinuidade e diferença
+					de métodos nas fontes de informação locais.
+					Em particular, os dados do <b>"satélite de referência"</b> permitem a comparação entre qualquer país
+					do Planeta.
 				</p>
 
 				<h3>Quantidade Anual de Focos de Incêndio Detectados</h3>
@@ -740,7 +802,9 @@
 
 				<h2>Meio Ambiente - Indice de Desenvolvimento Humano</h2>
 				<p>
-					O Indice de Desenvolvimento Humano (IDH) que possui mais de 30 anos, agora contabiliza no seu ranking geral variáveis ambientais como o <b>"Pegada Material / Material Footprint"</b> e a <b>"Emissão de Gases CO2 Per Capta"</b>. <br>
+					O Indice de Desenvolvimento Humano (IDH) que possui mais de 30 anos, agora contabiliza no seu
+					ranking geral variáveis ambientais como o <b>"Pegada Material / Material Footprint"</b> e a
+					<b>"Emissão de Gases CO2 Per Capta"</b>. <br>
 					<a href="#idh"><b>Os Dados Completos e Detalhados sobre o IDH pode ser acessado aqui também</b></a>.
 				</p>
 
@@ -752,8 +816,10 @@
 				<h3>Pegada Material / Material Footprint</h3>
 
 				<p>
-					A "Pegada Material", tecnicamente chamado de "Material Footprint" é um indice de extração de material global para atender a demanda interna de um País. <br>
-					O indice é calculado como (Importação de Matéria Prima) + (Extracão de Materia Prima Para Uso Doméstico) - (Exportação de Matéria Prima) <br>
+					A "Pegada Material", tecnicamente chamado de "Material Footprint" é um indice de extração de
+					material global para atender a demanda interna de um País. <br>
+					O indice é calculado como (Importação de Matéria Prima) + (Extracão de Materia Prima Para Uso
+					Doméstico) - (Exportação de Matéria Prima) <br>
 				</p>
 
 				<p>
@@ -782,13 +848,14 @@
 				<p></p><br>
 
 				<p>
-					<a href="/ambientais" target="_blank" class="button icon solid fa-search-location">Dados Detalhados</a>
+					<a href="/ambientais" target="_blank" class="button icon solid fa-search-location">Dados
+						Detalhados</a>
 				</p>
 				<br><br>
 
 				<h3>Ultima atualização: </h3>
 				<div class="atualizacao-ambientais"></div>
-			</article>			
+			</article>
 
 
 			<!-- INCC -->
@@ -808,8 +875,11 @@
 
 				<h1>INCC-DI</h1>
 				<p>
-					O <b>Índice Nacional de Custo de Construção - Disponibilidade Interna (INCC-DI) </b> tem por objetivo medir a variação do custo dos materiais utilizados nas construções habitacionais confome comentado. <br>
-					<b>A divulgação do INCC-DI ocorre sempre no 1º decêndio do mês</b> seguinte ao da coleta dos dados, cobrindo a <b>variação do período que vai entre o primeiro dia do mês até o último</b>.
+					O <b>Índice Nacional de Custo de Construção - Disponibilidade Interna (INCC-DI) </b> tem por
+					objetivo medir a variação do custo dos materiais utilizados nas construções habitacionais confome
+					comentado. <br>
+					<b>A divulgação do INCC-DI ocorre sempre no 1º decêndio do mês</b> seguinte ao da coleta dos dados,
+					cobrindo a <b>variação do período que vai entre o primeiro dia do mês até o último</b>.
 				</p>
 				<h2>Variação Mensal do INCC-DI</h2>
 				<p>
@@ -827,8 +897,11 @@
 				<h1>INCC-M</h1>
 
 				<p>
-					O <b>Índice Nacional de Custo de Construção - Mercado  (INCC-M)</b>, assim como as outras medições do Indice INCC tem o objetivo de medir o custo dos materiais utilizados nas contruções habitacionais. <br>
-					<b>A divulgação do INCC-M se dá no final de cada mês de referência. </b> cobrindo as medições realizadas <b>entre o dia 21 do mês anterior e o dia 20 do mês de referência</b>.
+					O <b>Índice Nacional de Custo de Construção - Mercado (INCC-M)</b>, assim como as outras medições do
+					Indice INCC tem o objetivo de medir o custo dos materiais utilizados nas contruções habitacionais.
+					<br>
+					<b>A divulgação do INCC-M se dá no final de cada mês de referência. </b> cobrindo as medições
+					realizadas <b>entre o dia 21 do mês anterior e o dia 20 do mês de referência</b>.
 				</p>
 
 				<h2>Variação Mensal do INCC-M</h2>
@@ -1473,8 +1546,8 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			console.log(event.target.id)
 
 			gtag('event', event.target.id, {
-			'app_name': event.target.id,
-			'screen_name': 'Home'
+				'app_name': event.target.id,
+				'screen_name': 'Home'
 			});
 		});
 	</script>
