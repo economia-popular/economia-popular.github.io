@@ -303,6 +303,8 @@ $.get(
   "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/app/data/inflacao/inflacao.json",
   function (data, textStatus, jqXHR) {
     const dataset = [];
+    const dataset_ipca = []
+    const dataset_selic_ano = []
 
     var raw = JSON.parse(data);
 
@@ -312,6 +314,18 @@ $.get(
         y: element.juros_reais,
       };
       dataset.push(temp);
+
+      temp_ipca = {
+        x: element.referencia,
+        y: element.ipca_acumulado_doze_meses,
+      }
+      dataset_ipca.push(temp_ipca)
+
+      temp_selic = {
+        x: element.referencia,
+        y: element.selic_ano,
+      }
+      dataset_selic_ano.push(temp_selic)
     });
 
     new Chart(juros_reais, {
@@ -320,11 +334,27 @@ $.get(
         backgroundColor: "#FFFFFF",
         datasets: [
           {
-            label: "Juros Reais - SELIC vs IPCA",
+            label: "Juros Reais",
             data: dataset.slice(-120), // Ultimos 10 anos,
             borderWidth: 1,
-            borderColor: "#FFFFFF",
-            backgroundColor: "#FFFFFF",
+            borderColor: "#537bc4",
+            backgroundColor: "#537bc4",
+          },
+
+          {
+            label: "IPCA acumulado",
+            data: dataset_ipca.slice(-120), // Ultimos 10 anos,
+            borderWidth: 1,
+            borderColor: "#5D6D2F",
+            backgroundColor: "#5D6D2F",
+          },
+
+          {
+            label: "Selic Ano",
+            data: dataset_selic_ano.slice(-120), // Ultimos 10 anos,
+            borderWidth: 1,
+            borderColor: "#114247",
+            backgroundColor: "#114247",
           },
         ],
       },
