@@ -306,6 +306,18 @@ $.get(
     const dataset_ipca = []
     const dataset_selic_ano = []
 
+    const plugin = {
+      id: 'customCanvasBackgroundColor',
+      beforeDraw: (chart, args, options) => {
+        const {ctx} = chart;
+        ctx.save();
+        ctx.globalCompositeOperation = 'destination-over';
+        ctx.fillStyle = options.color || '#99ffff';
+        ctx.fillRect(0, 0, chart.width, chart.height);
+        ctx.restore();
+      }
+    };
+
     var raw = JSON.parse(data);
 
     raw.data.forEach((element) => {
@@ -331,7 +343,7 @@ $.get(
     new Chart(juros_reais, {
       type: "line",
       data: {
-        backgroundColor: "#FFFFFF",
+        backgroundColor: "#000000",
         datasets: [
           {
             label: "Juros Reais",
@@ -353,8 +365,8 @@ $.get(
             label: "Selic Ano",
             data: dataset_selic_ano.slice(-120), // Ultimos 10 anos,
             borderWidth: 1,
-            borderColor: "#114247",
-            backgroundColor: "#114247",
+            borderColor: "#BA6338",
+            backgroundColor: "#BA6338",
           },
         ],
       },
@@ -367,10 +379,10 @@ $.get(
               display: true,
             },
             grid: {
-              color: "#FFFFFF",
+              color: "#ffffff",
             },
             ticks: {
-              color: "#FFFFFF",
+              color: "#ffffff",
               major: {
                 enabled: true,
               },
@@ -378,12 +390,12 @@ $.get(
           },
           y: {
             display: true,
-            color: "#FFFFFF",
+            color: "#ffffff",
             grid: {
-              color: "#FFFFFF",
+              color: "#ffffff",
             },
             ticks: {
-              color: "#FFFFFF",
+              color: "#ffffff",
             },
           },
         },
@@ -392,7 +404,7 @@ $.get(
           title: {
             display: true,
             text: "Juros Reais",
-            color: "#FFFFFF",
+            color: "#ffffff",
             padding: {
               top: 10,
               bottom: 30,
@@ -400,16 +412,20 @@ $.get(
           },
           subtitle: {
             display: true,
-            color: "#FFFFFF",
+            color: "#ffffff",
             text: "Variação do Juros Reais pelo IPCA",
           },
           legend: {
             labels: {
-              color: "#FFFFFF",
+              color: "#ffffff",
             }
-          }
+          },
+          // customCanvasBackgroundColor: {
+          //   color: '#131819',
+          // }
         },
       },
+      // plugins: [plugin],
     });
 
     // Data Grid
