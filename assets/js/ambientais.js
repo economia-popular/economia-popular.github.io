@@ -540,7 +540,7 @@ $.get(
     const dataset = [];
     var raw = JSON.parse(data);
 
-    console.log(raw)
+    //console.log(raw)
 
     const dataset_focos = []
     const dataset_acumulado = []

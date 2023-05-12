@@ -57,7 +57,7 @@
 				<ul>
 					<li><a href="#ipa" id="ipca_click">IPA</a></li>
 					<li><a href="#breve" id="pastas_click">Pastas</a></li>
-					<li><a href="#breve" id="precos_click">Preços</a></li>
+					<li><a href="#precos" id="precos_click">Preços</a></li>
 					<li><a href="#breve" id="agro_click">Agro</a></li>
 					<li><a href="#ambientais" id="ambientais_click">Ambientais</a></li>
 				</ul>
@@ -73,7 +73,8 @@
 
 			<!-- PIB -->
 			<article id="pib">
-				<h1 class="major">PIB - Produto Interno Bruto</h1>
+				<h1 class="major">PIB - Brasil</h1>
+				<h2>Produto Interno Bruto</h2>
 				<p>O PIB, ou <b>Produto Interno Bruto</b> é a soma de todos os bens e serviços finais produzidos por um
 					país,
 					estado ou cidade, geralmente em um ano. Todos os países calculam o seu PIB nas suas respectivas
@@ -374,19 +375,23 @@
 				<h1>Juros Reais - Selic / IPCA</h1>
 
 				<p>
-					Os juros reais são uma <b>medida do ganho real de um investimento</b>, levando em consideração a inflação.
+					Os juros reais são uma <b>medida do ganho real de um investimento</b>, levando em consideração a
+					inflação.
 					Eles representam a diferença entre a taxa de juros nominal (ou aparente) de um investimento e a taxa
 					de inflação durante o mesmo período.
 				</p>
 				<p>
-					Em outras palavras, <b>os juros reais refletem o aumento real do poder de compra do dinheiro investido</b>,
-					após descontar a inflação. Se a taxa de juros nominal <b>Selic Acumulado</b> é de 8% ao ano e a inflação é de 4% ao ano,
+					Em outras palavras, <b>os juros reais refletem o aumento real do poder de compra do dinheiro
+						investido</b>,
+					após descontar a inflação. Se a taxa de juros nominal <b>Selic Acumulado</b> é de 8% ao ano e a
+					inflação é de 4% ao ano,
 					então os juros reais são de 4% ao ano (8% - 4% = 4%). Isso significa que o dinheiro investido está
 					aumentando em valor real em 4% ao ano.
 				</p>
 
 				<p>
-					O indice inflacionário que iremos utilizar para ilustrar os <b>Juros Reais</b> será o <b><a href="/#ipca">IPCA</a></b>
+					O indice inflacionário que iremos utilizar para ilustrar os <b>Juros Reais</b> será o <b><a
+							href="/#ipca">IPCA</a></b>
 				</p>
 
 
@@ -1145,6 +1150,116 @@
 
 			</article>
 
+			<!-- Preços -->
+			<article id="precos">
+				<h1 class="major">Preços Brasil - Séries Históricas</h1>
+				<!-- <h2>Série História de Preços de Itens Comuns</h2> -->
+				<!-- <p>
+					O <b>Coeficiente de Gini</b>, ou <b>Indice de Gini</b> é um instrumento para medir o grau de
+					concentração de renda em determinado grupo.
+					Ele aponta a diferença entre os rendimentos dos <b>mais pobres</b> e dos <b>mais ricos</b>.
+					Numericamente, varia de zero a um (alguns apresentam de zero a cem).
+				</p>
+				<p>
+					<li>O valor <b>zero</b> representa a situação de <b>igualdade</b>, ou seja, numa situação imaginária
+						onde <b>todos têm a mesma renda</b>.</li>
+					<li>O valor um (ou cem) está no extremo oposto, isto é, uma situação imaginária onde <b>só uma
+							pessoa detém toda a riqueza</b>.</li>
+				</p> -->
+<!-- 
+				<h1>Preços de Itens Comuns de Mercado</h1> -->
+
+				<h2>Série Histórica - Carne Bovina</h2>
+				<p>
+					<canvas id="carne-bovina" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<div id="carne-bovina-grid" style="height:40vh; width:100%" class="ag-theme-alpine-dark"></div>
+				<br><br>
+
+
+				<h2>Série Histórica - Carne Suina</h2>
+				<p>
+					<canvas id="carne-suina" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<div id="carne-suina-grid" style="height:40vh; width:100%" class="ag-theme-alpine-dark"></div>
+				<br><br>
+
+				<h2>Série Histórica - Frango </h2>
+				<p>
+					<canvas id="carne-frango" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<h2>Série Histórica - Ovos</h2>
+				<p>
+					<canvas id="ovos" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<div id="ovos-grid" style="height:40vh; width:100%" class="ag-theme-alpine-dark"></div>
+				<br><br>
+
+				<h2>Série Histórica - Arroz</h2>
+				<p>
+					<canvas id="arroz" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<div id="arroz-grid" style="height:40vh; width:100%" class="ag-theme-alpine-dark"></div>
+				<br><br>
+
+				<h2>Série Histórica - Feijão</h2>
+				<p>
+					<canvas id="feijao" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<div id="feijao-grid" style="height:40vh; width:100%" class="ag-theme-alpine-dark"></div>
+				<br><br>
+
+				<h2>Série Histórica - Cana-De-Açucar </h2>
+				<p>
+					<canvas id="cana" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+
+				<h2>Série Histórica - Milho </h2>
+				<p>
+					<canvas id="milho" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<h2>Série Histórica - Trigo </h2>
+				<p>
+					<canvas id="trigo" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+
+				<h2>Série Histórica - Litro do Leite </h2>
+				<p>
+					<canvas id="leite" style="height:50vh; width:80vw"></canvas>
+				</p>
+				
+				
+
+
+				<div id="misc-grid" style="height:40vh; width:100%" class="ag-theme-alpine-dark"></div>
+				<br><br>
+
+				<h3>Datasets</h3>
+				<a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/precos/precos.json"
+					target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+				<a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/precos/precos.csv"
+					target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+				<a href="https://www.kaggle.com/datasets/fidelissauro/precos_brasil" target="_blank"
+					class="button primary icon solid fa-download" download>Kaggle</a>
+
+				<p></p><br>
+
+				<h3>Fonte Oficial: </h3>
+				<div class="fonte-precos"></div>
+				<br><br>
+				<h3>Ultima atualização: </h3>
+				<div class="atualizacao-precos"></div>
+			</article>
+
 			<!-- Breve -->
 			<article id="breve">
 				<h2 class="major">Em Breve</h2>
@@ -1532,6 +1647,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	<script src="/assets/js/auxilio-brasil.js"></script>
 	<script src="/assets/js/combustivel.js"></script>
 	<script src="/assets/js/ambientais.js"></script>
+	<script src="/assets/js/precos.js"></script>
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9GQ3VE9HVC"></script>
 	<script>
