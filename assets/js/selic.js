@@ -299,159 +299,156 @@ $.get(
 
 
 // Juros Reais
-$.get(
-  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/app/data/inflacao/inflacao.json",
-  function (data, textStatus, jqXHR) {
-    const dataset = [];
-    const dataset_ipca = []
-    const dataset_selic_ano = []
+function JurosReais(data) {
+  const dataset = [];
+  const dataset_ipca = []
+  const dataset_selic_ano = []
 
-    const plugin = {
-      id: 'customCanvasBackgroundColor',
-      beforeDraw: (chart, args, options) => {
-        const {ctx} = chart;
-        ctx.save();
-        ctx.globalCompositeOperation = 'destination-over';
-        ctx.fillStyle = options.color || '#99ffff';
-        ctx.fillRect(0, 0, chart.width, chart.height);
-        ctx.restore();
-      }
+  const plugin = {
+    id: 'customCanvasBackgroundColor',
+    beforeDraw: (chart, args, options) => {
+      const { ctx } = chart;
+      ctx.save();
+      ctx.globalCompositeOperation = 'destination-over';
+      ctx.fillStyle = options.color || '#99ffff';
+      ctx.fillRect(0, 0, chart.width, chart.height);
+      ctx.restore();
+    }
+  };
+
+  var raw = JSON.parse(data);
+
+  raw.data.forEach((element) => {
+    temp = {
+      x: element.referencia,
+      y: element.juros_reais,
     };
+    dataset.push(temp);
 
-    var raw = JSON.parse(data);
+    temp_ipca = {
+      x: element.referencia,
+      y: element.ipca_acumulado_doze_meses,
+    }
+    dataset_ipca.push(temp_ipca)
 
-    raw.data.forEach((element) => {
-      temp = {
-        x: element.referencia,
-        y: element.juros_reais,
-      };
-      dataset.push(temp);
+    temp_selic = {
+      x: element.referencia,
+      y: element.selic_ano,
+    }
+    dataset_selic_ano.push(temp_selic)
+  });
 
-      temp_ipca = {
-        x: element.referencia,
-        y: element.ipca_acumulado_doze_meses,
-      }
-      dataset_ipca.push(temp_ipca)
-
-      temp_selic = {
-        x: element.referencia,
-        y: element.selic_ano,
-      }
-      dataset_selic_ano.push(temp_selic)
-    });
-
-    new Chart(juros_reais, {
-      type: "line",
-      data: {
-        backgroundColor: "#000000",
-        datasets: [
-          {
-            label: "Juros Reais",
-            data: dataset.slice(-120), // Ultimos 10 anos,
-            borderWidth: 1,
-            borderColor: "#537bc4",
-            backgroundColor: "#537bc4",
-          },
-
-          {
-            label: "IPCA acumulado",
-            data: dataset_ipca.slice(-120), // Ultimos 10 anos,
-            borderWidth: 1,
-            borderColor: "#5D6D2F",
-            backgroundColor: "#5D6D2F",
-          },
-
-          {
-            label: "Selic Ano",
-            data: dataset_selic_ano.slice(-120), // Ultimos 10 anos,
-            borderWidth: 1,
-            borderColor: "#BA6338",
-            backgroundColor: "#BA6338",
-          },
-        ],
-      },
-      options: {
-        responsive: true,
-        scales: {
-          x: {
-            display: true,
-            title: {
-              display: true,
-            },
-            grid: {
-              color: "#ffffff",
-            },
-            ticks: {
-              color: "#ffffff",
-              major: {
-                enabled: true,
-              },
-            },
-          },
-          y: {
-            display: true,
-            color: "#ffffff",
-            grid: {
-              color: "#ffffff",
-            },
-            ticks: {
-              color: "#ffffff",
-            },
-          },
+  new Chart(juros_reais, {
+    type: "line",
+    data: {
+      backgroundColor: "#000000",
+      datasets: [
+        {
+          label: "Juros Reais",
+          data: dataset.slice(-120), // Ultimos 10 anos,
+          borderWidth: 1,
+          borderColor: "#537bc4",
+          backgroundColor: "#537bc4",
         },
-        layouts: {},
-        plugins: {
+
+        {
+          label: "IPCA acumulado",
+          data: dataset_ipca.slice(-120), // Ultimos 10 anos,
+          borderWidth: 1,
+          borderColor: "#5D6D2F",
+          backgroundColor: "#5D6D2F",
+        },
+
+        {
+          label: "Selic Ano",
+          data: dataset_selic_ano.slice(-120), // Ultimos 10 anos,
+          borderWidth: 1,
+          borderColor: "#BA6338",
+          backgroundColor: "#BA6338",
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      scales: {
+        x: {
+          display: true,
           title: {
             display: true,
-            text: "Juros Reais",
+          },
+          grid: {
             color: "#ffffff",
-            padding: {
-              top: 10,
-              bottom: 30,
+          },
+          ticks: {
+            color: "#ffffff",
+            major: {
+              enabled: true,
             },
           },
-          subtitle: {
-            display: true,
+        },
+        y: {
+          display: true,
+          color: "#ffffff",
+          grid: {
             color: "#ffffff",
-            text: "Variação do Juros Reais pelo IPCA",
           },
-          legend: {
-            labels: {
-              color: "#ffffff",
-            }
+          ticks: {
+            color: "#ffffff",
           },
-          // customCanvasBackgroundColor: {
-          //   color: '#131819',
-          // }
         },
       },
-      // plugins: [plugin],
-    });
-
-    // Data Grid
-    var columnDefs = [
-      { headerName: "Periodo", field: "referencia" },
-      { headerName: "IPCA", field: "ipca_acumulado_doze_meses" },
-      { headerName: "Selic Ano", field: "selic_ano" },
-      { headerName: "Juros Reais", field: "juros_reais" },
-    ];
-
-    var gridOptions = {
-      defaultColDef: {
-        flex: 1,
-        sortable: true,
-        filter: true,
+      layouts: {},
+      plugins: {
+        title: {
+          display: true,
+          text: "Juros Reais",
+          color: "#ffffff",
+          padding: {
+            top: 10,
+            bottom: 30,
+          },
+        },
+        subtitle: {
+          display: true,
+          color: "#ffffff",
+          text: "Variação do Juros Reais pelo IPCA",
+        },
+        legend: {
+          labels: {
+            color: "#ffffff",
+          }
+        },
+        // customCanvasBackgroundColor: {
+        //   color: '#131819',
+        // }
       },
-      columnDefs: columnDefs,
-      rowData: raw.data.reverse(),
-      animateRows: true,
-      accentedSort: true,
-    };
+    },
+    // plugins: [plugin],
+  });
 
-    var eGridDiv = document.querySelector("#juros-reais-grid");
+  // Data Grid
+  var columnDefs = [
+    { headerName: "Periodo", field: "referencia" },
+    { headerName: "IPCA", field: "ipca_acumulado_doze_meses" },
+    { headerName: "Selic Ano", field: "selic_ano" },
+    { headerName: "Juros Reais", field: "juros_reais" },
+  ];
 
-    new agGrid.Grid(eGridDiv, gridOptions);
+  var gridOptions = {
+    defaultColDef: {
+      flex: 1,
+      sortable: true,
+      filter: true,
+    },
+    columnDefs: columnDefs,
+    rowData: raw.data.reverse(),
+    animateRows: true,
+    accentedSort: true,
+  };
+
+  var eGridDiv = document.querySelector("#juros-reais-grid");
+
+  new agGrid.Grid(eGridDiv, gridOptions);
 
 
-  }
-);
+}

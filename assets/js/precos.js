@@ -36,7 +36,7 @@ $.get(
 
         var raw = JSON.parse(data);
 
-        console.log(raw)
+        // console.log(raw)
 
         raw.data.forEach((element) => {
             // Carne Bovina
