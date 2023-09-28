@@ -403,8 +403,6 @@
 const bg_plugin = {
 	id: 'customCanvasBackgroundColor',
 	beforeDraw: (chart, args, options) => {
-
-		console.log(options)
 	  const {ctx} = chart;
 	  ctx.save();
 	  ctx.globalCompositeOperation = 'destination-over';

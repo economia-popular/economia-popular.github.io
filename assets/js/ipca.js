@@ -280,8 +280,6 @@ function IPCASetor(data) {
 
   var raw = JSON.parse(data);
 
-  console.log(raw)
-
   const dataset = [];
   const dataset_alimentacao = [];
   const dataset_artigos_residencia = [];
@@ -524,8 +522,6 @@ $.get(
   "https://economia-popular-delivery-content-indices.s3.amazonaws.com/inflacao/ipca_detalhado.json",
   function (data, textStatus, jqXHR) {
     var raw = JSON.parse(data);
-
-    console.log(raw)
 
     const dataset = [];
     const dataset_alimentacao = [];

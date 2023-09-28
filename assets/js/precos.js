@@ -36,8 +36,6 @@ $.get(
 
         var raw = JSON.parse(data);
 
-        // console.log(raw)
-
         raw.data.forEach((element) => {
             // Carne Bovina
             dataset_carne_bovina_dianteira.push({
