@@ -28,40 +28,68 @@
 		<div id="main">
 
 			<!-- PIB -->
-			<article id="pib">
+			<article id="detail" class="active">
 				<h1 class="major">PIB - Brasil</h1>
-				<h2>Produto Interno Bruto</h2>
+				<h2>Produto Interno Bruto - Dados Detalhados</h2>
 				<p>O PIB, ou <b>Produto Interno Bruto</b> é a soma de todos os bens e serviços finais produzidos por um
 					país,
 					estado ou cidade, geralmente em um ano. Todos os países calculam o seu PIB nas suas respectivas
 					moedas.</a></p>
 
-				<h2>Evolução do PIB</h2>
+				<h1>Evolução do PIB</h1>
 				<p>A evolução do PIB é acompanhada de forma trimestral. Esse indicador leva em conta o crescimento ou
 					queda do PIB em relação <b>ao mesmo trimestre do ano anterior</b></p>
+
+				<canvas id="pib-variacao" style="height:50vh; width:80vw"></canvas>
+
+				<h3>Datasets</h3>
+				<a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/pib/pib-variacao.json"
+					target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+				<a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/pib/pib-variacao.csv"
+					target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+				<p></p><br>
+
+
+				<h1>PIB Acumulado - Trimestre</h1>
 				<p>
-					<canvas id="pib-variacao" height="300"></canvas>
+					<canvas id="pib-acumulado" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<h3>Datasets</h3>
+				<a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/pib/pib-acumulado.json"
+					target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+				<a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/pib/pib-acumulado.csv"
+					target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+				<p></p><br>
+
+				<h1>PIB Acumulado - Anual</h1>
+				<p>
+					<canvas id="pib-acumulado-anual" style="height:50vh; width:80vw"></canvas>
 				</p>
 
 
-				<h2>PIB Acumulado - Trimestre</h2>
-				<p>
-					<canvas id="pib-acumulado" height="300"></canvas>
-				</p>
+				<h3>Datasets</h3>
+				<a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/pib/pib-acumulado-ano.json"
+					target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+				<a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/pib/pib-acumulado-ano.csv"
+					target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+				<p></p><br>
 
-				<h2>PIB Acumulado - Anual</h2>
-				<p>
-					<canvas id="pib-acumulado-anual" height="300"></canvas>
-				</p>
-
-				<h2>PIB Per Capta</h2>
+				<h1>PIB Per Capta</h1>
 				<p>O <b>PIB Per Capta</b> simula o quanto cada cidadão brasileiro ganharia se a soma total do PIB fosse
 					dividida igualmente entre todos</p>
 				<p>
-					<canvas id="pib-per-capta" height="300"></canvas>
+					<canvas id="pib-per-capta" style="height:50vh; width:80vw"></canvas>
 				</p>
 
-				<h3>Calculo do PIB</h3>
+				<h3>Datasets</h3>
+				<a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/pib/pib-per-capta.json"
+					target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+				<a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/pib/pib-per-capta.csv"
+					target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+				<br>
+				<br>
+				<h2>Calculo do PIB</h2>
 				<p>Para o cálculo do PIB, são utilizados diversos dados; alguns produzidos pelo IBGE, outros
 					provenientes de fontes externas. Essas são algumas das peças que compõem o quebra-cabeça do PIB:</p>
 				<ul>
@@ -81,9 +109,14 @@
 				</ul>
 
 				<p>
-				<div class="fonte-pib"></div>
+					<a href="/pib" target="_blank" class="button icon solid fa-search-location">Dados Detalhados</a>
 				</p>
-				<p>Ultima atualização:
+				<br><br>
+
+				<h3>Fonte Oficial: </h3>
+				<div class="fonte-pib"></div>
+				<br><br>
+				<h3>Ultima atualização: </h3>
 				<div class="atualizacao-pib"></div>
 				</p>
 			</article>
@@ -107,13 +140,7 @@
 	<script src="/assets/js/breakpoints.min.js"></script>
 	<script src="/assets/js/util.js"></script>
 	<script src="/assets/js/main.js"></script>
-	<script src="/assets/js/pib.js"></script>
-	<script src="/assets/js/ipca.js"></script>
-	<script src="/assets/js/inpc.js"></script>
-	<script src="/assets/js/igp-m.js"></script>
-	<script src="/assets/js/selic.js"></script>
-	<script src="/assets/js/gini.js"></script>
-	<script src="/assets/js/idh.js"></script>
+	<script src="/pib/pib.js"></script>
 
 
 	<!-- Google tag (gtag.js) -->
@@ -124,6 +151,11 @@
 		gtag('js', new Date());
 
 		gtag('config', 'G-9GQ3VE9HVC');
+	</script>
+
+	<script>
+		document.getElementById("main").style.display = null;
+		document.getElementById("detail").style.display = null;
 	</script>
 
 </body>
