@@ -1200,6 +1200,30 @@ $.get(
         var eGridDivFeijao = document.querySelector('#feijao-grid');
         new agGrid.Grid(eGridDivFeijao, gridOptionsFeijao);
 
+        // Misc - Grid
+        var columnFeijao = [
+            { headerName: "Período", field: "referencia" },
+            { headerName: "Cana-de-Açucar Ton.", field: "cana_de_acucar_preco_tonelada"},
+            { headerName: "Milho 60kg", field: "milho_preco_60kg"},
+            { headerName: "Trigo 60kg", field: "trigo_60kg"},
+            { headerName: "Leite Litro", field: "leite_litro"},
+            { headerName: "Café em Coco Kg", field: "cafe_em_coco_preco_kg"},
+            { headerName: "Farelo em Soja Ton.", field: "soja_farelo_preco_tonelada"},
+        ];
 
+        var gridOptionsFeijao = {
+            defaultColDef: {
+                flex: 1,
+                sortable: true,
+                filter: true,
+            },
+            columnDefs: columnFeijao,
+            rowData: gridData,
+            animateRows: true,
+            accentedSort: true
+        };
+
+        var eGridDivFeijao = document.querySelector('#misc-grid');
+        new agGrid.Grid(eGridDivFeijao, gridOptionsFeijao);
     }
 );
