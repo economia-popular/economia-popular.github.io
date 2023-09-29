@@ -8,7 +8,8 @@ const trigo = document.getElementById("trigo")
 const ovos = document.getElementById("ovos")
 const arroz = document.getElementById("arroz")
 const feijao = document.getElementById("feijao")
-
+const cafe = document.getElementById("cafe")
+const soja = document.getElementById("soja")
 
 // Preços Mercado
 $.get(
@@ -33,6 +34,8 @@ $.get(
         const dataset_milho = [];
         const dataset_leite = [];
         const dataset_trigo = [];
+        const dataset_cafe = [];
+        const dataset_soja = [];
 
         var raw = JSON.parse(data);
 
@@ -131,6 +134,18 @@ $.get(
             dataset_trigo.push({
                 x: element.referencia,
                 y: element.trigo_60kg
+            })
+
+            // Café
+            dataset_cafe.push({
+                x: element.referencia,
+                y: element.cafe_em_coco_preco_kg
+            })
+
+            // Soja Farelo
+            dataset_soja.push({
+                x: element.referencia,
+                y: element.soja_farelo_preco_tonelada
             })
         });
 
@@ -916,6 +931,148 @@ $.get(
                         display: true,
                         color: "#FFFFFF",
                         text: "Preço recebido pelo Agricultos pela Litro do Leite",
+                    },
+                    legend: {
+                        labels: {
+                            color: "#FFFFFF",
+                        }
+                    }
+                },
+            },
+        });
+
+        // Café - Chart
+        new Chart(cafe, {
+            type: "bar",
+            data: {
+                backgroundColor: "#FFFFFF",
+                datasets: [
+                    {
+                        type: "bar",
+                        stack: true,
+                        label: "Café em Coco - R$",
+                        data: dataset_cafe.slice(-120), // Ultimos 10 anos,,
+                        borderWidth: 1,
+                        borderColor: "#ffffff",
+                        backgroundColor: "#ffffff",
+                    }
+                ],
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        display: true,
+                        title: {
+                            display: true,
+                        },
+                        grid: {
+                            color: "#FFFFFF",
+                        },
+                        ticks: {
+                            color: "#FFFFFF",
+                            major: {
+                                enabled: true,
+                            },
+                        },
+                    },
+                    y: {
+                        display: true,
+                        color: "#FFFFFF",
+                        grid: {
+                            color: "#FFFFFF",
+                        },
+                        ticks: {
+                            color: "#FFFFFF",
+                        },
+                    },
+                },
+                layouts: {},
+                plugins: {
+                    title: {
+                        display: true,
+                        text: "Café em Coco - Preço do Produtor",
+                        color: "#FFFFFF",
+                        padding: {
+                            top: 10,
+                            bottom: 10,
+                        },
+                    },
+                    subtitle: {
+                        display: true,
+                        color: "#FFFFFF",
+                        text: "Preço recebido pelo Agricultos pelo kg do Café em Coco",
+                    },
+                    legend: {
+                        labels: {
+                            color: "#FFFFFF",
+                        }
+                    }
+                },
+            },
+        });
+
+        // Soja em Farelo - Chart
+        new Chart(soja, {
+            type: "bar",
+            data: {
+                backgroundColor: "#FFFFFF",
+                datasets: [
+                    {
+                        type: "bar",
+                        stack: true,
+                        label: "Soja em Farelo (Tonelada) - R$",
+                        data: dataset_soja.slice(-120), // Ultimos 10 anos,,
+                        borderWidth: 1,
+                        borderColor: "#ffffff",
+                        backgroundColor: "#ffffff",
+                    }
+                ],
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        display: true,
+                        title: {
+                            display: true,
+                        },
+                        grid: {
+                            color: "#FFFFFF",
+                        },
+                        ticks: {
+                            color: "#FFFFFF",
+                            major: {
+                                enabled: true,
+                            },
+                        },
+                    },
+                    y: {
+                        display: true,
+                        color: "#FFFFFF",
+                        grid: {
+                            color: "#FFFFFF",
+                        },
+                        ticks: {
+                            color: "#FFFFFF",
+                        },
+                    },
+                },
+                layouts: {},
+                plugins: {
+                    title: {
+                        display: true,
+                        text: "Tonelada do Farelo de Soja - Preço do Varejista",
+                        color: "#FFFFFF",
+                        padding: {
+                            top: 10,
+                            bottom: 10,
+                        },
+                    },
+                    subtitle: {
+                        display: true,
+                        color: "#FFFFFF",
+                        text: "Preço pago pelos varejistas ou industriais junto aos atacadistas, cerealistas, cooperativas e distribuidoras",
                     },
                     legend: {
                         labels: {
