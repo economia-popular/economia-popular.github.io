@@ -7,6 +7,8 @@ const pobreza_familia = document.getElementById("pobreza-familia");
 const pobreza_indigena = document.getElementById("pobreza-indigena");
 const pobreza_quilombolas = document.getElementById("pobreza-quilombolas");
 const pobreza_ciganos = document.getElementById("pobreza-ciganos");
+const renda_media = document.getElementById("renda-media")
+const desemprego = document.getElementById("desemprego")
 
 // Pobreza - Variação
 $.get(
@@ -921,7 +923,7 @@ $.get(
   }
 );
 
-
+// Salario Minimo
 $.get(
   "https://economia-popular-delivery-content-indices.s3.amazonaws.com/sociais/salario_minimo.json",
   function (data, textStatus, jqXHR) {
@@ -940,8 +942,6 @@ $.get(
       }
 
     });
-
-
 
     new Chart(salario_minimo, {
       type: "bar",
@@ -1001,6 +1001,179 @@ $.get(
             display: true,
             color: "#FFFFFF",
             text: "R$",
+          },
+          legend: {
+            labels: {
+              color: "#FFFFFF",
+            }
+          }
+        },
+      },
+    });
+  }
+);
+
+// Renda Média
+$.get(
+  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/sociais/rendimento_medio.json",
+  function (data, textStatus, jqXHR) {
+    const dataset_renda_media = [];
+
+    var raw = JSON.parse(data);
+
+    raw.data.forEach((element) => {
+
+      dataset_renda_media.push({
+        x: element.referencia,
+        y: element.rendimento_medio,
+      });
+
+    });
+
+    new Chart(renda_media, {
+      type: "bar",
+      data: {
+        backgroundColor: "#587F49",
+        datasets: [
+          {
+            label: "Rendimento médio",
+            data: dataset_renda_media,
+            borderWidth: 2,
+            borderColor: "#b94d29",
+            backgroundColor: "#b94d29",
+            fill: false
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        hover: {
+          mode: "index",
+          intersec: false,
+        },
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+            },
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+              major: {
+                enabled: true,
+              },
+            },
+          },
+          y: {
+            display: true,
+            color: "#FFFFFF",
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+            },
+          },
+        },
+        layouts: {},
+        plugins: {
+          title: {
+            display: true,
+            text: "Familias Quilombolas em Situação de Pobreza / Vulnerabilidade",
+            color: "#FFFFFF",
+          },
+          subtitle: {
+            display: true,
+            color: "#FFFFFF",
+            text: "Numero de Familias Quilombolas",
+          },
+          legend: {
+            labels: {
+              color: "#FFFFFF",
+            }
+          }
+        },
+      },
+    });
+  }
+);
+
+// Desemprego 
+$.get(
+  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/sociais/desemprego.json",
+  function (data, textStatus, jqXHR) {
+    const dataset_desemprego = [];
+
+    var raw = JSON.parse(data);
+
+    console.log(raw)
+
+    raw.data.forEach((element) => {
+
+      dataset_desemprego.push({
+        x: element.referencia,
+        y: element.taxa_desemprego,
+      });
+
+    });
+
+    new Chart(desemprego, {
+      type: "line",
+      data: {
+        backgroundColor: "#587F49",
+        datasets: [
+          {
+            label: "Taxa de Desemprego %",
+            data: dataset_desemprego,
+            borderWidth: 2,
+            borderColor: "#FFFFFF",
+            backgroundColor: "#FFFFFF",
+            fill: false
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        hover: {
+          mode: "index",
+          intersec: false,
+        },
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+            },
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+              major: {
+                enabled: true,
+              },
+            },
+          },
+          y: {
+            display: true,
+            color: "#FFFFFF",
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+            },
+          },
+        },
+        layouts: {},
+        plugins: {
+          title: {
+            display: true,
+            text: "Taxa de Desocupação do Brasileiro",
+            color: "#FFFFFF",
           },
           legend: {
             labels: {
