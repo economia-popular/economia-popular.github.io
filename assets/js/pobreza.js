@@ -1082,13 +1082,13 @@ $.get(
         plugins: {
           title: {
             display: true,
-            text: "Familias Quilombolas em Situação de Pobreza / Vulnerabilidade",
+            text: "Rendimento médio mensal real das pessoas de 14 anos ou mais de idade ocupadas economicamente ativas",
             color: "#FFFFFF",
           },
           subtitle: {
             display: true,
             color: "#FFFFFF",
-            text: "Numero de Familias Quilombolas",
+            text: "Rendimento médio",
           },
           legend: {
             labels: {
