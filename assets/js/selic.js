@@ -5,7 +5,7 @@ const juros_reais = document.getElementById("juros-reais");
 
 // Meta Selic
 $.get(
-  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/app/data/selic/selic-meta.json",
+  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/selic/selic-meta.json",
   function (data, textStatus, jqXHR) {
     const dataset = [];
 
@@ -119,7 +119,7 @@ $.get(
 
 // SELIC - Variação
 $.get(
-  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/app/data/selic/selic-variacao-mes.json",
+  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/selic/selic-variacao-mes.json",
   function (data, textStatus, jqXHR) {
     const dataset = [];
 
@@ -209,7 +209,7 @@ $.get(
 
 // SELIC - Percentual / Ano
 $.get(
-  "https://raw.githubusercontent.com/msfidelis/indices-economicos/main/app/data/selic/selic-percentual-ano.json",
+  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/selic/selic-percentual-ano.json",
   function (data, textStatus, jqXHR) {
     const dataset = [];
 
