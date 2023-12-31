@@ -1,0 +1,33 @@
+title: Economia Popular - Indices Socioeconomicos Simplificados
+email: matheus@nanoshots.com.br
+description: >- # this means to ignore newlines until "baseurl:"
+  Economia, Sociologia, Geografia, Estatística, IDH, GINI, Selic, IPCA, INPC, Socioeconômicos, Indices
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://economiapopular.com.br" 
+twitter_username: fidelissauro
+github_username:  economia-popular
+include: ["_pages"]
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  # - jekyll-archives
+
+
+lazyimages: "enabled"
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md

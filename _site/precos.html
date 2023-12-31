@@ -1,0 +1,440 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Economia Popular - IPCA</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="title" content="Economia Popular - Preços Brasil - Séries Históricas">
+    <meta name="description" content="Indicadores Socioeconômicos Simplificados">
+    <meta name="keywords"
+        content="Economia, Sociologia, Geografia, Estatística, IDH, GINI, Selic, IPCA, INPC, Socioeconômicos, Indices">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Portuguese">
+    <meta name="author" content="Matheus Fidelis">
+    <meta name="og:image" content="/images/bg.jpg">
+
+    <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="/favicon.ico">
+
+    <link rel="stylesheet" href="/assets/css/main.css" />
+
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body lass="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Sobre -->
+            <article id="active" class="active">
+                <h1 class="major">Preços Brasil - Séries Históricas</h1>
+
+				<p>
+					Nesta seção, vamos explorar o impacto direto que os preços de itens comuns têm em nossas vidas
+					cotidianas. Itens como trigo, café, óleo de soja e cana-de-açúcar são fundamentais em nossos hábitos
+					de consumo, mas seus preços são moldados por uma série de fatores complexos e variáveis. Ao analisar
+					esses preços, podemos ganhar insights sobre a economia global e como ela afeta nosso bolso. Vamos
+					mergulhar nessa análise para entender melhor a dinâmica dos preços desses itens essenciais.
+				</p>
+
+
+				<h2>Série Histórica - Carne Bovina</h2>
+
+				<p>
+					Este gráfico apresenta os preços da carne bovina, considerando tanto a parte traseira quanto a
+					dianteira, com base em dados do <b><a href="">Departamento de Economia Rural (Deral)</a></b>, que
+					integra a <b><a href="">Secretaria de Estado da Agricultura e do Abastecimento (Seab) no estado do
+							Paraná</a></b>. Os preços são derivados de um levantamento que reflete <b>os valores pagos
+						pelos varejistas e industriais a atacadistas, cerealistas, cooperativas e distribuidoras</b>. A
+					ponderação dos preços leva em consideração a comercialização regional.
+				</p>
+
+				<p>
+					Os valores exibidos neste gráfico representam a <b>média mensal dos preços</b> paranaenses nos
+					últimos 12 meses, bem como médias anuais, ambas calculadas de forma simples. Esses dados oferecem
+					uma visão importante das tendências de preços da carne bovina na região e podem ser valiosos para
+					análises econômicas e decisões de mercado.
+				</p>
+
+				<p>
+					<canvas id="carne-bovina" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<div id="carne-bovina-grid" style="height:40vh; width:100%" class="ag-theme-alpine-dark"></div>
+				<br><br>
+
+
+				<h2>Série Histórica - Carne Suina</h2>
+
+				<p>
+					Este gráfico apresenta os <b>preços da carne suína</b>, abrangendo diferentes cortes, como <b>
+						carcaça completa</b>, <b>lombo</b>, <b>pernil</b> e <b>paleta</b>, com base em dados coletados
+					pelo <b><a href="">Departamento de Economia Rural (Deral)</a></b>. Esses preços refletem as
+					transações realizadas no mercado atacadista e são uma média ponderada das negociações entre
+					<b>varejistas, industriais e atacadistas, bem como de cerealistas, cooperativas e
+						distribuidoras</b>. A ponderação leva em consideração a comercialização regional no estado do
+					<b>Paraná</b>.
+					<br><br>
+					Os valores exibidos neste gráfico representam a <b>média mensal dos preços</b> na região paranaense
+					ao longo dos últimos 12 meses, além de médias anuais, ambas calculadas de forma simples. Esses dados
+					fornecem uma visão abrangente das tendências de preços da carne suína e de seus cortes específicos
+					na região.
+				</p>
+
+				<p>
+					<canvas id="carne-suina" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<div id="carne-suina-grid" style="height:40vh; width:100%" class="ag-theme-alpine-dark"></div>
+				<br><br>
+
+				<h2>Série Histórica - Frango </h2>
+
+				<p>
+					Este gráfico exibe os <b>preços do Frango Resfriado</b>, fornecendo informações sobre as variações
+					de preço ao longo do tempo. Os dados utilizados neste gráfico são derivados de um levantamento que
+					reflete os valores pagos pelos <b>varejistas e industriais a atacadistas, cerealistas, cooperativas
+						e distribuidoras</b>. A ponderação dos preços considera a comercialização regional.
+				</p>
+
+				<p>
+					Os valores apresentados neste gráfico representam a <b>média mensal dos preços</b> do Frango
+					Resfriado na região paranaense nos últimos 12 meses, bem como as médias anuais, ambas calculadas de
+					forma simples. Esses dados são essenciais para <b>monitorar tendências e flutuações de preços</b>, o
+					que é fundamental para a tomada de decisões informadas no setor de avicultura.
+				</p>
+
+				<p>
+					<canvas id="carne-frango" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<h2>Série Histórica - Ovos</h2>
+
+				<p>
+					Este gráfico apresenta os preços de venda de <b>30 dúzias de ovos</b> de diferentes tamanhos,
+					incluindo ovos <b>Extra Grandes, Grandes, Médios e Pequenos</b>. Os dados refletem os valores pagos
+					pelos varejistas e industriais a atacadistas, cerealistas, cooperativas e distribuidoras, ponderados
+					pela comercialização regional.
+				</p>
+
+				<p>
+					Os valores exibidos neste gráfico representam a <b>média mensal dos preços</b> dos ovos na região
+					paranaense nos últimos 12 meses, além das médias anuais, ambas calculadas de forma simples. Esses
+					dados fornecem uma visão abrangente dos preços dos ovos em diferentes tamanhos, permitindo
+					<b>acompanhar variações de preço</b> ao longo do tempo.
+				</p>
+
+				<p>
+					<canvas id="ovos" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<div id="ovos-grid" style="height:40vh; width:100%" class="ag-theme-alpine-dark"></div>
+				<br><br>
+
+				<h2>Série Histórica - Arroz</h2>
+
+				<p>
+					Este gráfico apresenta os preços de venda do <b>arroz tipo 1 e tipo 2</b>, considerando sacas de 30
+					Kg. Os dados refletem os valores pagos pelos varejistas e industriais a atacadistas, cerealistas,
+					cooperativas e distribuidoras, ponderados pela comercialização regional.
+				</p>
+
+				<p>
+					Os valores exibidos neste gráfico representam a <b>média mensal dos preços</b> do arroz na região
+					paranaense nos últimos 12 meses, além das médias anuais, ambas calculadas de forma simples. Esses
+					dados são essenciais para <b>acompanhar as variações de preço</b> desses dois tipos de arroz ao
+					longo do tempo.
+				</p>
+
+				<p>
+					<canvas id="arroz" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<div id="arroz-grid" style="height:40vh; width:100%" class="ag-theme-alpine-dark"></div>
+				<br><br>
+
+				<h2>Série Histórica - Feijão</h2>
+
+				<p>
+					Este gráfico apresenta os preços de venda do <b>feijão e feijão preto</b>, considerando sacas de 30
+					Kg. Os dados refletem os valores pagos pelos varejistas e industriais a atacadistas, cerealistas,
+					cooperativas e distribuidoras, ponderados pela comercialização regional.
+				</p>
+
+				<p>
+					Os valores exibidos neste gráfico representam a <b>média mensal dos preços</b> do arroz na região
+					paranaense nos últimos 12 meses, além das médias anuais, ambas calculadas de forma simples. Esses
+					dados são essenciais para <b>acompanhar as variações de preço</b> desses dois tipos de arroz ao
+					longo do tempo.
+				</p>
+
+				<p>
+					<canvas id="feijao" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<div id="feijao-grid" style="height:40vh; width:100%" class="ag-theme-alpine-dark"></div>
+				<br><br>
+
+				<h2>Série Histórica - Cana-De-Açucar </h2>
+
+				<p>
+					Este gráfico exibe os <b>preços médios recebidos pelos agricultores pela tonelada de
+						cana-de-açúcar</b>. Os dados são obtidos através de um levantamento dos preços auferidos pelos
+					produtores na venda de sua produção. A média estadual é ponderada pela renda regional do produto,
+					proporcionando uma representação precisa dos preços na região.
+				</p>
+
+				<p>
+					Os valores apresentados neste gráfico representam a <b>média mensal dos preços</b> da tonelada de
+					cana-de-açúcar na região paranaense nos últimos 12 meses, além das médias anuais, ambas calculadas
+					de forma simples. Esses dados são cruciais para <b>monitorar a remuneração dos agricultores</b> e
+					entender as tendências de preço ao longo do tempo.
+				</p>
+
+				<p>
+					Este gráfico fornece uma visão abrangente dos preços da tonelada de cana-de-açúcar e é uma
+					ferramenta valiosa para avaliar a economia agrícola relacionada a esse importante cultivo no Paraná.
+					Para informações adicionais e contexto sobre esses dados, você pode contatar o <b>Departamento de
+						Economia Rural - Deral</b>.
+				</p>
+
+				<p>
+					<canvas id="cana" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+
+				<h2>Série Histórica - Milho </h2>
+
+				<p>
+					Este gráfico apresenta os <b>preços médios recebidos pelos agricultores pelas sacas de 60 kg de
+						milho</b>. A coleta de dados é realizada através de um levantamento dos preços pagos pelos
+					varejistas ou industriais junto aos atacadistas, cerealistas, cooperativas e distribuidoras. A
+					ponderação pela comercialização regional garante uma representação precisa dos preços na região.
+				</p>
+
+				<p>
+					Os valores exibidos neste gráfico representam a <b>média mensal dos preços</b> do milho em sacas de
+					60 kg na região paranaense nos últimos 12 meses, além das médias anuais, ambas calculadas de forma
+					simples. Esses dados são essenciais para <b>acompanhar as variações de preço</b> do milho, um
+					componente fundamental na agricultura.
+				</p>
+
+				<p>
+					Este gráfico fornece informações valiosas sobre os preços do milho em sacas de 60 kg e é uma
+					ferramenta essencial para avaliar a economia agrícola relacionada a esse importante cultivo no
+					Paraná. Para obter informações adicionais e contexto sobre esses dados, você pode contatar o
+					<b>Departamento de Economia Rural - Deral</b>.
+				</p>
+
+				<p>
+					<canvas id="milho" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<h2>Série Histórica - Trigo </h2>
+
+				<p>
+					Este gráfico ilustra os <b>preços médios recebidos pelos agricultores pelas sacas de 60 kg de
+						trigo</b>. Os dados são obtidos por meio de um levantamento dos preços auferidos pelos
+					produtores na venda de sua produção. A média estadual é ponderada pela renda regional do produto,
+					proporcionando uma visão abrangente dos preços na região.
+				</p>
+
+				<p>
+					Os valores apresentados neste gráfico representam a <b>média mensal dos preços</b> do trigo em sacas
+					de 60 kg na região paranaense nos últimos 12 meses, além das médias anuais, ambas calculadas de
+					forma simples. Esses dados são cruciais para <b>analisar as variações de preço</b> do trigo, um
+					componente essencial na agricultura.
+				</p>
+
+				<p>
+					Este gráfico fornece informações valiosas sobre os preços do trigo em sacas de 60 kg, sendo uma
+					ferramenta essencial para avaliar a economia agrícola relacionada a esse importante cultivo no
+					Paraná. Para mais informações e contexto sobre esses dados, você pode contatar o <b>Departamento de
+						Economia Rural - Deral</b>.
+				</p>
+
+				<p>
+					<canvas id="trigo" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+
+				<h2>Série Histórica - Litro do Leite </h2>
+
+				<p>
+					Este gráfico destaca os <b>preços médios recebidos pelos agricultores pelo litro de leite</b>. A
+					obtenção desses dados envolve um levantamento dos preços auferidos pelos produtores na venda de sua
+					produção. A média estadual é cuidadosamente ponderada pela renda regional do produto, proporcionando
+					uma análise abrangente dos preços na região.
+				</p>
+
+				<p>
+					Os valores representados no gráfico refletem a <b>média mensal dos preços</b> do leite por litro na
+					região paranaense nos últimos 12 meses, bem como as médias anuais, ambas calculadas de maneira
+					simples. Esses dados são cruciais para <b>avaliar as flutuações nos preços</b> do leite, um
+					componente essencial na agricultura.
+				</p>
+
+				<p>
+					Este gráfico oferece insights valiosos sobre os preços do leite por litro, sendo uma ferramenta
+					essencial para avaliar a economia agrícola relacionada a esse importante produto no Paraná. Para
+					mais informações e contexto sobre esses dados, você pode contatar o <b>Departamento de Economia
+						Rural - Deral</b>.
+				</p>
+
+				<p>
+					<canvas id="leite" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+
+				<h2>Série Histórica - Café</h2>
+
+				<p>
+					Este gráfico apresenta os <b>preços médios recebidos pelos agricultores pelo quilo de café em
+						coco</b>. Esses dados resultam de um levantamento detalhado dos preços obtidos pelos produtores
+					durante a venda de sua produção. A média estadual é calculada de maneira a ser ponderada pela renda
+					regional do produto, oferecendo uma análise abrangente dos preços nesta categoria.
+				</p>
+
+				<p>
+					Os valores exibidos no gráfico refletem a <b>média mensal dos preços</b> do café em coco por quilo
+					na região paranaense ao longo dos últimos 12 meses, além das médias anuais, ambas calculadas de
+					forma simples. Essas informações são essenciais para compreender as flutuações nos preços deste
+					produto agrícola vital.
+				</p>
+
+				<p>
+					Este gráfico oferece insights valiosos sobre os preços do café em coco por quilo, sendo uma
+					ferramenta essencial para avaliar a economia agrícola relacionada a este importante produto no
+					Paraná. Para mais informações e contexto sobre esses dados, você pode contatar o <b>Departamento de
+						Economia Rural - Deral</b>.
+				</p>
+
+				<p>
+					<canvas id="cafe" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<h2>Série Histórica - Farelo de Soja</h2>
+
+				<p>
+					Este gráfico apresenta os <b>preços médios de venda no atacado da tonelada de soja em farelo</b> no
+					contexto do estado do Paraná. A obtenção desses dados envolve um levantamento minucioso dos preços
+					praticados pelos varejistas e industriais, estabelecendo uma média ponderada pela comercialização
+					regional.
+				</p>
+
+				<p>
+					Os valores apresentados neste gráfico refletem a <b>média mensal dos preços</b> da tonelada de soja
+					em farelo ao longo dos últimos 12 meses, além das médias anuais, ambas calculadas de forma simples.
+					Essa análise temporal oferece uma compreensão abrangente das tendências e variações nos preços deste
+					produto essencial na economia agrícola.
+				</p>
+
+				<p>
+					Esse gráfico é uma ferramenta valiosa para profissionais, pesquisadores e interessados na
+					compreensão dos <b>preços da tonelada de soja em farelo</b> no Paraná. Para mais informações e
+					contextualização sobre esses dados, você pode contatar o <b>Departamento de Economia Rural -
+						Deral</b>.
+				</p>
+
+				<p>
+					<canvas id="soja" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<div id="misc-grid" style="height:40vh; width:100%" class="ag-theme-alpine-dark"></div>
+				<br><br>
+
+				<h3>Datasets</h3>
+				<a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/precos/precos.json"
+					target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+				<a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/precos/precos.csv"
+					target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+				<a href="https://www.kaggle.com/datasets/fidelissauro/precos_brasil" target="_blank"
+					class="button primary icon solid fa-download" download>Kaggle</a>
+
+				<p></p><br>
+
+				<h3>Fonte Oficial: </h3>
+				<div class="fonte-precos"></div>
+				<br><br>
+				<h3>Ultima atualização: </h3>
+				<div class="atualizacao-precos"></div>
+            </article>
+
+
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <p class="copyright">&copy; Economia Popular.</p>
+    <p class="copyright">Created by <a href="https://linktr.ee/fidelissauro">Matheus Fidelis</a></p>
+    <!-- <p class="copyright">Photo by <a href="https://unsplash.com/@juniorreisfoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Junior REIS</a> on <a href="https://unsplash.com/s/photos/Indio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p> -->
+</footer>
+
+    </div>
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    	<!-- Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="/assets/js/jquery.min.js"></script>
+	<script src="/assets/js/browser.min.js"></script>
+	<script src="/assets/js/breakpoints.min.js"></script>
+	<script src="/assets/js/util.js"></script>
+	<script src="/assets/js/main.js"></script>
+
+     <!-- Page Script -->
+    <script src="/assets/js/precos.js"></script>
+
+    <!-- Tags -->
+    	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9GQ3VE9HVC"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-9GQ3VE9HVC');
+	</script>
+
+	<script>
+		addEventListener('click', (event) => {
+			console.log(event.target.id)
+
+			gtag('event', event.target.id, {
+				'app_name': event.target.id,
+				'screen_name': 'Home'
+			});
+		});
+	</script>
+    <meta content="http://localhost:4000/assets/images/bg.jpg" property="og:image">
+<meta content="Economia Popular - Indices Socioeconomicos Simplificados" property="og:site_name">
+
+  <meta content="Preços Brasil - Séries Históricas" property="og:title">
+
+
+<!-- 
+  <meta content="Economia, Sociologia, Geografia, Estatística, IDH, GINI, Selic, IPCA, INPC, Socioeconômicos, Indices" property="og:description">
+ -->
+
+<meta content="Economia, Sociologia, Geografia, Estatística, IDH, GINI, Selic, IPCA, INPC, Socioeconômicos, Indices" property="og:description">
+
+    
+
+    <script>
+        document.getElementById("main").style.display = null;
+        document.getElementById("active").style.display = null;
+    </script>
+
+</body>
+
+</html>

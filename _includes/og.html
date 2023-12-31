@@ -1,0 +1,15 @@
+<meta content="{{ site.url }}/assets/images/bg.jpg" property="og:image">
+<meta content="{{ site.title }}" property="og:site_name">
+{% if page.title %}
+  <meta content="{{ page.title }}" property="og:title">
+{% else %}
+  <meta content="{{ site.title }}" property="og:title">
+{% endif %}
+
+<!-- {% if page.excerpt %}
+  <meta content="{{ page.excerpt }}" property="og:description">
+{% else %}
+  <meta content="{{ site.description }}" property="og:description">
+{% endif %} -->
+
+<meta content="{{ site.description }}" property="og:description">

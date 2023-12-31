@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Economia Popular - Taxa Selic Detalhado</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="title" content="Economia Popular - Taxa Selic">
+    <meta name="description" content="Indicadores Socioeconômicos Simplificados">
+    <meta name="keywords"
+        content="Economia, Sociologia, Geografia, Estatística, IDH, GINI, Selic, IPCA, INPC, Socioeconômicos, Indices">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Portuguese">
+    <meta name="author" content="Matheus Fidelis">
+    <meta name="og:image" content="/images/bg.jpg">
+
+    <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="/favicon.ico">
+
+    <link rel="stylesheet" href="/assets/css/main.css" />
+
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body lass="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Sobre -->
+            <article id="active" class="active">
+                <h1 class="major">Taxa Selic </h1>
+                <h3>Sistema Especial de Liquidação e Custódia</h3>
+                <p>No Brasil, a <b>Taxa Selic é a taxa básica de juros da economia</b> . É o <b>principal instrumento de
+                        política monetária</b> utilizado pelo <b>Banco Central do Brasil</b> para controle da inflação
+                </p>
+                <p>Os movimentos da Selic <b>influenciam todas as taxas de juros praticadas no país</b>, sejam as que um
+                    banco cobra ao <b>conceder um empréstimo</b>, sejam as que um <b>investidor recebe ao realizar uma
+                        aplicação financeira</b>.</p>
+                <p>A Taxa Selic é a principal ferramenta do Banco Central para controlar o volume de recursos em
+                    circulação. Quando a economia está aquecida e os preços começam a subir a ponto de afetar
+                    negativamente as metas de inflação, a Selic Sobe, desestimulando empréstimos e contrações de
+                    serviços que tomam a Selic como báse de preço.</p>
+                <p>O mesmo ocorre quando a inflação está abaixo da meta. A Selic é diminuida para estimular o consumo e
+                    contratações de empréstimos de Pessoa Física e Pessoa Jurídica e aquecer a economia. </p>
+
+                <h1>Taxa Selic - Meta</h1>
+                <p>
+                    <canvas id="selic-meta" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <div id="selic-meta-grid" style="height:40vh; width:100%" class="ag-theme-alpine-dark"></div>
+                <br><br>
+
+                <h3>Datasets</h3>
+                <a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/selic/selic-meta.json"
+                    target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+                <a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/app/data/selic/selic-meta.csv"
+                    target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+                <p></p><br>
+
+                <h1>Taxa Selic - Acumulada ao Ano</h1>
+                <p>
+                    <canvas id="selic-acumulado" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <h3>Datasets</h3>
+                <a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/selic/selic-percentual-ano.json"
+                    target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+                <a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/app/data/selic/selic-percentual-ano.csv"
+                    target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+                <p></p><br>
+
+                <h1>Taxa Selic - Variação Mensal</h1>
+                <p>
+                    <canvas id="selic-variacao" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <h3>Datasets</h3>
+                <a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/selic/selic-variacao-mes.json"
+                    target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+                <a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/app/data/selic/selic-variacao-mes.csv"
+                    target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+                <p></p><br>
+
+
+                <h1>Juros Reais - Selic / IPCA</h1>
+
+                <p>
+                    Os juros reais são uma <b>medida do ganho real de um investimento</b>, levando em consideração a
+                    inflação.
+                    Eles representam a diferença entre a taxa de juros nominal (ou aparente) de um investimento e a taxa
+                    de inflação durante o mesmo período.
+                </p>
+                <p>
+                    Em outras palavras, <b>os juros reais refletem o aumento real do poder de compra do dinheiro
+                        investido</b>,
+                    após descontar a inflação. Se a taxa de juros nominal <b>Selic Acumulado</b> é de 8% ao ano e a
+                    inflação é de 4% ao ano,
+                    então os juros reais são de 4% ao ano (8% - 4% = 4%). Isso significa que o dinheiro investido está
+                    aumentando em valor real em 4% ao ano.
+                </p>
+
+                <p>
+                    O indice inflacionário que iremos utilizar para ilustrar os <b>Juros Reais</b> será o <b><a
+                            href="/#ipca">IPCA</a></b>
+                </p>
+
+
+                <p>
+                    <canvas id="juros-reais" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <div id="juros-reais-grid" style="height:40vh; width:100%" class="ag-theme-alpine-dark"></div>
+                <br><br>
+
+                <h3>Datasets</h3>
+                <a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/app/data/inflacao/inflacao.json"
+                    target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+                <a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/app/data/inflacao/inflacao.csv"
+                    target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+                <p></p><br>
+
+
+                <p>
+                    <a href="/selic" target="_blank" class="button icon solid fa-search-location">Dados Detalhados</a>
+                </p>
+                <br><br>
+
+                <h3>Fonte Oficial: </h3>
+                <div class="fonte-selic"></div>
+                <br><br>
+                <h3>Ultima atualização: </h3>
+                <div class="atualizacao-selic"></div>
+            </article>
+
+
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <p class="copyright">&copy; Economia Popular.</p>
+    <p class="copyright">Created by <a href="https://linktr.ee/fidelissauro">Matheus Fidelis</a></p>
+    <!-- <p class="copyright">Photo by <a href="https://unsplash.com/@juniorreisfoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Junior REIS</a> on <a href="https://unsplash.com/s/photos/Indio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p> -->
+</footer>
+
+    </div>
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    	<!-- Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="/assets/js/jquery.min.js"></script>
+	<script src="/assets/js/browser.min.js"></script>
+	<script src="/assets/js/breakpoints.min.js"></script>
+	<script src="/assets/js/util.js"></script>
+	<script src="/assets/js/main.js"></script>
+
+    <!-- Page Script -->
+    <script src="/assets/js/selic-detalhado.js"></script>
+
+    <!-- Tags -->
+    	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9GQ3VE9HVC"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-9GQ3VE9HVC');
+	</script>
+
+	<script>
+		addEventListener('click', (event) => {
+			console.log(event.target.id)
+
+			gtag('event', event.target.id, {
+				'app_name': event.target.id,
+				'screen_name': 'Home'
+			});
+		});
+	</script>
+    <meta content="http://localhost:4000/assets/images/bg.jpg" property="og:image">
+<meta content="Economia Popular - Indices Socioeconomicos Simplificados" property="og:site_name">
+
+  <meta content="Taxa Selic" property="og:title">
+
+
+<!-- 
+  <meta content="Economia, Sociologia, Geografia, Estatística, IDH, GINI, Selic, IPCA, INPC, Socioeconômicos, Indices" property="og:description">
+ -->
+
+<meta content="Economia, Sociologia, Geografia, Estatística, IDH, GINI, Selic, IPCA, INPC, Socioeconômicos, Indices" property="og:description">
+
+
+
+    <script>
+        document.getElementById("main").style.display = null;
+        document.getElementById("active").style.display = null;
+    </script>
+
+</body>
+
+</html>
