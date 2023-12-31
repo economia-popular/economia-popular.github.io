@@ -1,17 +1,11 @@
----
-title: Sobre
-permalink: /sobre
-comments:
----
-
 <!DOCTYPE HTML>
 <html>
 
 <head>
-    <title>Economia Popular - IPCA</title>
+    <title>Economia Popular - PIB</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="title" content="Economia Popular">
+    <meta name="title" content="Economia Popular - Produto Interno Bruto">
     <meta name="description" content="Indicadores Socioeconômicos Simplificados">
     <meta name="keywords"
         content="Economia, Sociologia, Geografia, Estatística, IDH, GINI, Selic, IPCA, INPC, Socioeconômicos, Indices">
@@ -98,8 +92,29 @@ comments:
                     target="_blank" class="button primary icon solid fa-download" download>JSON</a>
                 <a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/pib/pib-per-capta.csv"
                     target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+                <p></p><br>
+
+                <h1>Dívida Pública</h1>
+                <p>A dívida pública refere-se ao montante total de dinheiro que um governo deve aos seus credores. Ela é composta por empréstimos e títulos emitidos pelo governo para financiar suas atividades quando as receitas fiscais são insuficientes. A dívida pública pode ser de curto ou longo prazo e pode ser devida a credores nacionais ou internacionais.</p>
+                <p>
+                    A relação entre a dívida pública e o Produto Interno Bruto (PIB) é um importante indicador econômico. O PIB é a soma total de todos os bens e serviços produzidos dentro de um país durante um ano. Ao comparar a dívida pública com o PIB, os economistas podem avaliar a capacidade de um país de pagar suas dívidas. Uma relação dívida/PIB alta sugere que um país pode ter dificuldades para pagar suas dívidas sem gerar mais dívidas ou aumentar impostos. Por outro lado, uma relação baixa indica que um país tem espaço para contrair mais dívidas, se necessário, sem prejudicar sua economia.
+                </p>
+                <h2>Divida Pública vs PIB</h1>
+                <p>
+                    <canvas id="pib-divida-publica" style="height:50vh; width:80vw"></canvas>
+                </p>
                 <br>
+                <h2>Divida Pública vs PIB - ANUAL</h1>
+                <p>
+                    <canvas id="pib-divida-publica-anual" style="height:50vh; width:80vw"></canvas>
+                </p>
                 <br>
+                <h3>Datasets</h3>
+                <a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/pib/divida_publica.json"
+                    target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+                <a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/pib/divida_publica.csv"
+                    target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+                <p></p><br>
                 <h2>Calculo do PIB</h2>
                 <p>Para o cálculo do PIB, são utilizados diversos dados; alguns produzidos pelo IBGE, outros
                     provenientes de fontes externas. Essas são algumas das peças que compõem o quebra-cabeça do PIB:</p>
@@ -156,6 +171,7 @@ comments:
 	<script src="/assets/js/util.js"></script>
 	<script src="/assets/js/main.js"></script>
     <script src="/assets/js/pib.js"></script>
+    <script src="/assets/js/divida-publica.js"></script>
 
     <!-- Tags -->
     	<!-- Google tag (gtag.js) -->
