@@ -4,6 +4,9 @@
 <loc>http://localhost:4000/about/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/ambientais</loc>
+</url>
+<url>
 <loc>http://localhost:4000/combustiveis</loc>
 </url>
 <url>
@@ -41,5 +44,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/sociais</loc>
+</url>
+<url>
+<loc>http://localhost:4000/googlef67c75ce1c29933e.html</loc>
+<lastmod>2023-12-31T16:49:06-03:00</lastmod>
 </url>
 </urlset>
