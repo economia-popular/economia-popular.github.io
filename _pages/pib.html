@@ -1,0 +1,168 @@
+---
+title: PIB - Produto Interno Bruto
+permalink: /pib
+comments:
+layout: indice.html
+---
+
+---
+title: Sobre
+permalink: /sobre
+comments:
+---
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Economia Popular - IPCA</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="title" content="Economia Popular">
+    <meta name="description" content="Indicadores Socioeconômicos Simplificados">
+    <meta name="keywords"
+        content="Economia, Sociologia, Geografia, Estatística, IDH, GINI, Selic, IPCA, INPC, Socioeconômicos, Indices">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Portuguese">
+    <meta name="author" content="Matheus Fidelis">
+    <meta name="og:image" content="/images/bg.jpg">
+
+    <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="/favicon.ico">
+
+    <link rel="stylesheet" href="/assets/css/main.css" />
+
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body lass="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Sobre -->
+            <article id="active" class="active">
+                <h1 class="major">PIB - Brasil</h1>
+                <h2>Produto Interno Bruto</h2>
+                <p>O PIB, ou <b>Produto Interno Bruto</b> é a soma de todos os bens e serviços finais produzidos por um
+                    país,
+                    estado ou cidade, geralmente em um ano. Todos os países calculam o seu PIB nas suas respectivas
+                    moedas.</a></p>
+
+                <h1>Evolução do PIB</h1>
+                <p>A evolução do PIB é acompanhada de forma trimestral. Esse indicador leva em conta o crescimento ou
+                    queda do PIB em relação <b>ao mesmo trimestre do ano anterior</b></p>
+
+                <canvas id="pib-variacao" style="height:50vh; width:80vw"></canvas>
+
+                <h3>Datasets</h3>
+                <a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/pib/pib-variacao.json"
+                    target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+                <a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/pib/pib-variacao.csv"
+                    target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+                <p></p><br>
+
+
+                <h1>PIB Acumulado - Trimestre</h1>
+                <p>
+                    <canvas id="pib-acumulado" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <h3>Datasets</h3>
+                <a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/pib/pib-acumulado.json"
+                    target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+                <a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/pib/pib-acumulado.csv"
+                    target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+                <p></p><br>
+
+                <h1>PIB Acumulado - Anual</h1>
+                <p>
+                    <canvas id="pib-acumulado-anual" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+
+                <h3>Datasets</h3>
+                <a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/pib/pib-acumulado-ano.json"
+                    target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+                <a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/pib/pib-acumulado-ano.csv"
+                    target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+                <p></p><br>
+
+                <h1>PIB Per Capta</h1>
+                <p>O <b>PIB Per Capta</b> simula o quanto cada cidadão brasileiro ganharia se a soma total do PIB fosse
+                    dividida igualmente entre todos</p>
+                <p>
+                    <canvas id="pib-per-capta" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <h3>Datasets</h3>
+                <a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/pib/pib-per-capta.json"
+                    target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+                <a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/pib/pib-per-capta.csv"
+                    target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+                <br>
+                <br>
+                <h2>Calculo do PIB</h2>
+                <p>Para o cálculo do PIB, são utilizados diversos dados; alguns produzidos pelo IBGE, outros
+                    provenientes de fontes externas. Essas são algumas das peças que compõem o quebra-cabeça do PIB:</p>
+                <ul>
+                    <li>Balanço de Pagamentos (Banco Central)</li>
+                    <li>Declaração de Informações Econômico-Fiscais da Pessoa Jurídica - DIPJ (Secretaria da Receita
+                        Federal)</li>
+                    <li>Índice de Preços ao Produtor Amplo - IPA (FGV)</li>
+                    <li>Índice Nacional de Preços ao Consumidor Amplo - IPCA (IBGE)</li>
+                    <li>Produção Agrícola Municipal - PAM - (IBGE)</li>
+                    <li>Pesquisa Anual de Comércio - PAC (IBGE)</li>
+                    <li>Pesquisa Anual de Serviços - PAS (IBGE)</li>
+                    <li>Pesquisa de Orçamentos Familiares - POF (IBGE)</li>
+                    <li>Pesquisa Industrial Anual - Empresa - PIA-Empresa (IBGE)</li>
+                    <li>Pesquisa Industrial Mensal - Produção Física - PIM-PF (IBGE)</li>
+                    <li>Pesquisa Mensal de Comércio - PMC (IBGE)</li>
+                    <li>Pesquisa Mensal de Serviços - PMS (IBGE)</li>
+                </ul>
+
+                <p>
+                    <a href="/pib-detalhado" target="_blank" class="button icon solid fa-search-location">Dados Detalhados</a>
+                </p>
+                <br><br>
+
+                <h3>Fonte Oficial: </h3>
+                <div class="fonte-pib"></div>
+                <br><br>
+                <h3>Ultima atualização: </h3>
+                <div class="atualizacao-pib"></div>
+            </article>
+
+
+        </div>
+
+        {% include footer.html %}
+
+    </div>
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    {% include js.html %}
+    <script src="/assets/js/pib.js"></script>
+
+    <!-- Tags -->
+    {% include analytics.html %}
+    {% include og.html %}
+
+    
+
+    <script>
+        document.getElementById("main").style.display = null;
+        document.getElementById("active").style.display = null;
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Economia Popular - IGP-M</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="title" content="Economia Popular">
+    <meta name="description" content="Indicadores Socioeconômicos Simplificados">
+    <meta name="keywords"
+        content="Economia, Sociologia, Geografia, Estatística, IDH, GINI, Selic, IPCA, INPC, Socioeconômicos, Indices">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Portuguese">
+    <meta name="author" content="Matheus Fidelis">
+    <meta name="og:image" content="/images/bg.jpg">
+
+    <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="/favicon.ico">
+
+    <link rel="stylesheet" href="/assets/css/main.css" />
+
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body lass="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Sobre -->
+            <article id="active" class="active">
+                <h1 class="major">IGP-M</h1>
+                <h3>O Índice Geral de Preços - Mercado</h3>
+                <p><b>O Índice Geral de Preços de Mercado </b> é um indice divulgada pela <b>Fundação Gentúlio Vargas
+                        (FGV)</b>. Por meio dele, é possível saber se houve aumento (inflação) ou diminuição (deflação)
+                    em determinado período e prever tendências.</p>
+                <p>Utilizado como indice comparativo com outros índices como <b>IPCA</b> e <b>INPC</b></p>
+                <p>A tabela IGP-M é o <b>principal parâmetro utilizado na atualização dos preços dos aluguéis</b>, o que
+                    ocorre anualmente. Então, é o percentual anual divulgado que indicará o reajuste dos valores para
+                    locadores e locatários.</p>
+
+                <h1>Variação do IGP-M - Histórico</h1>
+
+                <p>
+                    <canvas id="igpm-variacao" style="height:50vh; width:80vw"></canvas>
+                </p>
+                <div id="igpm-grid" style="height:60vh; width:100%" class="ag-theme-alpine-dark"></div>
+                <br><br>
+                <p>
+                    <a href="/igpm" target="_blank" class="button icon solid fa-search-location">Dados Detalhados</a>
+                </p>
+                <br><br>
+
+                <h3>Datasets</h3>
+                <a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/app/data/igpm/igpm.json"
+                    target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+                <a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/app/data/igpm/igpm.csv"
+                    target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+                <p></p><br>
+
+                <h3>Fonte Oficial: </h3>
+                <div class="fonte-igpm"></div>
+                <br><br>
+                <h3>Ultima atualização: </h3>
+                <div class="atualizacao-igpm"></div>
+            </article>
+
+
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <p class="copyright">&copy; Economia Popular.</p>
+    <p class="copyright">Created by <a href="https://linktr.ee/fidelissauro">Matheus Fidelis</a></p>
+    <!-- <p class="copyright">Photo by <a href="https://unsplash.com/@juniorreisfoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Junior REIS</a> on <a href="https://unsplash.com/s/photos/Indio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p> -->
+</footer>
+
+    </div>
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    	<!-- Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="/assets/js/jquery.min.js"></script>
+	<script src="/assets/js/browser.min.js"></script>
+	<script src="/assets/js/breakpoints.min.js"></script>
+	<script src="/assets/js/util.js"></script>
+	<script src="/assets/js/main.js"></script>
+
+    <!-- Page Script -->
+    <script src="/assets/js/igp-m-detalhado.js"></script>
+
+    <!-- Tags -->
+    	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9GQ3VE9HVC"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-9GQ3VE9HVC');
+	</script>
+
+	<script>
+		addEventListener('click', (event) => {
+			console.log(event.target.id)
+
+			gtag('event', event.target.id, {
+				'app_name': event.target.id,
+				'screen_name': 'Home'
+			});
+		});
+	</script>
+    <meta content="http://localhost:4000/assets/images/bg.jpg" property="og:image">
+<meta content="Economia Popular - Indices Socioeconomicos Simplificados" property="og:site_name">
+
+  <meta content="IGP-M (Detalhado) - Indice Geral de Preços - Mercado" property="og:title">
+
+
+<!-- 
+  <meta content="Economia, Sociologia, Geografia, Estatística, IDH, GINI, Selic, IPCA, INPC, Socioeconômicos, Indices" property="og:description">
+ -->
+
+<meta content="Economia, Sociologia, Geografia, Estatística, IDH, GINI, Selic, IPCA, INPC, Socioeconômicos, Indices" property="og:description">
+
+
+
+    <script>
+        document.getElementById("main").style.display = null;
+        document.getElementById("active").style.display = null;
+    </script>
+
+</body>
+
+</html>

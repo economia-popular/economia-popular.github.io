@@ -1,0 +1,148 @@
+---
+title: INCC (Detalhado) - Índice Nacional de Custo da Construção
+permalink: /incc-detalhado
+comments:
+layout: indice.html
+sitemap: false
+---
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Economia Popular - INCC</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="title" content="Economia Popular - INCC">
+    <meta name="description" content="Indicadores Socioeconômicos Simplificados">
+    <meta name="keywords"
+        content="Economia, Sociologia, Geografia, Estatística, IDH, GINI, Selic, IPCA, INPC, Socioeconômicos, Indices">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Portuguese">
+    <meta name="author" content="Matheus Fidelis">
+    <meta name="og:image" content="/images/bg.jpg">
+
+    <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="/favicon.ico">
+
+    <link rel="stylesheet" href="/assets/css/main.css" />
+
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body lass="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Sobre -->
+            <article id="active" class="active">
+				<h1 class="major">INCC Brasil</h1>
+				<h2>Índice Nacional de Custo da Construção</h2>
+				<p>
+					<b>Índice Nacional de Custo da Construção</b> foi o primeiro índice desenvolvido para monitorar a
+					evolução dos preços de materiais, serviços e mão-de-obra destinados a construção de residências no
+					Brasil.
+				</p>
+				<p>
+					Além de se um dos índices componentes do Índice Geral de Preços (IGP) do FGV IBRE, o INCC continua
+					sendo, mais de 70 anos depois, um dos mais importantes indicadores de preços para o seu segmento.
+				</p>
+
+
+				<h1>INCC-DI</h1>
+				<p>
+					O <b>Índice Nacional de Custo de Construção - Disponibilidade Interna (INCC-DI) </b> tem por
+					objetivo medir a variação do custo dos materiais utilizados nas construções habitacionais confome
+					comentado. <br>
+					<b>A divulgação do INCC-DI ocorre sempre no 1º decêndio do mês</b> seguinte ao da coleta dos dados,
+					cobrindo a <b>variação do período que vai entre o primeiro dia do mês até o último</b>.
+				</p>
+				<h2>Variação Mensal do INCC-DI</h2>
+				<p>
+					<canvas id="incc-variacao" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<h2>Variação do INCC-DI - Acumulado</h2>
+				<p>
+					<canvas id="incc-acumulado" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<div id="incc-grid" style="height:60vh; width:100%" class="ag-theme-alpine-dark"></div>
+				<br><br>
+
+				<h1>INCC-M</h1>
+
+				<p>
+					O <b>Índice Nacional de Custo de Construção - Mercado (INCC-M)</b>, assim como as outras medições do
+					Indice INCC tem o objetivo de medir o custo dos materiais utilizados nas contruções habitacionais.
+					<br>
+					<b>A divulgação do INCC-M se dá no final de cada mês de referência. </b> cobrindo as medições
+					realizadas <b>entre o dia 21 do mês anterior e o dia 20 do mês de referência</b>.
+				</p>
+
+				<h2>Variação Mensal do INCC-M</h2>
+
+				<p>
+					<canvas id="incc-m-variacao" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<h2>Variação do INCC-M - Acumulado</h2>
+				<p>
+					<canvas id="incc-m-acumulado" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<div id="incc-m-grid" style="height:60vh; width:100%" class="ag-theme-alpine-dark"></div>
+				<br><br>
+
+				<h3>Datasets</h3>
+				<a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/inflacao/incc.json"
+					target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+				<a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/inflacao/incc.csv"
+					target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+				<a href="https://www.kaggle.com/datasets/fidelissauro/inflacao-brasil" target="_blank"
+					class="button primary icon solid fa-download" download>Kaggle</a>
+				<p></p><br>
+
+				<h3>Fonte Oficial: </h3>
+				<div class="fonte-incc"></div>
+				<br><br>
+				<h3>Ultima atualização: </h3>
+				<div class="atualizacao-incc"></div>
+            </article>
+
+
+        </div>
+
+        {% include footer.html %}
+
+    </div>
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    {% include js.html %}
+
+     <!-- Page Script -->
+    <script src="/assets/js/incc-detalhado.js"></script>
+
+    <!-- Tags -->
+    {% include analytics.html %}
+    {% include og.html %}
+
+    
+
+    <script>
+        document.getElementById("main").style.display = null;
+        document.getElementById("active").style.display = null;
+    </script>
+
+</body>
+
+</html>

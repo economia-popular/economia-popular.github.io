@@ -1,0 +1,237 @@
+---
+title: Indicadores Ambientais
+permalink: /ambientais
+comments:
+layout: indice.html
+sitemap: false
+---
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Economia Popular - IPCA</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="title" content="Economia Popular - Indicadores Ambientais">
+    <meta name="description" content="Indicadores Socioeconômicos Simplificados">
+    <meta name="keywords"
+        content="Economia, Sociologia, Geografia, Estatística, IDH, GINI, Selic, IPCA, INPC, Socioeconômicos, Indices">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Portuguese">
+    <meta name="author" content="Matheus Fidelis">
+    <meta name="og:image" content="/images/bg.jpg">
+
+    <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="/favicon.ico">
+
+    <link rel="stylesheet" href="/assets/css/main.css" />
+
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body lass="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+
+            <article id="active" class="active">
+                <h1 class="major">Indicadores Ambientais</h1>
+                <h3>Séries históricas com o tema do Meio Ambiente e Preservação no Brasil</h3>
+                <p>
+                    Compilado de séries históricas disponibilizados pela politica de Dados Abertos de diversas
+                    Instituições e Projetos nacionais e internacionais como o <a
+                        href="https://www.gov.br/inpe/pt-br"><b>INPE (Instituto Nacional de Pesquisas
+                            Espaciais)</b></a>, <a href="https://www.gov.br/ibama/pt-br"><b>IBAMA (Instituto Brasileiro
+                            do Meio Ambiente e dos Recursos Naturais Renováveis)</b></a> e <a
+                        href="https://hdr.undp.org"><b>UNDP (United Nations Development Programme)</b></a>.
+                </p>
+
+                <h2>Amazonia Legal</h2>
+
+                <h3>Desmatamento da Amazonia Legal</h3>
+                <p>
+                    Os dados historicos a seguir são coletados a partir do <a
+                        href="http://www.obt.inpe.br/OBT/assuntos/programas/amazonia/prodes"><b>PRODES</b></a>, um
+                    projeto da <a href="http://www.obt.inpe.br"><b>INPE (Instituto Nacional de Pesquisas
+                            Espaciais)</b></a> <br><br>
+                    O projeto <a href="http://www.obt.inpe.br/OBT/assuntos/programas/amazonia/prodes"><b>PRODES
+                            (Programa de Cálculo do Desflorestamento da Amazônia) </b> </a> realiza o monitoramento por
+                    satélites do desmatamento por corte raso na Amazônia Legal e produz, desde 1988, <b>as taxas anuais
+                        de desmatamento na região, que são usadas pelo governo brasileiro para o estabelecimento de
+                        políticas públicas.</b>
+                    As taxas anuais são estimadas a partir dos incrementos de desmatamento identificados em cada imagem
+                    de satélite que cobre a Amazônia Legal.
+                    A primeira apresentação dos dados é realizada até dezembro de cada ano, na forma de estimativa,
+                    quando normalmente são processadas aproximadamente 50% das imagens que cobrem a Amazônia Legal.
+                    <b>Os dados consolidados são apresentados no primeiro semestre do ano seguinte.</b>
+                </p>
+
+                <p>
+                    <canvas id="desmatamento-variacao" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <p>
+                    <canvas id="desmatamento-regioes-variacao" style="height:50vh; width:80vw"></canvas>
+                    * Os dados do ano de 2022 ainda estão considerados como incompletos. A totalização e sumarização
+                    estão previstas para o primeiro semestre de 2023.
+                </p>
+
+                <div id="desmatamento-grid" style="height:60vh; width:100%" class="ag-theme-alpine-dark"></div>
+
+                <br><br>
+                <h3>Datasets</h3>
+                <a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/ambientais/desmatamento_prodes.json"
+                    target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+                <a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/ambientais/desmatamento_prodes.csv"
+                    target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+                <a href="https://www.kaggle.com/datasets/fidelissauro/desmatamento-brasil" target="_blank"
+                    class="button primary icon solid fa-download" download>Kaggle</a>
+                <br><br>
+                <h3>Fonte Oficial: </h3>
+                <div class="fonte-desmatamento"></div>
+                <br><br>
+
+                <h2>Monitoramento de Queimadas e Incêndios</h2>
+
+                <p>
+                    Os dados a seguir são um compilado simplificado dos dados abertos de monitoramento de queimadas e
+                    focos de incêndios vindos do <a href="https://queimadas.dgi.inpe.br/queimadas/portal"><b>Programa
+                            Queimadas do INPE</b></a>.
+                </p>
+                <p>
+                    O <b>Programa Queimadas do INPE</b> realiza pesquisa, desenvolvimento tecnológico e a inovação de
+                    produtos, processos e geoserviços para o monitoramento e a modelagem da ocorrência e propagação e
+                    classificação do fogo ativo na vegetação, seu risco,
+                    extensão e severidade, utilizando técnicas de Sensoriamento Remoto, Geoprocessamento e Modelagem
+                    Numérica
+                </p>
+
+                <p>
+                    A detecção dos focos de queima de vegetação e de fogo é realizado via satélite, em todas regiões,
+                    todos os dias e por anos seguidos, o que <b> permite análises temporais e espaciais da ocorrência do
+                        fogo que seriam impossíveis de outra forma</b>, dada a precariedade, descontinuidade e diferença
+                    de métodos nas fontes de informação locais.
+                    Em particular, os dados do <b>"satélite de referência"</b> permitem a comparação entre qualquer país
+                    do Planeta.
+                </p>
+
+                <h3>Quantidade Anual de Focos de Incêndio Detectados</h3>
+
+                <p>
+                    <canvas id="queimadas-acumulado" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <h3>Quantidade Mensal de Focos de Incêndio Detectados</h3>
+
+                <p>
+                    <canvas id="queimadas-variacao" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <div id="queimadas-grid" style="height:60vh; width:100%" class="ag-theme-alpine-dark"></div>
+                <br><br>
+                <h3>Datasets</h3>
+                <a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/ambientais/queimadas.json"
+                    target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+                <a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/ambientais/queimadas.csv"
+                    target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+                <a href="https://www.kaggle.com/datasets/fidelissauro/focos-incendios-brasil" target="_blank"
+                    class="button primary icon solid fa-download" download>Kaggle</a>
+                <br><br>
+                <h3>Fonte Oficial: </h3>
+                <div class="fonte-queimadas"></div>
+                <br><br>
+
+
+                <h2>Meio Ambiente - Indice de Desenvolvimento Humano</h2>
+                <p>
+                    O Indice de Desenvolvimento Humano (IDH) que possui mais de 30 anos, agora contabiliza no seu
+                    ranking geral variáveis ambientais como o <b>"Pegada Material / Material Footprint"</b> e a
+                    <b>"Emissão de Gases CO2 Per Capta"</b>. <br>
+                    <a href="#idh"><b>Os Dados Completos e Detalhados sobre o IDH pode ser acessado aqui também</b></a>.
+                </p>
+
+                <h3>Emissão de Toneladas de CO2 Per Capta</h3>
+                <p>
+                    <canvas id="co2-variacao" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <h3>Pegada Material / Material Footprint</h3>
+
+                <p>
+                    A "Pegada Material", tecnicamente chamado de "Material Footprint" é um indice de extração de
+                    material global para atender a demanda interna de um País. <br>
+                    O indice é calculado como (Importação de Matéria Prima) + (Extracão de Materia Prima Para Uso
+                    Doméstico) - (Exportação de Matéria Prima) <br>
+                </p>
+
+                <p>
+                    <canvas id="material-variacao" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <!-- <h2>Emissão de Poluentes</h2>
+
+				<h3>Série histórica de emissão de poluentes</h3>
+
+				<div id="polientes-grid" style="height:60vh; width:100%" class="ag-theme-alpine-dark"></div>
+				<br><br>
+				<h3>Datasets</h3>
+				<a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/ambientais/desmatamento_prodes.json"
+					target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+				<a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/ambientais/desmatamento_prodes.csv"
+					target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+				<a href="https://www.kaggle.com/datasets/fidelissauro/desmatamento-amazonia" target="_blank"
+					class="button primary icon solid fa-download" download>Kaggle</a>
+				<br><br>
+				<h3>Fonte Oficial: </h3>
+				<div class="fonte-desmatamento"></div>
+				<br><br> -->
+
+
+                <p></p><br>
+
+                <p>
+                    <a href="/ambientais" target="_blank" class="button icon solid fa-search-location">Dados
+                        Detalhados</a>
+                </p>
+                <br><br>
+
+                <h3>Ultima atualização: </h3>
+                <div class="atualizacao-ambientais"></div>
+            </article>
+
+
+        </div>
+
+        {% include footer.html %}
+
+    </div>
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    {% include js.html %}
+
+    <!-- Page Script -->
+    <script src="/assets/js/ambientais.js"></script>
+
+    <!-- Tags -->
+    {% include analytics.html %}
+    {% include og.html %}
+
+
+
+    <script>
+        document.getElementById("main").style.display = null;
+        document.getElementById("active").style.display = null;
+    </script>
+
+</body>
+
+</html>

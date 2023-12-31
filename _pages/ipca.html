@@ -1,0 +1,225 @@
+---
+title: IPCA - Índice de Preços no Consumidor Amplo
+permalink: /ipca
+comments:
+layout: indice.html
+---
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Economia Popular - IPCA</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="Indicadores Socioeconômicos Simplificados">
+    <meta name="keywords"
+        content="Economia, Sociologia, Geografia, Estatística, IDH, GINI, Selic, IPCA, INPC, Socioeconômicos, Indices">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Portuguese">
+    <meta name="author" content="Matheus Fidelis">
+    <meta name="og:image" content="/images/bg.jpg">
+
+    <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="/favicon.ico">
+
+    <link rel="stylesheet" href="/assets/css/main.css" />
+
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body lass="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Sobre -->
+            <article id="active" class="active">
+                <h1 class="major">IPCA</h1>
+                <h3>Índice de Preços no Consumidor Amplo</h3>
+                <p><b>O Índice de Preços no Consumidor Amplo</b> é usado para observar <b>tendências de inflação</b>. É
+                    calculado com base no preço médio necessário para comprar um conjunto de bens de consumo e serviços
+                    num país, comparando com períodos anteriores.</p>
+                <p>Assim como INPC, é útilizado para calcular a <b>variação do custo de vida médio</b> de família com
+                    <b>renda mensal de 1 e 40 salários mínimos</b>
+                </p>
+                <p>
+                    O cálculo e a divulgação do IPCA são de feitas pelo <b>IBGE</b> e os dados são coletados entre o
+                    <b>primeiro e último dia</b> de cada mês, nas regiões de <b>Belém, Fortaleza, Recife, Salvador, Belo
+                        Horizonte, Rio de Janeiro, São Paulo, Curitiba, Vitória, Porto Alegre, Brasília Goiânia e Campo
+                        Grande.</b>
+                </p>
+                <p>O resultado mostra se os preços aumentaram ou diminuíram de um mês para o outro.</p>
+
+                <h1>Variação Mensal do IPCA</h1>
+                <p>
+                    <canvas id="ipca-variacao" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <h1>IPCA - Acumulado</h1>
+                <p>
+                    <canvas id="ipca-acumulado" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <p>
+                    <canvas id="ipca-acumulado-12" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <div id="ipca-grid" style="height:60vh; width:100%" class="ag-theme-alpine-dark"></div>
+                <br><br>
+
+                <h1>IPCA - Por Grupo de Produtos</h1>
+
+                <p>
+                    O calculo do <b>IPCA</b> são baseados em preços de determinados tipos de produtos que são coletados
+                    diretamente de domicílios, estabelecimentos comerciais, restaurantes, prestadores de serviços e
+                    concessionárias. <br><br>
+                    A partir desses locais de coletas, são analizados cerca de 470 itens que são alocados dentro de
+                    grupos como <b>Alimentação e bebidas</b>, <b>Habitação</b>, <b>Transporte</b>, <b>Saúde e cuidados
+                        pessoais</b>, <b>Despesas pessoais</b>, <b>Vestuário</b>, <b>Artigos de residência</b>,
+                    <b>Educação</b>, <b>Comunicação</b>
+                </p>
+
+                <p>
+                    <b>Para cada um desses grupos, temos produtos e pesos no calculo. São eles: </b>
+
+                <ul>
+                    <li>
+                        <b>Alimentação e bebidas (24.77%):</b> refeição fora do domicílio, pão francês, leite longa
+                        vida, refrigerante, entre outros.
+                    </li>
+                    <li>
+                        <b>Habitação (15.82%):</b> aluguel e energia elétrica residencial, taxa de água e esgoto,
+                        reformas, entre outros.
+                    </li>
+                    <li>
+                        <b>Transportes (18.29%):</b> gasolina, ônibus urbano, conserto de automóvel, entre outros.
+                    </li>
+                    <li>
+                        <b>Saúde e cuidados pessoais (12.27%):</b> plano de saúde, perfume, dentista, entre outros.
+                    </li>
+                    <li>
+                        <b>Despesas pessoais (10.81%):</b> cabeleireiro, cigarro, serviço bancário, entre outros.
+                    </li>
+                    <li>
+                        <b>Vestuário (5.65%):</b> tênis, camisa masculina, blusa, calça comprida feminina, entre outros.
+                    </li>
+                    <li>
+                        <b>Artigos de residência (3.91%):</b> móvel para sala, microcomputador, refrigerador, roupa de
+                        cama, entre outros.
+                    </li>
+                    <li>
+                        <b>Educação (5.01%):</b> ensino superior, ensino fundamental, ensino médio, curso de idiomas,
+                        entre outros.
+                    </li>
+                    <li>
+                        <b>Comunicação (3.42%):</b> telefone fixo, telefone celular, TV por assinatura, acesso à
+                        internet, entre outros.
+                    </li>
+                </ul>
+                <a href="https://www.suno.com.br/guias/ipca/">Fonte: Suno</a>
+                </p>
+
+                <h2>Variação do IPCA por Grupo</h2>
+                <p>
+                    O objetivo deste gráfico é demonstrar quais foram as principais categorias impactadas, e quanto as
+                    mesmas representaram na variação do indice geral durante o período de coleta dos dados.
+                </p>
+                <p>
+                    <canvas id="ipca-variacao-setor" style="height:90vh; width:80vw"></canvas>
+                </p>
+
+                <div id="ipca-setor-variacao-grid" style="height:60vh; width:100%" class="ag-theme-alpine-dark"></div>
+                <br><br>
+
+                <h2>Acumulo Anual do IPCA por Grupo</h2>
+                <p>
+                    Este gráfico representa o acumulo anual de cada um dos grupos do IPCA. O objetivo é entender quanto
+                    cada categoria de produto variou dentro do período de 1 ano corrente.
+                </p>
+                <p>
+                    <canvas id="ipca-acumulado-setor" style="height:90vh; width:80vw"></canvas>
+                </p>
+
+                <div id="ipca-setor-acumulado-grid" style="height:60vh; width:100%" class="ag-theme-alpine-dark"></div>
+                <br><br>
+
+                <h1>IPCA15</h1>
+                <p>O IPCA15 é uma prévia do IPCA. <b>Índice Nacional de Preços ao Consumidor Amplo 15 – IPCA-15</b>
+                    difere do <b> Índice Nacional de Preços ao Consumidor Amplo – IPCA </b>, apenas no período de coleta
+                    que abrange, em geral, <b>do dia 16 do mês anterior ao 15 do mês de referência</b> </p>
+
+                <h2>Variação Mensal do IPCA15</h2>
+                <p>
+                    <canvas id="ipca15-variacao" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <h1>IPCA15 - Acumulado</h1>
+                <p>
+                    <canvas id="ipca15-acumulado" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <p>
+                    <canvas id="ipca15-acumulado-12" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <div id="ipca15-grid" style="height:60vh; width:100%" class="ag-theme-alpine-dark"></div>
+                <br><br>
+
+                <br><br>
+                <h3>Datasets</h3>
+                <a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/inflacao/inflacao.json"
+                    target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+                <a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/inflacao/inflacao.csv"
+                    target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+                <a href="https://www.kaggle.com/datasets/fidelissauro/inflacao-brasil" target="_blank"
+                    class="button primary icon solid fa-download" download>Kaggle</a>
+                <p></p><br>
+
+
+                <p>
+                    <a href="/ipca-detalhado" target="_blank" class="button icon solid fa-search-location">Dados Detalhados</a>
+                </p>
+                <br><br>
+
+                <h3>Fonte Oficial: </h3>
+                <div class="fonte-ipca"></div>
+                <br><br>
+                <h3>Ultima atualização: </h3>
+                <div class="atualizacao-ipca"></div>
+            </article>
+
+
+        </div>
+
+        {% include footer.html %}
+
+    </div>
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    {% include js.html %}
+
+    <!-- Page Script -->
+    <script src="/assets/js/ipca.js"></script>
+
+    <!-- Tags -->
+    {% include analytics.html %}
+    {% include og.html %}
+
+
+
+    <script>
+        document.getElementById("main").style.display = null;
+        document.getElementById("active").style.display = null;
+    </script>
+
+</body>
+
+</html>

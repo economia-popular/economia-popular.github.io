@@ -1,0 +1,187 @@
+---
+title: IDH - Indice de Desenvolvimento Humano
+permalink: /idh
+comments:
+layout: indice.html
+---
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Economia Popular - Indice de Desenvolvimento Humano</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="title" content="Economia Popular">
+    <meta name="description" content="Indicadores Socioeconômicos Simplificados">
+    <meta name="keywords"
+        content="Economia, Sociologia, Geografia, Estatística, IDH, GINI, Selic, IPCA, INPC, Socioeconômicos, Indices">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Portuguese">
+    <meta name="author" content="Matheus Fidelis">
+    <meta name="og:image" content="/images/bg.jpg">
+
+    <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="/favicon.ico">
+
+    <link rel="stylesheet" href="/assets/css/main.css" />
+
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body lass="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Sobre -->
+            <article id="active" class="active">
+                <h1 class="major">IDH</h1>
+                <h3>Indice de Desenvolvimento Humano</h3>
+                <p>
+                    O <b> Índice de Desenvolvimento Humano (IDH)</b> é uma medida resumida do progresso a longo prazo em
+                    três dimensões básicas do desenvolvimento humano: <b>renda</b>, <b>educação</b> e <b>saúde</b>.
+                </p>
+                <p>
+                    O objetivo da criação do IDH foi o de oferecer um contraponto a outro indicador muito utilizado, o
+                    <b>Produto Interno Bruto (PIB)</b> per capita, que considera <b>apenas a dimensão econômica do
+                        desenvolvimento</b>.
+                </p>
+                <p>
+                    Numericamente, varia de zero a um (alguns apresentam de zero a cem).
+                </p>
+
+                <h1>Indice de Desenvolvimento Humano - Geral</h1>
+                <p>
+                    <canvas id="idh-variacao" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <h1>Indice de Desenvolvimento Humano - Por Sexo</h1>
+                <p>
+                    <canvas id="idh-sexo" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <h1>Expectativa de Vida - Geral</h1>
+                <p>
+                    <canvas id="idh-ev" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <h1>Expectativa de Vida - Por Sexo</h1>
+                <p>
+                    <canvas id="idh-ev-sexo" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <h1>Expectativa de Anos na Escola - Geral</h1>
+                <p>
+                    <canvas id="idh-as" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <h1>Expectativa de Anos na Escola - Por Sexo</h1>
+                <p>
+                    <canvas id="idh-as-sexo" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <p>
+                    <canvas id="idh-as-sexo-m" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <h1>Emissão de Toneladas de CO2 Per Capta</h1>
+
+                <p>
+                    <canvas id="idh-co2-per-capta" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <h1>Pegada Material / Material Footprint</h1>
+
+                <p>
+                    A "Pegada Material", tecnicamente chamado de "Material Footprint" é um indice de extração de
+                    material global para atender a demanda interna de um País. <br>
+                    O indice é calculado como (Importação de Matéria Prima) + (Extracão de Materia Prima Para Uso
+                    Doméstico) - (Exportação de Matéria Prima) <br>
+                </p>
+
+                <p>
+                    <canvas id="idh-footprint" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <h1>Taxa de Mortalidade Materna</h1>
+
+                <p>
+                    A taxa de mortalidade materna pode ser calculada dividindo as mortes maternas registradas (ou
+                    estimadas) pelo total de nascidos vivos registrados (ou estimados) no mesmo período e multiplicando
+                    por 100.000.
+                </p>
+                <p>
+                    A medição requer informações sobre o estado da gravidez, momento da morte (<b>durante a
+                        gravidez</b>, <b>parto</b> ou <b>dentro de 42 dias após o término da gravidez</b> ) e causa da
+                    morte.
+                </p>
+                <p>
+                    Taxa de mortalidade materna = (Número de mortes maternas / Número de nascidos vivos) X 100.000
+                </p>
+
+                <p>
+                    <canvas id="idh-mort-materna" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <div id="idh-grid" style="height:60vh; width:100%; display: block; box-sizing: inherit"
+                    class="ag-theme-alpine-dark grid"></div>
+                <br>
+                <p>
+                    <a href="/idh-detalhado" target="_blank" class="button icon solid fa-search-location">Dados Detalhados</a>
+                </p>
+                <br><br>
+
+                <h3>Datasets</h3>
+                <a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/idh/idh.json"
+                    target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+                <a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/idh/idh.csv" target="_blank"
+                    class="button primary icon solid fa-download" download>CSV</a>
+
+                <a href="https://www.kaggle.com/datasets/fidelissauro/indice-desenvolviment-humano-brasil"
+                    target="_blank" class="button primary icon solid fa-download" download>Kaggle</a>
+
+                <p></p><br>
+
+                <h3>Fonte Oficial: </h3>
+                <div class="fonte-idh"></div>
+                <br><br>
+                <h3>Ultima atualização: </h3>
+                <div class="atualizacao-idh"></div>
+            </article>
+
+
+        </div>
+
+        {% include footer.html %}
+
+    </div>
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    {% include js.html %}
+
+    <!-- Page Script -->
+    <script src="/assets/js/idh.js"></script>
+
+    <!-- Tags -->
+    {% include analytics.html %}
+    {% include og.html %}
+
+
+
+    <script>
+        document.getElementById("main").style.display = null;
+        document.getElementById("active").style.display = null;
+    </script>
+
+</body>
+
+</html>

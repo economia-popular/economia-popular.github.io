@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Economia Popular - Preço de Combustíveis</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="title" content="Economia Popular - Preço de Combustíveis">
+    <meta name="description" content="Indicadores Socioeconômicos Simplificados">
+    <meta name="keywords"
+        content="Economia, Sociologia, Geografia, Estatística, IDH, GINI, Selic, IPCA, INPC, Socioeconômicos, Indices">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Portuguese">
+    <meta name="author" content="Matheus Fidelis">
+    <meta name="og:image" content="/images/bg.jpg">
+
+    <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="/favicon.ico">
+
+    <link rel="stylesheet" href="/assets/css/main.css" />
+
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body lass="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Sobre -->
+            <article id="active" class="active">
+                <h2 class="major">Combustíveis Brasil</h2>
+                <h3>Sério Historica dos Indicadores de Preços de Combustíveis no Brasil</h3>
+                <p>
+                    Os indicadores de preço de combustíveis são publicados mensalmente pela <a
+                        href="https://www.gov.br/anp/pt-br">Agência Nacional do Petróleo, Gás Natural e Biocombustíveis
+                        (ANP)</a> por meio das políticas de Dados Abertos.
+                </p>
+                <p>
+                    Os indices são contabilizados e fornecidos na nível Nacional, Regional e Municipal, realizando uma
+                    pesquisa de consulta de postos de abastacimento afim de estabelecer os preços médios, minimos e
+                    máximos da venda dos combustíveis na bomba, para medir o impacto orçamentário no bolso do consumidor
+                    final.
+                </p>
+
+
+                <h1>Variação de Preço da Gasolina</h1>
+
+                <p>
+                    O preço da gasolina é um dos principais impactantes no bolso do Brasileiro. Assim como Diesel, porém
+                    em menor escala, ele impacta em outras cadeias produtivas e logisticas de diversos produtos e
+                    serviços.
+                </p>
+
+                <p>
+                    Os indicadores de preço da Gasolina são dividos entre <b>Gasolina Comum</b> e <b>Gasolina
+                        Aditivada</b>. <br>
+                    A diferença entre gasolina comum e aditivada consiste, basicamente, na <b>adição de aditivos</b> que
+                    uma possui e a outra não. <br>
+                    <b>Ambas apresentam as mesmas 50 elementos em sua composição</b>, porém <b>a gasolina aditivada
+                        conta com um aditivo dispersante quimico como um detergente, que limpa os resídulos gerados pelo
+                        combustível no motor do veículo</b>.
+                </p>
+
+                <h2>Preço da Gasolina Comum</h2>
+                <p>
+                    <canvas id="gasolina-comum-variacao" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <h2>Preço da Gasolina Aditivada</h2>
+                <p>
+                    <canvas id="gasolina-aditivada-variacao" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <div id="gasolina-grid" style="height:60vh; width:100%" class="ag-theme-alpine-dark"></div>
+                <br><br>
+
+                <h1>Variação de Preço do Etanol</h1>
+
+                <p>
+                    O etanol pode ser produzido a partir de matérias-primas, como <b>milho</b>, <b>beterraba</b> ou
+                    <b>cana-de-açúcar</b>. No Brasil, o modelo mais utilizado é o da <b>cana</b>. Essa opção tem algumas
+                    vantagens, pois é mais produtiva do que o combustível extraído do milho e causa um impacto menor ao
+                    meio ambiente. <br>
+                    Se um hectare de milho rende 3 mil litros de etanol, a mesma área equivale a 7,5 mil litros no caso
+                    da cana.
+                </p>
+
+                <p>
+                    O <b>Etanol Hidratado</b> possi esse nome pois possue uma porcentagem de água na sua composição a
+                    partir do consumo da bomba, essa porcentagem vai de 6% a 7%.
+                </p>
+                <h2>Preço do Etanol Hidratado</h2>
+                <p>
+                    <canvas id="etanol-variacao" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <div id="etanol-grid" style="height:60vh; width:100%" class="ag-theme-alpine-dark"></div>
+                <br><br>
+
+                <h1>Variação de Preço do Diesel</h1>
+
+                <p>
+                    O Diesel é o combustível mais utilizado em território nacional, principalmente entre a categoria de
+                    veículos pesados.
+                </p>
+
+                <p>
+                    Além de caminhões e ônibus, por seu excelente desempenho, é usado também em geradores de energia,
+                    trens, transporte marítimo, máquinas agrícolas e maquinários diversos. Portanto sua inflação ou
+                    deflação impacta diretamente em outros índices de forma agregada, por estar diretamente ligado a
+                    veículos de transporte de carga, alimentício e de materiais de forma geral.
+                </p>
+
+                <p>
+                    Os indices de preço do Diesel estão divididos entre o Diesel S500 e Diesel S10. A diferença entre
+                    estes tipos de combustíveis está no teor de enxofre presente na composição. <br>
+                    Enquanto o diesel <b>S-10</b> possui <b>10 partes de enxofre por milhão</b>, o diesel <b>S-500</b>
+                    <b>possui 500 partes por milhão</b>. Isso significa que o diesel S10 conta com maior poder de
+                    limpeza e detergência natural.
+                </p>
+
+                <p>
+                    <b>Os veículos a diesel fabricados após o ano de 2012 usam somente o Diesel S-10</b>, enquanto os
+                    <b>motores mais antigos utilizam ainda o Diesel S-500.</b>
+                </p>
+
+                <h2>Preço do Diesel S10</h2>
+                <p>
+                    <canvas id="diesel-s10-variacao" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <h2>Preço do Diesel Comum - S500 </h2>
+                <p>
+                    <canvas id="diesel-variacao" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <div id="diesel-grid" style="height:60vh; width:100%" class="ag-theme-alpine-dark"></div>
+                <br><br>
+
+                <h1>Variação de Preço do Gás Veicular</h1>
+
+                <p>
+                    <canvas id="gas-veicular-variacao" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <div id="gas-veicular-grid" style="height:60vh; width:100%" class="ag-theme-alpine-dark"></div>
+                <br><br>
+
+                <br><br>
+                <h3>Datasets</h3>
+                <a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/combustiveis/combustiveis-brasil.json"
+                    target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+                <a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/combustiveis/combustiveis-brasil.csv"
+                    target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+                <a href="https://www.kaggle.com/datasets/fidelissauro/combustiveis-brasil" target="_blank"
+                    class="button primary icon solid fa-download" download>Kaggle</a>
+                <p></p><br>
+
+
+                <p>
+                    <a href="/combustivel" target="_blank" class="button icon solid fa-search-location">Dados
+                        Detalhados</a>
+                </p>
+                <br><br>
+
+                <h3>Fonte Oficial: </h3>
+                <div class="fonte-combustiveis"></div>
+                <br><br>
+                <h3>Ultima atualização: </h3>
+                <div class="atualizacao-combustiveis"></div>
+
+            </article>
+
+
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <p class="copyright">&copy; Economia Popular.</p>
+    <p class="copyright">Created by <a href="https://linktr.ee/fidelissauro">Matheus Fidelis</a></p>
+    <!-- <p class="copyright">Photo by <a href="https://unsplash.com/@juniorreisfoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Junior REIS</a> on <a href="https://unsplash.com/s/photos/Indio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p> -->
+</footer>
+
+    </div>
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    	<!-- Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="/assets/js/jquery.min.js"></script>
+	<script src="/assets/js/browser.min.js"></script>
+	<script src="/assets/js/breakpoints.min.js"></script>
+	<script src="/assets/js/util.js"></script>
+	<script src="/assets/js/main.js"></script>
+
+    <!-- Page Script -->
+    <script src="/assets/js/combustivel.js"></script>
+
+    <!-- Tags -->
+    	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9GQ3VE9HVC"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-9GQ3VE9HVC');
+	</script>
+
+	<script>
+		addEventListener('click', (event) => {
+			console.log(event.target.id)
+
+			gtag('event', event.target.id, {
+				'app_name': event.target.id,
+				'screen_name': 'Home'
+			});
+		});
+	</script>
+    <meta content="http://localhost:4000/assets/images/bg.jpg" property="og:image">
+<meta content="Economia Popular - Indices Socioeconomicos Simplificados" property="og:site_name">
+
+  <meta content="Preço de Combustíveis" property="og:title">
+
+
+<!-- 
+  <meta content="Economia, Sociologia, Geografia, Estatística, IDH, GINI, Selic, IPCA, INPC, Socioeconômicos, Indices" property="og:description">
+ -->
+
+<meta content="Economia, Sociologia, Geografia, Estatística, IDH, GINI, Selic, IPCA, INPC, Socioeconômicos, Indices" property="og:description">
+
+
+
+    <script>
+        document.getElementById("main").style.display = null;
+        document.getElementById("active").style.display = null;
+    </script>
+
+</body>
+
+</html>

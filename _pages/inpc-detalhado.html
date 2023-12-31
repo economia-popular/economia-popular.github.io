@@ -1,0 +1,117 @@
+---
+title: INPC (Detalhado) - inpc Nacional de Preços ao Consumidor
+permalink: /inpc-detalhado
+comments:
+layout: indice.html
+sitemap: false
+---
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Economia Popular - INPC</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="title" content="INPC - Indice Nacional de Preços ao Consumidor">
+    <meta name="description" content="Indicadores Socioeconômicos Simplificados">
+    <meta name="keywords"
+        content="Economia, Sociologia, Geografia, Estatística, IDH, GINI, Selic, IPCA, INPC, Socioeconômicos, Indices">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Portuguese">
+    <meta name="author" content="Matheus Fidelis">
+    <meta name="og:image" content="/images/bg.jpg">
+
+    <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="/favicon.ico">
+
+    <link rel="stylesheet" href="/assets/css/main.css" />
+
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body lass="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Sobre -->
+            <article id="active" class="active">
+                <h1 class="major">INPC</h1>
+				<h3>Índice Nacional de Preços ao Consumidor</h3>
+				<p><b>Índice Nacional de Preços ao Consumidor</b> é usado para observar tendências de inflação. É
+					calculado com base no preço médio necessário para comprar um conjunto de bens de consumo e serviços
+					num país, comparando com períodos anteriores.</p>
+				<p>Assim como IPCA, é útilizado para calcular a <b>variação do custo de vida médio</b> de família com
+					<b>renda mensal de 1 e 5 salários mínimos</b>
+				</p>
+				<p>O resultado mostra se os preços aumentaram ou diminuíram de um mês para o outro.</p>
+
+				<h1>Variação do INPC - Histórico</h1>
+
+				<p>
+					<canvas id="inpc-variacao" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<h1>Variação do INPC - Acumulado</h1>
+				<p>
+					<canvas id="inpc-acumulado" style="height:50vh; width:80vw"></canvas>
+				</p>
+
+				<div id="inpc-grid" style="height:60vh; width:100%" class="ag-theme-alpine-dark"></div>
+				<br><br>
+				<h3>Datasets</h3>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/app/data/inpc/inpc.json"
+					target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+				<a href="https://raw.githubusercontent.com/msfidelis/indices-economicos/main/app/data/inpc/inpc.csv"
+					target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+				<a href="https://www.kaggle.com/datasets/fidelissauro/inflacao-brasil" target="_blank"
+					class="button primary icon solid fa-download" download>Kaggle</a>
+				<p></p><br>
+
+				<p>
+					<a href="/inpc-detalhado" target="_blank" class="button icon solid fa-search-location">Dados Detalhados</a>
+				</p>
+				<br><br>
+
+				<h3>Fonte Oficial: </h3>
+				<div class="fonte-inpc"></div>
+				<br><br>
+				<h3>Ultima atualização: </h3>
+				<div class="atualizacao-inpc"></div>
+            </article>
+
+
+        </div>
+
+        {% include footer.html %}
+
+    </div>
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    {% include js.html %}
+
+     <!-- Page Script -->
+    <script src="/assets/js/inpc-detalhado.js"></script>
+
+    <!-- Tags -->
+    {% include analytics.html %}
+    {% include og.html %}
+
+    
+
+    <script>
+        document.getElementById("main").style.display = null;
+        document.getElementById("active").style.display = null;
+    </script>
+
+</body>
+
+</html>
