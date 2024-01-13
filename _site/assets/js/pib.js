@@ -1,6 +1,7 @@
 const pib_variacao = document.getElementById("pib-variacao");
 const pib_per_capta = document.getElementById("pib-per-capta");
 const pib_acumulado = document.getElementById("pib-acumulado");
+const pib_mensal = document.getElementById("pib-mensal");
 const pib_acumulado_anual = document.getElementById("pib-acumulado-anual");
 
 // PIB - Anual
@@ -177,6 +178,94 @@ $.get(
     });
   }
 );
+
+// PIB - Valor Mensal
+$.get(
+  "https://economia-popular-delivery-content-indices.s3.amazonaws.com/inflacao/pib_valor.json",
+  function (data, textStatus, jqXHR) {
+    const dataset = [];
+
+    var raw = JSON.parse(data);
+
+    raw.data.forEach((element) => {
+      
+      temp = {
+        x: element.referencia,
+        y: element.valor,
+      };
+      dataset.push(temp);
+    });
+
+    new Chart(pib_mensal, {
+      type: "bar",
+      data: {
+        backgroundColor: "#FFFFFF",
+        datasets: [
+          {
+            label: "R$ ",
+            data: dataset.slice(-160),
+            borderWidth: 1,
+            borderColor: "#FFFFFF",
+            backgroundColor: "#FFFFFF",
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+            },
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+              major: {
+                enabled: true,
+              },
+            },
+          },
+          y: {
+            display: true,
+            color: "#FFFFFF",
+            grid: {
+              color: "#FFFFFF",
+            },
+            ticks: {
+              color: "#FFFFFF",
+            },
+          },
+        },
+        layouts: {},
+        plugins: {
+          title: {
+            display: true,
+            text: "PIB - Valor Mensal Produzido",
+            color: "#FFFFFF",
+            padding: {
+              top: 10,
+              bottom: 30,
+            },
+          },
+          subtitle: {
+            display: true,
+            color: "#FFFFFF",
+            text: "Milhões de Reais",
+          },
+          legend: {
+            labels :{
+              color:  "#FFFFFF",
+            }
+          }
+        },
+      },
+    });
+  }
+);
+
 
 // PIB - Variação
 $.get(
