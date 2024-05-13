@@ -1,0 +1,109 @@
+---
+title: Economia Popular - Taxas de Câmbio
+permalink: /cambio
+comments:
+layout: indice.html
+---
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Economia Popular - Taxas de Câmbio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="title" content="Economia Popular">
+    <meta name="description" content="Indicadores Socioeconômicos Simplificados">
+    <meta name="keywords"
+        content="Economia, Sociologia, Geografia, Estatística, IDH, GINI, Selic, IPCA, INPC, Socioeconômicos, Indices">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Portuguese">
+    <meta name="author" content="Matheus Fidelis">
+    <meta name="og:image" content="/images/bg.jpg">
+
+    <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="/favicon.ico">
+
+    <link rel="stylesheet" href="/assets/css/main.css" />
+
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body lass="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Sobre -->
+            <article id="active" class="active">
+                <h1 class="major">Taxas de Câmbio</h1>
+
+                <p>
+                    Taxas de câmbio são valores que representam quanto uma moeda vale em termos de outra moeda. Elas são determinadas no mercado de câmbio, que é um dos maiores mercados financeiros do mundo. As taxas de câmbio flutuam constantemente devido a diversos fatores como diferenças nas taxas de juros entre países, inflação, estabilidade política, e balanços comerciais. Essas taxas são essenciais para o comércio internacional, pois permitem que empresas e governos convertam uma moeda para outra. Por exemplo, uma empresa brasileira que importa produtos dos Estados Unidos precisa pagar esses produtos em dólares, usando a taxa de câmbio para converter o valor de reais para dólares.
+                </p>
+
+
+                <h1>Dólar Comercial</h1>
+                <p>
+                    Este dashboard fornece uma visão detalhada das taxas de câmbio do Dólar Comercial em relação ao Real (BRL) ao longo dos últimos dez anos. O objetivo é oferecer insights valiosos para análises financeiras, investimentos e compreensão das tendências macroeconômicas que influenciam as flutuações cambiais. Para um intervalo maior, faça o download do dataset. 
+                </p>
+                <h2>Dólar - Fechamento Mensal</h2>
+                <p>
+                    O gráfico a seguir apresenta a evolução mensal da taxa de câmbio do Dólar Comercial em relação ao Real. Cada ponto no gráfico representa o valor de fechamento do câmbio ao final de cada mês, permitindo visualizar tendências de alta, baixa e períodos de estabilidade. Utilize este gráfico para análises de longo prazo e tomada de decisão estratégica em contextos que dependem do comportamento do câmbio.
+                </p>
+                <p>
+                    <canvas id="dolar-variacao" style="height:50vh; width:80vw"></canvas>
+                </p>
+
+                <div id="dolar-grid" style="height:60vh; width:100%" class="ag-theme-alpine-dark"></div>
+                <br><br>
+                <h3>Datasets</h3>
+                <a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/cambio/cambio_dolar.json"
+                    target="_blank" class="button primary icon solid fa-download" download>JSON</a>
+                <a href="https://economia-popular-delivery-content-indices.s3.amazonaws.com/cambio/cambio_dolar.csv"
+                    target="_blank" class="button primary icon solid fa-download" download>CSV</a>
+
+                <p></p><br>
+
+                <h3>Fonte Oficial: </h3>
+                <div class="fonte-cambio"></div>
+                <br><br>
+                <h3>Ultima atualização: </h3>
+                <div class="atualizacao-cambio"></div>
+            </article>
+
+
+        </div>
+
+        {% include footer.html %}
+
+    </div>
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    {% include js.html %}
+
+    <!-- Page Script -->
+    <script src="/assets/js/cambio.js"></script>
+
+    <!-- Tags -->
+    {% include analytics.html %}
+    {% include og.html %}
+
+
+
+    <script>
+        document.getElementById("main").style.display = null;
+        document.getElementById("active").style.display = null;
+    </script>
+
+</body>
+
+</html>
