@@ -35,7 +35,9 @@ $.get(
     ];
 
     var gridOptions = {
-      defaultColDef: {
+      theme: "ag-theme-balham",
+      theme: "ag-theme-balham",
+defaultColDef: {
         flex: 1,
         sortable: true,
         filter: true,
@@ -48,7 +50,7 @@ $.get(
 
     var eGridDiv = document.querySelector('#incc-grid');
 
-    new agGrid.Grid(eGridDiv, gridOptions);
+    new agGrid.createGrid(eGridDiv, gridOptions);
 
     new Chart(incc_variacao, {
       type: "line",
@@ -364,7 +366,9 @@ $.get(
     ];
 
     var gridOptions = {
-      defaultColDef: {
+      theme: "ag-theme-balham",
+      theme: "ag-theme-balham",
+defaultColDef: {
         flex: 1,
         sortable: true,
         filter: true,
@@ -377,7 +381,7 @@ $.get(
 
     var eGridDiv = document.querySelector('#incc-m-grid');
 
-    new agGrid.Grid(eGridDiv, gridOptions);
+    new agGrid.createGrid(eGridDiv, gridOptions);
 
     // Fonte do gini
     $("div.fonte-incc").text("debit.com.br");

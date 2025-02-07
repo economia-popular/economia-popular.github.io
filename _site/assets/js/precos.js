@@ -1093,6 +1093,7 @@ $.get(
         ];
 
         var gridOptionsBovina = {
+            theme: "ag-theme-balham",
             defaultColDef: {
                 flex: 1,
                 sortable: true,
@@ -1105,7 +1106,7 @@ $.get(
         };
 
         var eGridDivBovina = document.querySelector('#carne-bovina-grid');
-        new agGrid.Grid(eGridDivBovina, gridOptionsBovina);
+        new agGrid.createGrid(eGridDivBovina, gridOptionsBovina);
 
         // Carne Suina - Grid
         var columnSuina = [
@@ -1117,6 +1118,7 @@ $.get(
         ];
 
         var gridOptionsSuina = {
+            theme: "ag-theme-balham",
             defaultColDef: {
                 flex: 1,
                 sortable: true,
@@ -1129,7 +1131,7 @@ $.get(
         };
 
         var eGridDivSuina = document.querySelector('#carne-suina-grid');
-        new agGrid.Grid(eGridDivSuina, gridOptionsSuina);
+        new agGrid.createGrid(eGridDivSuina, gridOptionsSuina);
 
         // Ovos - Grid
         var columnOvos = [
@@ -1141,6 +1143,7 @@ $.get(
         ];
 
         var gridOptionsOvos = {
+            theme: "ag-theme-balham",
             defaultColDef: {
                 flex: 1,
                 sortable: true,
@@ -1153,7 +1156,7 @@ $.get(
         };
 
         var eGridDivOvos = document.querySelector('#ovos-grid');
-        new agGrid.Grid(eGridDivOvos, gridOptionsOvos);
+        new agGrid.createGrid(eGridDivOvos, gridOptionsOvos);
 
 
         // Arroz - Grid
@@ -1164,6 +1167,7 @@ $.get(
         ];
 
         var gridOptionsArroz = {
+            theme: "ag-theme-balham",
             defaultColDef: {
                 flex: 1,
                 sortable: true,
@@ -1176,7 +1180,7 @@ $.get(
         };
 
         var eGridDivArroz = document.querySelector('#arroz-grid');
-        new agGrid.Grid(eGridDivArroz, gridOptionsArroz);
+        new agGrid.createGrid(eGridDivArroz, gridOptionsArroz);
 
         // Feijao - Grid
         var columnFeijao = [
@@ -1186,6 +1190,7 @@ $.get(
         ];
 
         var gridOptionsFeijao = {
+            theme: "ag-theme-balham",
             defaultColDef: {
                 flex: 1,
                 sortable: true,
@@ -1198,7 +1203,7 @@ $.get(
         };
 
         var eGridDivFeijao = document.querySelector('#feijao-grid');
-        new agGrid.Grid(eGridDivFeijao, gridOptionsFeijao);
+        new agGrid.createGrid(eGridDivFeijao, gridOptionsFeijao);
 
         // Misc - Grid
         var columnFeijao = [
@@ -1212,6 +1217,7 @@ $.get(
         ];
 
         var gridOptionsFeijao = {
+            theme: "ag-theme-balham",
             defaultColDef: {
                 flex: 1,
                 sortable: true,
@@ -1224,6 +1230,6 @@ $.get(
         };
 
         var eGridDivFeijao = document.querySelector('#misc-grid');
-        new agGrid.Grid(eGridDivFeijao, gridOptionsFeijao);
+        new agGrid.createGrid(eGridDivFeijao, gridOptionsFeijao);
     }
 );

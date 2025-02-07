@@ -49,7 +49,9 @@ $.get(
     ];
 
     var gridOptions = {
-      defaultColDef: {
+      theme: "ag-theme-balham",
+      theme: "ag-theme-balham",
+defaultColDef: {
         flex: 1,
         sortable: true,
         filter: true,
@@ -62,7 +64,7 @@ $.get(
 
     var eGridDiv = document.querySelector('#ipca-grid');
 
-    new agGrid.Grid(eGridDiv, gridOptions);
+    new agGrid.createGrid(eGridDiv, gridOptions);
 
     new Chart(ipca_variacao, {
       type: "line",
@@ -440,7 +442,8 @@ function IPCASetor(data) {
   ];
 
   var gridOptions = {
-    defaultColDef: {
+    theme: "ag-theme-balham",
+defaultColDef: {
       flex: 1,
       sortable: true,
       filter: true,
@@ -453,7 +456,7 @@ function IPCASetor(data) {
 
   var eGridDiv = document.querySelector('#ipca-setor-acumulado-grid');
 
-  new agGrid.Grid(eGridDiv, gridOptions);
+  new agGrid.createGrid(eGridDiv, gridOptions);
   
 }
 
@@ -682,7 +685,9 @@ $.get(
     ];
   
     var gridOptions = {
-      defaultColDef: {
+      theme: "ag-theme-balham",
+      theme: "ag-theme-balham",
+defaultColDef: {
         flex: 1,
         sortable: true,
         filter: true,
@@ -695,7 +700,7 @@ $.get(
   
     var eGridDiv = document.querySelector('#ipca-setor-variacao-grid');
   
-    new agGrid.Grid(eGridDiv, gridOptions);
+    new agGrid.createGrid(eGridDiv, gridOptions);
 
   }
 )
@@ -741,7 +746,9 @@ $.get(
     ];
 
     var gridOptions = {
-      defaultColDef: {
+      theme: "ag-theme-balham",
+      theme: "ag-theme-balham",
+defaultColDef: {
         flex: 1,
         sortable: true,
         filter: true,
@@ -752,7 +759,7 @@ $.get(
       accentedSort: true
     };
 
-    // new agGrid.Grid(eGridDiv, gridOptions);
+    // new agGrid.createGrid(eGridDiv, gridOptions);
 
     new Chart(ipca15_variacao, {
       type: "line",

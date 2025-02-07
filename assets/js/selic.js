@@ -28,7 +28,9 @@ $.get(
     ];
 
     var gridOptions = {
-      defaultColDef: {
+      theme: "ag-theme-balham",
+      theme: "ag-theme-balham",
+defaultColDef: {
         flex: 1,
         sortable: true,
         filter: true,
@@ -41,7 +43,7 @@ $.get(
 
     var eGridDiv = document.querySelector("#selic-meta-grid");
 
-    new agGrid.Grid(eGridDiv, gridOptions);
+    new agGrid.createGrid(eGridDiv, gridOptions);
 
     new Chart(selic_meta, {
       type: "line",
@@ -435,7 +437,8 @@ function JurosReais(data) {
   ];
 
   var gridOptions = {
-    defaultColDef: {
+    theme: "ag-theme-balham",
+defaultColDef: {
       flex: 1,
       sortable: true,
       filter: true,
@@ -448,7 +451,7 @@ function JurosReais(data) {
 
   var eGridDiv = document.querySelector("#juros-reais-grid");
 
-  new agGrid.Grid(eGridDiv, gridOptions);
+  new agGrid.createGrid(eGridDiv, gridOptions);
 
 
 }

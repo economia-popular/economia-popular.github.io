@@ -177,7 +177,9 @@ $.get(
     ];
 
     var gridOptions = {
-      defaultColDef: {
+      theme: "ag-theme-balham",
+      theme: "ag-theme-balham",
+defaultColDef: {
         flex: 1,
         sortable: true,
         filter: true,
@@ -189,7 +191,7 @@ $.get(
     };
 
     var eGridDiv = document.querySelector('#gasolina-grid');
-    new agGrid.Grid(eGridDiv, gridOptions);
+    new agGrid.createGrid(eGridDiv, gridOptions);
 
 
     // Data Grid - Etanol
@@ -201,7 +203,8 @@ $.get(
     ];
 
     var gridOptionsEtanol = {
-      defaultColDef: {
+      theme: "ag-theme-balham",
+defaultColDef: {
         flex: 1,
         sortable: true,
         filter: true,
@@ -213,7 +216,7 @@ $.get(
     };
 
     var eGridDivEtanol = document.querySelector('#etanol-grid');
-    new agGrid.Grid(eGridDivEtanol, gridOptionsEtanol);
+    new agGrid.createGrid(eGridDivEtanol, gridOptionsEtanol);
 
     // Data Grid - Diesel
     var columnDefsDiesel = [
@@ -227,7 +230,8 @@ $.get(
     ];
 
     var gridOptionsDiesel = {
-      defaultColDef: {
+      theme: "ag-theme-balham",
+defaultColDef: {
         flex: 1,
         sortable: true,
         filter: true,
@@ -239,7 +243,7 @@ $.get(
     };
 
     var eGridDivDiesel = document.querySelector('#diesel-grid');
-    new agGrid.Grid(eGridDivDiesel, gridOptionsDiesel);
+    new agGrid.createGrid(eGridDivDiesel, gridOptionsDiesel);
 
 
     // Data Grid - Gás Veicular
@@ -251,7 +255,8 @@ $.get(
     ];
 
     var gridOptionsGasVeicular = {
-      defaultColDef: {
+      theme: "ag-theme-balham",
+defaultColDef: {
         flex: 1,
         sortable: true,
         filter: true,
@@ -263,7 +268,7 @@ $.get(
     };
 
     var eGridDivGasVeicular = document.querySelector('#gas-veicular-grid');
-    new agGrid.Grid(eGridDivGasVeicular, gridOptionsGasVeicular);
+    new agGrid.createGrid(eGridDivGasVeicular, gridOptionsGasVeicular);
 
 
     new Chart(gasolina_comum_variacao, {

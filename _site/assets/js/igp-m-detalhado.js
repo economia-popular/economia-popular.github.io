@@ -35,7 +35,9 @@ $.get(
     ];
 
     var gridOptions = {
-      defaultColDef: {
+      theme: "ag-theme-balham",
+      theme: "ag-theme-balham",
+defaultColDef: {
         flex: 1,
         sortable: true,
         filter: true,
@@ -48,7 +50,7 @@ $.get(
 
     var eGridDiv = document.querySelector('#igpm-grid');
 
-    new agGrid.Grid(eGridDiv, gridOptions);
+    new agGrid.createGrid(eGridDiv, gridOptions);
 
     new Chart(igpm_variacao, {
       type: "line",

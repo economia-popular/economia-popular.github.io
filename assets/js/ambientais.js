@@ -108,7 +108,9 @@ $.get(
     ];
 
     var gridOptions = {
-      defaultColDef: {
+      theme: "ag-theme-balham",
+      theme: "ag-theme-balham",
+defaultColDef: {
         flex: 1,
         sortable: true,
         filter: true,
@@ -121,7 +123,9 @@ $.get(
 
     var eGridDiv = document.querySelector('#desmatamento-grid');
 
-    new agGrid.Grid(eGridDiv, gridOptions);
+    console.log(agGrid)
+
+    new agGrid.createGrid(eGridDiv, gridOptions);
 
     new Chart(desmatamento_variacao, {
       type: "bar",
@@ -568,7 +572,9 @@ $.get(
     ];
 
     var gridOptions = {
-      defaultColDef: {
+      theme: "ag-theme-balham",
+      theme: "ag-theme-balham",
+defaultColDef: {
         flex: 1,
         sortable: true,
         filter: true,
@@ -581,7 +587,7 @@ $.get(
 
     var eGridDiv = document.querySelector('#queimadas-grid');
 
-    new agGrid.Grid(eGridDiv, gridOptions);
+    new agGrid.createGrid(eGridDiv, gridOptions);
 
 
     new Chart(queimadas_variacao, {
